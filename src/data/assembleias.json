@@ -1,0 +1,191 @@
+[
+  {
+    "uf": "SP",
+    "nome": "São Paulo",
+    "sigla": "ALESP",
+    "vagas": 94,
+    "portal": "https://www.al.sp.gov.br"
+  },
+  {
+    "uf": "GO",
+    "nome": "Goiás",
+    "sigla": "ALEGO",
+    "vagas": 41,
+    "portal": "https://portal.al.go.leg.br"
+  },
+  {
+    "uf": "AL",
+    "nome": "Alagoas",
+    "sigla": "ALEAL",
+    "vagas": 27,
+    "portal": "https://www.al.al.leg.br"
+  },
+  {
+    "uf": "MG",
+    "nome": "Minas Gerais",
+    "sigla": "ALMG",
+    "vagas": 77,
+    "portal": "https://www.almg.gov.br"
+  },
+  {
+    "uf": "RJ",
+    "nome": "Rio de Janeiro",
+    "sigla": "ALERJ",
+    "vagas": 70,
+    "portal": "https://www.alerj.rj.gov.br"
+  },
+  {
+    "uf": "BA",
+    "nome": "Bahia",
+    "sigla": "ALBA",
+    "vagas": 63,
+    "portal": "https://www.al.ba.gov.br"
+  },
+  {
+    "uf": "PR",
+    "nome": "Paraná",
+    "sigla": "ALEP",
+    "vagas": 54,
+    "portal": "https://www.assembleia.pr.leg.br"
+  },
+  {
+    "uf": "RS",
+    "nome": "Rio Grande do Sul",
+    "sigla": "ALRS",
+    "vagas": 55,
+    "portal": "https://www.al.rs.gov.br"
+  },
+  {
+    "uf": "PE",
+    "nome": "Pernambuco",
+    "sigla": "ALEPE",
+    "vagas": 49,
+    "portal": "https://www.alepe.pe.gov.br"
+  },
+  {
+    "uf": "CE",
+    "nome": "Ceará",
+    "sigla": "ALECE",
+    "vagas": 46,
+    "portal": "https://www.al.ce.gov.br"
+  },
+  {
+    "uf": "SC",
+    "nome": "Santa Catarina",
+    "sigla": "ALESC",
+    "vagas": 40,
+    "portal": "https://www.alesc.sc.gov.br"
+  },
+  {
+    "uf": "MA",
+    "nome": "Maranhão",
+    "sigla": "ALEMA",
+    "vagas": 42,
+    "portal": "https://www.al.ma.leg.br"
+  },
+  {
+    "uf": "PB",
+    "nome": "Paraíba",
+    "sigla": "ALPB",
+    "vagas": 36,
+    "portal": "https://www.al.pb.leg.br"
+  },
+  {
+    "uf": "ES",
+    "nome": "Espírito Santo",
+    "sigla": "ALES",
+    "vagas": 30,
+    "portal": "https://www.al.es.leg.br"
+  },
+  {
+    "uf": "PA",
+    "nome": "Pará",
+    "sigla": "ALEPA",
+    "vagas": 41,
+    "portal": "https://www.alepa.pa.gov.br"
+  },
+  {
+    "uf": "MT",
+    "nome": "Mato Grosso",
+    "sigla": "ALMT",
+    "vagas": 24,
+    "portal": "https://www.al.mt.leg.br"
+  },
+  {
+    "uf": "MS",
+    "nome": "Mato Grosso do Sul",
+    "sigla": "ALEMS",
+    "vagas": 24,
+    "portal": "https://www.al.ms.leg.br"
+  },
+  {
+    "uf": "DF",
+    "nome": "Distrito Federal",
+    "sigla": "CLDF",
+    "vagas": 24,
+    "portal": "https://www.cl.df.gov.br"
+  },
+  {
+    "uf": "RN",
+    "nome": "Rio Grande do Norte",
+    "sigla": "ALRN",
+    "vagas": 24,
+    "portal": "https://www.al.rn.leg.br"
+  },
+  {
+    "uf": "PI",
+    "nome": "Piauí",
+    "sigla": "ALEPI",
+    "vagas": 30,
+    "portal": "https://www.alepi.pi.gov.br"
+  },
+  {
+    "uf": "SE",
+    "nome": "Sergipe",
+    "sigla": "ALESE",
+    "vagas": 24,
+    "portal": "https://al.se.leg.br"
+  },
+  {
+    "uf": "RO",
+    "nome": "Rondônia",
+    "sigla": "ALERO",
+    "vagas": 24,
+    "portal": "https://www.al.ro.leg.br"
+  },
+  {
+    "uf": "TO",
+    "nome": "Tocantins",
+    "sigla": "ALETO",
+    "vagas": 24,
+    "portal": "https://www.al.to.leg.br"
+  },
+  {
+    "uf": "AC",
+    "nome": "Acre",
+    "sigla": "ALEAC",
+    "vagas": 24,
+    "portal": "https://www.al.ac.leg.br"
+  },
+  {
+    "uf": "AP",
+    "nome": "Amapá",
+    "sigla": "ALAP",
+    "vagas": 24,
+    "portal": "https://www.al.ap.leg.br"
+  },
+  {
+    "uf": "AM",
+    "nome": "Amazonas",
+    "sigla": "ALEAM",
+    "vagas": 24,
+    "portal": "https://www.aleam.gov.br"
+  },
+  {
+    "uf": "RR",
+    "nome": "Roraima",
+    "sigla": "ALERR",
+    "vagas": 24,
+    "portal": "https://al.rr.leg.br"
+  }
+]

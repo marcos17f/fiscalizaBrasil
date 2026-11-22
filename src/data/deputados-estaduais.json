@@ -1,0 +1,5391 @@
+{
+  "SP": [
+    {
+      "nome": "Agente Federal Danilo Balas",
+      "partido": "PL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Alex de Madureira",
+      "partido": "PL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Altair Moraes",
+      "partido": "REPUBLICANOS",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Ana Carolina Serra",
+      "partido": "CIDADANIA",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Ana Perugini",
+      "partido": "PT",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Analice Fernandes",
+      "partido": "PSDB",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "André do Prado",
+      "partido": "PL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Andréa Werner",
+      "partido": "PSB",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Atila Jacomussi",
+      "partido": "UNIÃO",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Barros Munhoz",
+      "partido": "PSDB",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Beth Sahão",
+      "partido": "PT",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Bruna Furlan",
+      "partido": "PSDB",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Bruno Zambelli",
+      "partido": "PL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Caio França",
+      "partido": "PSB",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Capitão Conte Lopes",
+      "partido": "PL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Capitão Telhada",
+      "partido": "PP",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Carla Morando",
+      "partido": "PSDB",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Carlão Pignatari",
+      "partido": "PSDB",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Carlos Cezar",
+      "partido": "PL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Carlos Giannazi",
+      "partido": "PSOL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Clarice Ganem",
+      "partido": "PODE",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Dani Alonso",
+      "partido": "PL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Daniel Soares",
+      "partido": "UNIÃO",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Delegada Graciela",
+      "partido": "PL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Delegado Olim",
+      "partido": "PL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Donato",
+      "partido": "PT",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Dr. Eduardo Nóbrega",
+      "partido": "PODE",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Dr. Elton",
+      "partido": "PSC",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Dr. Jorge do Carmo",
+      "partido": "PT",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Ediane Maria",
+      "partido": "PSOL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Edmir Chedid",
+      "partido": "UNIÃO",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Edna Macedo",
+      "partido": "REPUBLICANOS",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Edson Giriboni",
+      "partido": "UNIÃO",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Eduardo Suplicy",
+      "partido": "PT",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Emídio de Souza",
+      "partido": "PT",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Ênio Tatto",
+      "partido": "PT",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Fabiana Barroso",
+      "partido": "PL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Felipe Franco",
+      "partido": "UNIÃO",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Gerson Pessoa",
+      "partido": "PODE",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Gil Diniz",
+      "partido": "PL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Gilmaci Santos",
+      "partido": "REPUBLICANOS",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Guilherme Cortez",
+      "partido": "PSOL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Guto Zacarias",
+      "partido": "UNIÃO",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Helinho Zanatta",
+      "partido": "PSC",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Itamar Borges",
+      "partido": "MDB",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Jorge Caruso",
+      "partido": "MDB",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Jorge Wilson",
+      "partido": "REPUBLICANOS",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Leci Brandão",
+      "partido": "PCdoB",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Leo Oliveira",
+      "partido": "MDB",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Leo Siqueira",
+      "partido": "NOVO",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Letícia Aguiar",
+      "partido": "PP",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Lucas Bove",
+      "partido": "PL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Luiz Cláudio Marcolino",
+      "partido": "PT",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Luiz Fernando",
+      "partido": "PT",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Major Mecca",
+      "partido": "PL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Márcia Lia",
+      "partido": "PT",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Márcio Nakashima",
+      "partido": "PDT",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Marcos Damásio",
+      "partido": "PL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Maria Lúcia Amary",
+      "partido": "PSDB",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Marina Helou",
+      "partido": "REDE",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Mário Maurici",
+      "partido": "PT",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Marta Costa",
+      "partido": "PSD",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Mauro Bragato",
+      "partido": "PSDB",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Milton Leite Filho",
+      "partido": "UNIÃO",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Mônica do Movimento Pretas",
+      "partido": "PSOL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Oseias de Madureira",
+      "partido": "PSD",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Paula da Bancada Feminista",
+      "partido": "PSOL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Paulo Corrêa Júnior",
+      "partido": "PSD",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Paulo Fiorilo",
+      "partido": "PT",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Paulo Mansur",
+      "partido": "PL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Professora Bebel",
+      "partido": "PT",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Rafa Zimbaldi",
+      "partido": "CIDADANIA",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Rafael Saraiva",
+      "partido": "UNIÃO",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Rafael Silva",
+      "partido": "PSD",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Reis",
+      "partido": "PT",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Ricardo França",
+      "partido": "PODE",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Ricardo Madalena",
+      "partido": "PL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Rodrigo Moraes",
+      "partido": "PL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Rogério Nogueira",
+      "partido": "PSDB",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Rogério Santos",
+      "partido": "MDB",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Rômulo Fernandes",
+      "partido": "PT",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Rui Alves",
+      "partido": "REPUBLICANOS",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Sebastião Santos",
+      "partido": "REPUBLICANOS",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Simão Pedro",
+      "partido": "PT",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Solange Freitas",
+      "partido": "UNIÃO",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Tenente Coimbra",
+      "partido": "PL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Teonilio Barba",
+      "partido": "PT",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Thainara Faria",
+      "partido": "PT",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Thiago Auricchio",
+      "partido": "PL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Tomé Abduch",
+      "partido": "REPUBLICANOS",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Valdomiro Lopes",
+      "partido": "PSB",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Valéria Bolsonaro",
+      "partido": "PL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Vinícius Camarinha",
+      "partido": "PSDB",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Vitão do Cachorrão",
+      "partido": "REPUBLICANOS",
+      "municipio": "São Paulo"
+    }
+  ],
+  "GO": [
+    {
+      "nome": "Bruno Peixoto",
+      "partido": "UNIÃO",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Lucas do Vale",
+      "partido": "MDB",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Lucas Calil",
+      "partido": "MDB",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Issy Quinan",
+      "partido": "MDB",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Amilton Filho",
+      "partido": "MDB",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Antônio Gomide",
+      "partido": "PT",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Virmondes Cruvinel",
+      "partido": "UNIÃO",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Lincoln Tejota",
+      "partido": "UNIÃO",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Henrique César",
+      "partido": "PSC",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Cairo Salim",
+      "partido": "PSD",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Vivian Naves",
+      "partido": "PP",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Jamil Calife",
+      "partido": "PP",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Paulo César Martins",
+      "partido": "PL",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Renato de Castro",
+      "partido": "UNIÃO",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Amauri Ribeiro",
+      "partido": "UNIÃO",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Major Araújo",
+      "partido": "PL",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Delegado Eduardo Prado",
+      "partido": "PL",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Charles Bento",
+      "partido": "MDB",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Wagner Neto",
+      "partido": "PRTB",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Talles Barreto",
+      "partido": "UNIÃO",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Rubens Marques",
+      "partido": "UNIÃO",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Quirino",
+      "partido": "REPUBLICANOS",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Veter Martins",
+      "partido": "PATRIOTA",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Wilde Cambão",
+      "partido": "PSD",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Lineu Olimpio",
+      "partido": "MDB",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Clécio Alves",
+      "partido": "REPUBLICANOS",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Fred Rodrigues",
+      "partido": "DC",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Gustavo Sebba",
+      "partido": "PSDB",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "André do Premium",
+      "partido": "AVANTE",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Coronel Adailton",
+      "partido": "PRTB",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Anderson Teodoro",
+      "partido": "AVANTE",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Bia de Lima",
+      "partido": "PT",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Alessandro Moreira",
+      "partido": "PP",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Dr. José Machado",
+      "partido": "PSDB",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Mauro Rubem",
+      "partido": "PT",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Gugu Nader",
+      "partido": "AGIR",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Julio Pina",
+      "partido": "PRTB",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Zeli",
+      "partido": "PRTB",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Rosângela Rezende",
+      "partido": "AGIR",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Karlos Cabral",
+      "partido": "PSB",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "Cristiano Galindo",
+      "partido": "SOLIDARIEDADE",
+      "municipio": "Goiás"
+    },
+    {
+      "nome": "George Morais",
+      "partido": "PDT",
+      "municipio": "Goiás"
+    }
+  ],
+  "AL": [
+    {
+      "nome": "Alexandre Ayres",
+      "partido": "MDB",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Cabo Bebeto",
+      "partido": "PL",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Marcelo Victor",
+      "partido": "MDB",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Flávia Cavalcante",
+      "partido": "MDB",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Cibele Moura",
+      "partido": "MDB",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Fernando Pereira",
+      "partido": "PP",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Carla Dantas",
+      "partido": "MDB",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Ricardo Nezinho",
+      "partido": "MDB",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Dr. Wanderley",
+      "partido": "MDB",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Antonio Albuquerque",
+      "partido": "REPUBLICANOS",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Fátima Canuto",
+      "partido": "MDB",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Remi Calheiros",
+      "partido": "MDB",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Bruno Toledo",
+      "partido": "MDB",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Delegado Leonam",
+      "partido": "UNIÃO",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Ronaldo Medeiros",
+      "partido": "PT",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Dudu Ronalsa",
+      "partido": "MDB",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Rose Davino",
+      "partido": "PP",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Inácio Loiola",
+      "partido": "MDB",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Francisco Tenório",
+      "partido": "PP",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Breno Albuquerque",
+      "partido": "MDB",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Gilvan Barros Filho",
+      "partido": "MDB",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Lelo Maia",
+      "partido": "UNIÃO",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Andre Silva",
+      "partido": "REPUBLICANOS",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Gabi Gonçalves",
+      "partido": "PP",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Mesaque Padilha",
+      "partido": "UNIÃO",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Marcos Barbosa",
+      "partido": "AVANTE",
+      "municipio": "Alagoas"
+    },
+    {
+      "nome": "Silvio Camelo",
+      "partido": "PV",
+      "municipio": "Alagoas"
+    }
+  ],
+  "MG": [
+    {
+      "nome": "Bruno Engler",
+      "partido": "PL",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Beatriz Cerqueira",
+      "partido": "PT",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Cassio Soares",
+      "partido": "PSD",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Antonio Carlos Arantes",
+      "partido": "PL",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Mauro Tramonte",
+      "partido": "REPUBLICANOS",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Arlen Santiago",
+      "partido": "AVANTE",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Noraldino Júnior",
+      "partido": "PSC",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Leandro Genaro",
+      "partido": "PSD",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Fábio Avelar",
+      "partido": "AVANTE",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Tadeuzinho",
+      "partido": "MDB",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Tito Torres",
+      "partido": "PSD",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Gustavo Valadares",
+      "partido": "PMN",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Ulysses Gomes",
+      "partido": "PT",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Eduardo Azevedo",
+      "partido": "PSC",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Cristiano Silveira",
+      "partido": "PT",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Gil Pereira",
+      "partido": "PSD",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Neilando Pimenta",
+      "partido": "PSB",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Dr. Jean Freire",
+      "partido": "PT",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Delegado Christiano Xavier",
+      "partido": "PSD",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Elismar Prado",
+      "partido": "PROS",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Carlos Henrique",
+      "partido": "REPUBLICANOS",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Ione Pinheiro",
+      "partido": "UNIÃO",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Mário Henrique Caixa",
+      "partido": "PV",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Raul Belém",
+      "partido": "CIDADANIA",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Sargento Rodrigues",
+      "partido": "PL",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "João Magalhães",
+      "partido": "MDB",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Doorgal Andrada",
+      "partido": "PATRIOTA",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Zé Guilherme",
+      "partido": "PP",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Duarte",
+      "partido": "PSD",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Bosco",
+      "partido": "CIDADANIA",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Dr. Paulo",
+      "partido": "PATRIOTA",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Enes Cândido",
+      "partido": "PMN",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Marquinho Lemos",
+      "partido": "PT",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Leonídio Bouças",
+      "partido": "PSDB",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Lohanna",
+      "partido": "PV",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Doutor Wilson Batista",
+      "partido": "PSD",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Leninha",
+      "partido": "PT",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Coronel Sandro",
+      "partido": "PL",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Thiago Cota",
+      "partido": "PDT",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Douglas Melo",
+      "partido": "PSD",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "João Vitor Xavier",
+      "partido": "CIDADANIA",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Betão",
+      "partido": "PT",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Charles Santos",
+      "partido": "REPUBLICANOS",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Arnaldo",
+      "partido": "UNIÃO",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Alencar da Silveira Jr.",
+      "partido": "PDT",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Rafael Martins",
+      "partido": "PSD",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Lud Falcão",
+      "partido": "PODEMOS",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Delegada Sheila",
+      "partido": "PL",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Bim da Ambulância",
+      "partido": "AVANTE",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Roberto Andrade",
+      "partido": "PATRIOTA",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Vitório Júnior",
+      "partido": "PP",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Caporezzo",
+      "partido": "PL",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Dr. Maurício",
+      "partido": "NOVO",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Zé Laviola",
+      "partido": "NOVO",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Andreia de Jesus",
+      "partido": "PT",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Macaé Evaristo",
+      "partido": "PT",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Luizinho",
+      "partido": "PT",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Professor Cleiton",
+      "partido": "PV",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Betinho Pinto Coelho",
+      "partido": "PV",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Professor Wendel Mesquita",
+      "partido": "SOLIDARIEDADE",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Nayara Rocha",
+      "partido": "PP",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Celinho Sintrocel",
+      "partido": "PCdoB",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Bella Gonçalves",
+      "partido": "PSOL",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Ricardo Campos",
+      "partido": "PT",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Gustavo Santana",
+      "partido": "PL",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Leleco Pimentel",
+      "partido": "PT",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Maria Clara Marra",
+      "partido": "DC",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Alê Portela",
+      "partido": "PL",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Grego",
+      "partido": "PMN",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Oscar Teixeira",
+      "partido": "PP",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Coronel Henrique",
+      "partido": "PL",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Adriano Alvarenga",
+      "partido": "PP",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Chiara Biondini",
+      "partido": "PP",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Lucas Lasmar",
+      "partido": "REDE",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Ana Paula Siqueira",
+      "partido": "REDE",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Marli Ribeiro",
+      "partido": "PSC",
+      "municipio": "Minas Gerais"
+    },
+    {
+      "nome": "Rodrigo Lopes",
+      "partido": "UNIÃO",
+      "municipio": "Minas Gerais"
+    }
+  ],
+  "RJ": [
+    {
+      "nome": "Marcelo Dino",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Douglas Ruas",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Renata Souza",
+      "partido": "PSOL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Rosenverg Reis",
+      "partido": "MDB",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Delegado Carlos Augusto",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Delaroli",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Thiago Gagliasso",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Renan Jordy",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Elika Takimoto",
+      "partido": "PT",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Giselle Monteiro",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Danniel Librelon",
+      "partido": "REPUBLICANOS",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Jair Bittencourt",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Filippe Poubel",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Valdecy da Saúde",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Samuel Malafaia",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Flavio Serafini",
+      "partido": "PSOL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Vinicius Cozzolino",
+      "partido": "PSD",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Val Ceasa",
+      "partido": "PRD",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Bruno Dauaire",
+      "partido": "UNIÃO",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Dani Balbi",
+      "partido": "PCdoB",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Renato Machado",
+      "partido": "PT",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Tia Ju",
+      "partido": "REPUBLICANOS",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Fábio Silva",
+      "partido": "UNIÃO",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Carlos Macedo",
+      "partido": "REPUBLICANOS",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Martha Rocha",
+      "partido": "PDT",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Lucinha",
+      "partido": "PSD",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Brazão",
+      "partido": "UNIÃO",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Índia Armelau",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Verônica Lima",
+      "partido": "PT",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Carlos Minc",
+      "partido": "PSB",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Lilian Behring",
+      "partido": "PCdoB",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Renato Miranda",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Gustavo Tutuca",
+      "partido": "PP",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "André Corrêa",
+      "partido": "PSD",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Anderson Moraes",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Márcio Gualberto",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Rafael Nobre",
+      "partido": "UNIÃO",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Zeidan",
+      "partido": "PT",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Alexandre Knoploch",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Dani Monteiro",
+      "partido": "PSOL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Célia Jordão",
+      "partido": "PSD",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Claudio Caiado",
+      "partido": "PSD",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Rodrigo Amorim",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Felipinho Ravis",
+      "partido": "PP",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Marina do MST",
+      "partido": "PT",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Doutor Deodalto",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Sarah Poncio",
+      "partido": "SOLIDARIEDADE",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Pedro Ricardo",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Vitor Júnior",
+      "partido": "PDT",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Dionisio Lins",
+      "partido": "PP",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Carlinhos BNH",
+      "partido": "PP",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Guilherme Schleder",
+      "partido": "PSD",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Alan Lopes",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Rafael Picciani",
+      "partido": "UNIÃO",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Luiz Paulo",
+      "partido": "PSD",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Franciane Motta",
+      "partido": "PODE",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Filipe Soares",
+      "partido": "PSDB",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Chico Machado",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Jorge Felippe Neto",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Munir Neto",
+      "partido": "PSD",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Carla Machado",
+      "partido": "PSD",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Sérgio Fernandes",
+      "partido": "PSD",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Giovani Ratinho",
+      "partido": "SOLIDARIEDADE",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Wellington José",
+      "partido": "UNIÃO",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Julio Rocha",
+      "partido": "AGIR",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Arthur Monteiro",
+      "partido": "SOLIDARIEDADE",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Professor Josemar",
+      "partido": "PSOL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Jari Oliveira",
+      "partido": "PSB",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Yuri Moura",
+      "partido": "PSOL",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "nome": "Fred Pacheco",
+      "partido": "PL",
+      "municipio": "Rio de Janeiro"
+    }
+  ],
+  "SC": [
+    {
+      "nome": "Ana Campagnolo",
+      "partido": "PL",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Luciane Carminatti",
+      "partido": "PT",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Antídio Lunelli",
+      "partido": "MDB",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Sargento Lima",
+      "partido": "PL",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Mauro de Nadal",
+      "partido": "MDB",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Mauricio Eskudlark",
+      "partido": "PL",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Jerry Comper",
+      "partido": "MDB",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Paulinha",
+      "partido": "PODE",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Zé Milton",
+      "partido": "PP",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Mario Motta",
+      "partido": "PSD",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Jessé Lopes",
+      "partido": "PL",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Fernando Krelling",
+      "partido": "MDB",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Julio Garcia",
+      "partido": "PSD",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Marcos Vieira",
+      "partido": "PSDB",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Carlos Humberto",
+      "partido": "PL",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Altair Silva",
+      "partido": "PP",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Volnei Weber",
+      "partido": "MDB",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Ivan Naatz",
+      "partido": "PL",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Camilo Martins",
+      "partido": "PODE",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Sergio Motta",
+      "partido": "REPUBLICANOS",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Nilso Berlanda",
+      "partido": "PL",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Marquito",
+      "partido": "PSOL",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Vicente Caropreso",
+      "partido": "PSDB",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Marcius Machado",
+      "partido": "PL",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Neodi Saretta",
+      "partido": "PT",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Napoleão Bernardes",
+      "partido": "PSD",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Fabiano da Luz",
+      "partido": "PT",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Delegado Egidio Ferrari",
+      "partido": "PTB",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Tiago Zilli",
+      "partido": "MDB",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Jair Miotto",
+      "partido": "UNIÃO",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Edilson Massocco",
+      "partido": "PL",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Pepê Collaço",
+      "partido": "PP",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Rodrigo Minotto",
+      "partido": "PDT",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Repórter Sergio Guimarães",
+      "partido": "UNIÃO",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Oscar Gutz",
+      "partido": "PL",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Padre Pedro",
+      "partido": "PT",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Marcos da Rosa",
+      "partido": "UNIÃO",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Soratto",
+      "partido": "PL",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Lucas Neves",
+      "partido": "PODE",
+      "municipio": "Santa Catarina"
+    },
+    {
+      "nome": "Matheus Cadorin",
+      "partido": "NOVO",
+      "municipio": "Santa Catarina"
+    }
+  ],
+  "BA": [
+    {
+      "nome": "Ivana Bastos",
+      "partido": "PSD",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Alex da Piatã",
+      "partido": "PSD",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Adolfo Menezes",
+      "partido": "PSD",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Marcinho Oliveira",
+      "partido": "UNIÃO",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Samuel Junior",
+      "partido": "REPUBLICANOS",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Olivia Santana",
+      "partido": "PCdoB",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Rosemberg Pinto",
+      "partido": "PT",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Rogério Andrade",
+      "partido": "MDB",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Niltinho",
+      "partido": "PP",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Zé Raimundo Fontes",
+      "partido": "PT",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Nelson Leal",
+      "partido": "PP",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Eures Ribeiro",
+      "partido": "PSD",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Jurailton Santos",
+      "partido": "REPUBLICANOS",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Pedro Tavares",
+      "partido": "UNIÃO",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Katia Oliveira",
+      "partido": "UNIÃO",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Marcelinho Veiga",
+      "partido": "UNIÃO",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "José de Arimateia",
+      "partido": "REPUBLICANOS",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Osni",
+      "partido": "PT",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Alan Sanches",
+      "partido": "UNIÃO",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Neusa Cadore",
+      "partido": "PT",
+      "municipio": "Bahia — suplente que assumiu em 07/03/2024"
+    },
+    {
+      "nome": "Paulo Câmara",
+      "partido": "PSDB",
+      "municipio": "Bahia — suplente que assumiu em 27/12/2024"
+    },
+    {
+      "nome": "Jusmari Oliveira",
+      "partido": "PSD",
+      "municipio": "Bahia — suplente que assumiu em 27/12/2024"
+    },
+    {
+      "nome": "Luciano Ribeiro",
+      "partido": "UNIÃO",
+      "municipio": "Bahia — suplente que assumiu em janeiro de 2026"
+    },
+    {
+      "nome": "Angelo Coronel Filho",
+      "partido": "PSD",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Sandro Régis",
+      "partido": "UNIÃO",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Tiago Correia",
+      "partido": "PSDB",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Eduardo Salles",
+      "partido": "PP",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Luciano Simões",
+      "partido": "UNIÃO",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Vitor Bonfim",
+      "partido": "PV",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Vitor Azevedo",
+      "partido": "PL",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Cafu Barreto",
+      "partido": "PSD",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Eduardo Alencar",
+      "partido": "PSD",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Junior Muniz",
+      "partido": "PT",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Marquinho Viana",
+      "partido": "PV",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Manuel Rocha",
+      "partido": "UNIÃO",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Robinho",
+      "partido": "UNIÃO",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Junior Nascimento",
+      "partido": "UNIÃO",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Jordavio Ramos",
+      "partido": "PSDB",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Bobô",
+      "partido": "PCdoB",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Soane Galvão",
+      "partido": "PSB",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Ludmilla Fiscina",
+      "partido": "PV",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Hassan de Zé Cocá",
+      "partido": "PP",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Matheus de Geraldo Júnior",
+      "partido": "MDB",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Angelo Almeida",
+      "partido": "PSB",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Robinson",
+      "partido": "PT",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Fabrício",
+      "partido": "PCdoB",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Roberto Carlos",
+      "partido": "PV",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Fatima Nunes",
+      "partido": "PT",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Pablo Roberto",
+      "partido": "PSDB",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Euclides Fernandes",
+      "partido": "PT",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Ricardo Rodrigues",
+      "partido": "PSD",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Emerson Penalva",
+      "partido": "PDT",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Felipe Duarte",
+      "partido": "PP",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Zó",
+      "partido": "PCdoB",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Maria Del Carmen",
+      "partido": "PT",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Claudia Oliveira",
+      "partido": "PSD",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Antônio Henrique Jr.",
+      "partido": "PP",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Binho Galinha",
+      "partido": "PATRIOTA",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Paulo Rangel",
+      "partido": "PT",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Hilton Coelho",
+      "partido": "PSOL",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Laerte do Vando",
+      "partido": "PSC",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Leandro de Jesus",
+      "partido": "PL",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Patrick Lopes",
+      "partido": "AVANTE",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Raimundinho da Jr",
+      "partido": "PL",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Diego Castro",
+      "partido": "PL",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Luciano Araujo",
+      "partido": "SD",
+      "municipio": "Bahia"
+    },
+    {
+      "nome": "Pancadinha",
+      "partido": "SD",
+      "municipio": "Bahia"
+    }
+  ],
+  "PR": [
+    {
+      "nome": "Alexandre Curi",
+      "partido": "PSD",
+      "municipio": "Curitiba"
+    },
+    {
+      "nome": "Marcio Nunes",
+      "partido": "PSD",
+      "municipio": "Campo Mourão"
+    },
+    {
+      "nome": "Professor Lemos",
+      "partido": "PT",
+      "municipio": "Barra de São Francisco"
+    },
+    {
+      "nome": "Traiano",
+      "partido": "PSD",
+      "municipio": "Francisco Beltrão"
+    },
+    {
+      "nome": "Tiago Amaral",
+      "partido": "PSD",
+      "municipio": "Londrina"
+    },
+    {
+      "nome": "Romanelli",
+      "partido": "PSD",
+      "municipio": "Londrina"
+    },
+    {
+      "nome": "Hussein Bakri",
+      "partido": "PSD",
+      "municipio": "União da Vitória"
+    },
+    {
+      "nome": "Requião Filho",
+      "partido": "PDT",
+      "municipio": "Curitiba"
+    },
+    {
+      "nome": "Arilson Chiorato",
+      "partido": "PT",
+      "municipio": "Mandaguaçu"
+    },
+    {
+      "nome": "Ney Leprevost",
+      "partido": "UNIÃO",
+      "municipio": "Curitiba"
+    },
+    {
+      "nome": "Secretária Márcia",
+      "partido": "PSD",
+      "municipio": "Tangará"
+    },
+    {
+      "nome": "Marcel Micheletto",
+      "partido": "PL",
+      "municipio": "Toledo"
+    },
+    {
+      "nome": "Mabel Canto",
+      "partido": "PSDB",
+      "municipio": "Clevelândia"
+    },
+    {
+      "nome": "Ricardo Arruda",
+      "partido": "PL",
+      "municipio": "São Paulo"
+    },
+    {
+      "nome": "Artagão Junior",
+      "partido": "PSD",
+      "municipio": "Ponta Grossa"
+    },
+    {
+      "nome": "Cobra Repórter",
+      "partido": "PSD",
+      "municipio": "Apucarana"
+    },
+    {
+      "nome": "Delegado Tito Barichello",
+      "partido": "UNIÃO",
+      "municipio": "Caçador"
+    },
+    {
+      "nome": "Luiz Fernando Guerra",
+      "partido": "UNIÃO",
+      "municipio": "Pato Branco"
+    },
+    {
+      "nome": "Renato Freitas",
+      "partido": "PT",
+      "municipio": "Sorocaba"
+    },
+    {
+      "nome": "Delegado Jacovós",
+      "partido": "PL",
+      "municipio": "Cianorte"
+    },
+    {
+      "nome": "Paulo Gomes da TV",
+      "partido": "PP",
+      "municipio": "Curitiba"
+    },
+    {
+      "nome": "Gilson de Souza",
+      "partido": "PL",
+      "municipio": "Curitiba"
+    },
+    {
+      "nome": "Paulo do Carmo",
+      "partido": "UNIÃO",
+      "municipio": "Maringá"
+    },
+    {
+      "nome": "Maria Victoria",
+      "partido": "PP",
+      "municipio": "Maringá"
+    },
+    {
+      "nome": "Alexandre Amaro",
+      "partido": "REPUBLICANOS",
+      "municipio": "Santo André"
+    },
+    {
+      "nome": "Ana Júlia",
+      "partido": "PT",
+      "municipio": "Curitiba"
+    },
+    {
+      "nome": "Gilberto Ribeiro",
+      "partido": "PL",
+      "municipio": "Lages"
+    },
+    {
+      "nome": "Thiago Bührer",
+      "partido": "UNIÃO",
+      "municipio": "São José dos Pinhais"
+    },
+    {
+      "nome": "Anibelli Neto",
+      "partido": "MDB",
+      "municipio": "Curitiba"
+    },
+    {
+      "nome": "Batatinha",
+      "partido": "MDB",
+      "municipio": "Nova Aurora"
+    },
+    {
+      "nome": "Luciana Rafagnin",
+      "partido": "PT",
+      "municipio": "Mariano Moro"
+    },
+    {
+      "nome": "Goura",
+      "partido": "PDT",
+      "municipio": "Curitiba"
+    },
+    {
+      "nome": "Cantora Mara Lima",
+      "partido": "REPUBLICANOS",
+      "municipio": "Francisco Beltrão"
+    },
+    {
+      "nome": "Cristina Silvestri",
+      "partido": "PSDB",
+      "municipio": "Guarapuava"
+    },
+    {
+      "nome": "Gugu Bueno",
+      "partido": "PSD",
+      "municipio": "Cascavel"
+    },
+    {
+      "nome": "Mauro Moraes",
+      "partido": "UNIÃO",
+      "municipio": "Tomazina"
+    },
+    {
+      "nome": "Douglas Fabrício",
+      "partido": "CIDADANIA",
+      "municipio": "Roncador"
+    },
+    {
+      "nome": "Marcelo Rangel",
+      "partido": "PSD",
+      "municipio": "Ponta Grossa"
+    },
+    {
+      "nome": "Flávia Francischini",
+      "partido": "UNIÃO",
+      "municipio": "Brasília"
+    },
+    {
+      "nome": "Moacyr Fadel",
+      "partido": "PSD",
+      "municipio": "Ponta Grossa"
+    },
+    {
+      "nome": "Marli Paulino",
+      "partido": "SD",
+      "municipio": "Goioerê"
+    },
+    {
+      "nome": "Alisson Wandscheer",
+      "partido": "SOLIDARIEDADE",
+      "municipio": "Curitiba"
+    },
+    {
+      "nome": "Adão Litro",
+      "partido": "PSD",
+      "municipio": "Dois Vizinhos"
+    },
+    {
+      "nome": "Tercílio Turini",
+      "partido": "PSD",
+      "municipio": "Jaú"
+    },
+    {
+      "nome": "Marcio Pacheco",
+      "partido": "REPUBLICANOS",
+      "municipio": "Boa Esperança"
+    },
+    {
+      "nome": "Dr. Antenor",
+      "partido": "PT",
+      "municipio": "Guarapuava"
+    },
+    {
+      "nome": "Soldado Adriano José",
+      "partido": "PP",
+      "municipio": "Santo Inácio"
+    },
+    {
+      "nome": "Evandro Araújo",
+      "partido": "PSD",
+      "municipio": "Altônia"
+    },
+    {
+      "nome": "Cloara Pinheiro",
+      "partido": "PSD",
+      "municipio": "Curitiba"
+    },
+    {
+      "nome": "Fabio Oliveira",
+      "partido": "PODE",
+      "municipio": "Guarapuava"
+    },
+    {
+      "nome": "Denian Couto",
+      "partido": "PODE",
+      "municipio": "Porto Alegre"
+    },
+    {
+      "nome": "Matheus Vermelho",
+      "partido": "PP",
+      "municipio": "Salto do Lontra"
+    },
+    {
+      "nome": "Samuel Dantas",
+      "partido": "SOLIDARIEDADE",
+      "municipio": "Assaí"
+    },
+    {
+      "nome": "Luís Corti",
+      "partido": "PSB",
+      "municipio": "São João"
+    }
+  ],
+  "RS": [
+    {
+      "nome": "Gustavo Victorino",
+      "partido": "REPUBLICANOS",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Luciana Genro",
+      "partido": "PSOL",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Rodrigo Lorenzoni",
+      "partido": "PL",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Silvana Covatti",
+      "partido": "PP",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Matheus Gomes",
+      "partido": "PSOL",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Sergio Peres",
+      "partido": "REPUBLICANOS",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Valdeci Oliveira",
+      "partido": "PT",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Pepe Vargas",
+      "partido": "PT",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Ernani Polo",
+      "partido": "PP",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Costella",
+      "partido": "MDB",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Adão Pretto Filho",
+      "partido": "PT",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Kelly Moraes",
+      "partido": "PL",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Dirceu Franciscon",
+      "partido": "UNIÃO",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Jeferson Fernandes",
+      "partido": "PT",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Delegado Zucco",
+      "partido": "REPUBLICANOS",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Paparico Bacchi",
+      "partido": "PL",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Guilherme Pasin",
+      "partido": "PP",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Mainardi",
+      "partido": "PT",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Bruna Rodrigues",
+      "partido": "PCdoB",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Eduardo Loureiro",
+      "partido": "PDT",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Beto Fantinel",
+      "partido": "MDB",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Professor Bonatto",
+      "partido": "PSDB",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Patrícia Alba",
+      "partido": "MDB",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Vilmar Zanchin",
+      "partido": "MDB",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Leonel Radde",
+      "partido": "PT",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Zé Nunes",
+      "partido": "PT",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Delegada Nadine",
+      "partido": "PSDB",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Felipe Camozzato",
+      "partido": "NOVO",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Joel de Igrejinha",
+      "partido": "PP",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Sofia Cavedon",
+      "partido": "PT",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Stela Farias",
+      "partido": "PT",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Miguel Rossetto",
+      "partido": "PT",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Luciano Silveira",
+      "partido": "MDB",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Laura Sito",
+      "partido": "PT",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Frederico Antunes",
+      "partido": "PP",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Elton Weber",
+      "partido": "PSB",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Eliana Bayer",
+      "partido": "REPUBLICANOS",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Edivilson Brum",
+      "partido": "MDB",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Claudio Branchieri",
+      "partido": "PODE",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Gaúcho da Geral",
+      "partido": "PSD",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Neri, o Carteiro",
+      "partido": "PSDB",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Elizandro Sabino",
+      "partido": "PTB",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Pedro Pereira",
+      "partido": "PSDB",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Marcus Vinícius",
+      "partido": "PP",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Classmann",
+      "partido": "UNIÃO",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Capitão Martim",
+      "partido": "REPUBLICANOS",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Adriana Lara",
+      "partido": "PL",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Santini",
+      "partido": "PODE",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Adolfo Brito",
+      "partido": "PP",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Dr. Thiago",
+      "partido": "UNIÃO",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Luiz Marenco",
+      "partido": "PDT",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Gerson Burmann",
+      "partido": "PDT",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Kaká D'avila",
+      "partido": "PSDB",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Claudio Tatsch",
+      "partido": "PL",
+      "municipio": "Rio Grande do Sul"
+    },
+    {
+      "nome": "Sossella",
+      "partido": "PDT",
+      "municipio": "Rio Grande do Sul"
+    }
+  ],
+  "PE": [
+    {
+      "nome": "Pastor Júnior Tércio",
+      "partido": "PP",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Coronel Alberto Feitosa",
+      "partido": "PL",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Delegada Gleide Ângelo",
+      "partido": "PP",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Eriberto Filho",
+      "partido": "PSB",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "João Paulo",
+      "partido": "PT",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Gilmar Júnior",
+      "partido": "PV",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Cléber Chaparral",
+      "partido": "UNIÃO",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Francismar Pontes",
+      "partido": "PSB",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Gustavo Gouveia",
+      "partido": "PODE",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Doriel Barros",
+      "partido": "PT",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Aglailson Victor",
+      "partido": "PSD",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Romero Sales Filho",
+      "partido": "PSD",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Luciano Duque",
+      "partido": "PODE",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Dannilo Godoy",
+      "partido": "PP",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "William Brígido",
+      "partido": "PSD",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Antônio Morais",
+      "partido": "PSD",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Claudiano Martins Filho",
+      "partido": "PP",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Simone Santana",
+      "partido": "PSB",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "France Hacker",
+      "partido": "PP",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Adalto Santos",
+      "partido": "PP",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Jeferson Timóteo",
+      "partido": "PP",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Débora Almeida",
+      "partido": "PSD",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Fabrizio Ferraz",
+      "partido": "PODE",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Mário Ricardo",
+      "partido": "REPUBLICANOS",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Joaquim Lira",
+      "partido": "PV",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Romero Albuquerque",
+      "partido": "UNIÃO",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Renato Antunes",
+      "partido": "PL",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Álvaro Porto",
+      "partido": "MDB",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Kaio Maniçoba",
+      "partido": "PP",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Jarbas Vasconcelos Filho",
+      "partido": "MDB",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Rodrigo Farias",
+      "partido": "PSB",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Waldemar Borges",
+      "partido": "PSB",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Henrique Queiroz Filho",
+      "partido": "PP",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Abimael Santos",
+      "partido": "PL",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Sileno Guedes",
+      "partido": "PSB",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Rosa Amorim",
+      "partido": "PT",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "João Paulo Costa",
+      "partido": "PCdoB",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Dani Portela",
+      "partido": "PT",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Joel da Harpa",
+      "partido": "PP",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Socorro Pimentel",
+      "partido": "PSD",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "João de Nadegi",
+      "partido": "PV",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Joãozinho Tenório",
+      "partido": "PSD",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Izaías Régis",
+      "partido": "PSD",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Nino de Enoque",
+      "partido": "PL",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Antônio Coelho",
+      "partido": "UNIÃO",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "José Patriota",
+      "partido": "PSB",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Rodrigo Novaes",
+      "partido": "PSB",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Cleiton Collins",
+      "partido": "PP",
+      "municipio": "Pernambuco"
+    },
+    {
+      "nome": "Diogo Moraes",
+      "partido": "PSB",
+      "municipio": "Pernambuco"
+    }
+  ],
+  "CE": [
+    {
+      "nome": "Evandro Leitão",
+      "partido": "PDT",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Fernando Santana",
+      "partido": "PT",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Sérgio Aguiar",
+      "partido": "PDT",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Romeu Aldigueri",
+      "partido": "PDT",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Zezinho Albuquerque",
+      "partido": "PP",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Dra. Silvana",
+      "partido": "PL",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Renato Roseno",
+      "partido": "PSOL",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Osmar Baquit",
+      "partido": "PDT",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "David Durand",
+      "partido": "REPUBLICANOS",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Guilherme Landim",
+      "partido": "PDT",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "João Jaime",
+      "partido": "PP",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Marcos Sobreira",
+      "partido": "PDT",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Jeová Mota",
+      "partido": "PDT",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Agenor Neto",
+      "partido": "MDB",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Queiroz Filho",
+      "partido": "PDT",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Danniel Oliveira",
+      "partido": "MDB",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Moisés Braz",
+      "partido": "PT",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Salmito",
+      "partido": "PDT",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Leonardo Pinheiro",
+      "partido": "PP",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Davi de Raimundão",
+      "partido": "MDB",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Lucílvio Girão",
+      "partido": "PSD",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Júlio César Filho",
+      "partido": "PT",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Fernando Hugo",
+      "partido": "PSD",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Apóstolo Luiz Henrique",
+      "partido": "REPUBLICANOS",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Carmelo Neto",
+      "partido": "PL",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Marta Gonçalves",
+      "partido": "PL",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Gabriella Aguiar",
+      "partido": "PSD",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Cláudio Pinho",
+      "partido": "PDT",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Alcides Fernandes",
+      "partido": "PL",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Antônio Henrique",
+      "partido": "PDT",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Lia Gomes",
+      "partido": "PDT",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "De Assis Diniz",
+      "partido": "PT",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Firmo Camurça",
+      "partido": "UNIÃO",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Alysson Aguiar",
+      "partido": "PCdoB",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Dr. Oscar Rodrigues",
+      "partido": "UNIÃO",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Luana Ribeiro",
+      "partido": "CIDADANIA",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Jô Farias",
+      "partido": "PT",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Juliana Lucena",
+      "partido": "PT",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Missias Dias",
+      "partido": "PT",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Sargento Reginauro",
+      "partido": "UNIÃO",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Larissa Gaspar",
+      "partido": "PT",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Felipe Mota",
+      "partido": "UNIÃO",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Emilia Pessoa",
+      "partido": "PSDB",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Lucinildo Frota",
+      "partido": "PMN",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Oriel Filho",
+      "partido": "PDT",
+      "municipio": "Ceará"
+    },
+    {
+      "nome": "Stuart Castro",
+      "partido": "AVANTE",
+      "municipio": "Ceará"
+    }
+  ],
+  "MA": [
+    {
+      "nome": "Iracema Vale",
+      "partido": "MDB",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Carlos Lula",
+      "partido": "PSB",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Othelino Neto",
+      "partido": "PSB",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Davi Brandão",
+      "partido": "MDB",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Florêncio Neto",
+      "partido": "MDB",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Solange Almeida",
+      "partido": "PL",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Fabiana Vilar",
+      "partido": "PL",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Francisco Nagib",
+      "partido": "MDB",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Mical Damasceno",
+      "partido": "PSD",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Neto Evangelista",
+      "partido": "REPUBLICANOS",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Aluizio Santos",
+      "partido": "PL",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Abigail",
+      "partido": "PL",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Daniella",
+      "partido": "MDB",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Edna Silva",
+      "partido": "PRD",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Guilherme Paz",
+      "partido": "PRD",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Fernando Braide",
+      "partido": "PSB",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Yglésio Moyses",
+      "partido": "PRD",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Ricardo Arruda",
+      "partido": "MDB",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Ariston Ribeiro",
+      "partido": "MOBILIZA",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Osmar Filho",
+      "partido": "PDT",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Andreia Rezende",
+      "partido": "MDB",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Antônio Pereira",
+      "partido": "MDB",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Arnaldo Melo",
+      "partido": "PP",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Cláudia Coutinho",
+      "partido": "PDT",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Claudio Cunha",
+      "partido": "PL",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Dra. Vivianne",
+      "partido": "PSD",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Eric Costa",
+      "partido": "PSD",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Glalbert Cutrim",
+      "partido": "PDT",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Hemetério Weba",
+      "partido": "PP",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Janaina Ramos",
+      "partido": "REPUBLICANOS",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Júlio Mendonça",
+      "partido": "PCdoB",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Júnior Cascaria",
+      "partido": "REPUBLICANOS",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Júnior França",
+      "partido": "PP",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Juscelino Marreca",
+      "partido": "PRD",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Leandro Bello",
+      "partido": "PSB",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Rafael Leitoa",
+      "partido": "PSB",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Ricardo Rios",
+      "partido": "PCdoB",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Rildo Amaral",
+      "partido": "PP",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Roberto Costa",
+      "partido": "MDB",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Rodrigo Lago",
+      "partido": "PCdoB",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Wellington do Curso",
+      "partido": "PSD",
+      "municipio": "Maranhão"
+    },
+    {
+      "nome": "Ana do Gás",
+      "partido": "REPUBLICANOS",
+      "municipio": "Maranhão"
+    }
+  ],
+  "PB": [
+    {
+      "nome": "Adriano Galdino",
+      "partido": "REPUBLICANOS",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Wallber Virgolino",
+      "partido": "PL",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Felipe Leitão",
+      "partido": "MDB",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Fábio Ramalho",
+      "partido": "MDB",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Eduardo Carneiro",
+      "partido": "PP",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Wilson Filho",
+      "partido": "REPUBLICANOS",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Michel Henrique",
+      "partido": "PP",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "João Paulo",
+      "partido": "PP",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Chico Mendes",
+      "partido": "PSB",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Tanilson Soares",
+      "partido": "PP",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Tião Gomes",
+      "partido": "REPUBLICANOS",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Júnior Araújo",
+      "partido": "PP",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Dra. Jane Panta",
+      "partido": "PP",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Márcio Roberto",
+      "partido": "REPUBLICANOS",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Francisca Motta",
+      "partido": "REPUBLICANOS",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Drª. Paula",
+      "partido": "PP",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "João Gonçalves",
+      "partido": "PP",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Danielle do Vale",
+      "partido": "REPUBLICANOS",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Caio Roberto",
+      "partido": "MDB",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Galego de Sousa",
+      "partido": "PP",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Dr. Taciano Diniz",
+      "partido": "UNIÃO",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Jutay Meneses",
+      "partido": "REPUBLICANOS",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Camila Toscano",
+      "partido": "MDB",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Cida Ramos",
+      "partido": "PT",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Hervázio Bezerra",
+      "partido": "MDB",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Branco Mendes",
+      "partido": "REPUBLICANOS",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Chió",
+      "partido": "PV",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "George Morais",
+      "partido": "PL",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Anderson Monteiro",
+      "partido": "PV",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Inácio Falcão",
+      "partido": "PCdoB",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Dr. Romualdo",
+      "partido": "PCdoB",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Tovar Lima",
+      "partido": "MDB",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Dr. Eduardo Brito",
+      "partido": "SOLIDARIEDADE",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Luciano Cartaxo",
+      "partido": "REPUBLICANOS",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Gilbertinho",
+      "partido": "UNIÃO",
+      "municipio": "Paraíba"
+    },
+    {
+      "nome": "Sargento Neto",
+      "partido": "PL",
+      "municipio": "Paraíba"
+    }
+  ],
+  "ES": [
+    {
+      "nome": "Sérgio Meneguelli",
+      "partido": "REPUBLICANOS",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Capitão Assumção",
+      "partido": "PL",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "João Coser",
+      "partido": "PT",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Camila Valadão",
+      "partido": "PSOL",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Marcelo Santos",
+      "partido": "PODE",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Iriny Lopes",
+      "partido": "PT",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Tyago Hoffmann",
+      "partido": "PSB",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Dr. Bruno Resende",
+      "partido": "UNIÃO",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Lucas Polese",
+      "partido": "PL",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Vandinho Leite",
+      "partido": "PSDB",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Lucas Scaramussa",
+      "partido": "PODE",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Raquel Lessa",
+      "partido": "PP",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Denninho Silva",
+      "partido": "UNIÃO",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Janete de Sá",
+      "partido": "PSB",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Danilo Bahiense",
+      "partido": "PL",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Pablo Muribeca",
+      "partido": "PATRIOTA",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Adilson Espindula",
+      "partido": "PDT",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Theodorico Ferraço",
+      "partido": "PP",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Hudson Leal",
+      "partido": "REPUBLICANOS",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Mazinho dos Anjos",
+      "partido": "PSDB",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Alexandre Xambinho",
+      "partido": "PSC",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "José Esmeraldo",
+      "partido": "PDT",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Dary Pagung",
+      "partido": "PSB",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Fabrício Gandini",
+      "partido": "CIDADANIA",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Callegari",
+      "partido": "PL",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Zé Preto",
+      "partido": "PL",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Alcântaro",
+      "partido": "REPUBLICANOS",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Allan Ferreira",
+      "partido": "PODE",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Bispo Alves",
+      "partido": "REPUBLICANOS",
+      "municipio": "Espírito Santo"
+    },
+    {
+      "nome": "Coronel Weliton",
+      "partido": "PTB",
+      "municipio": "Espírito Santo"
+    }
+  ],
+  "PA": [
+    {
+      "nome": "Chamonzinho",
+      "partido": "MDB",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Iran Lima",
+      "partido": "MDB",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Cilene Couto",
+      "partido": "PSDB",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Chicão",
+      "partido": "MDB",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Rogério Barra",
+      "partido": "PL",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Erick Monteiro",
+      "partido": "PSDB",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Adriano Coelho",
+      "partido": "PDT",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Gustavo Sefer",
+      "partido": "PSD",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Igor Normando",
+      "partido": "MDB",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Dirceu Ten Caten",
+      "partido": "PT",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Braz",
+      "partido": "PDT",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Luth Rebelo",
+      "partido": "PP",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Zeca Pirão",
+      "partido": "MDB",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Ronie Silva",
+      "partido": "MDB",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Paula Titan",
+      "partido": "MDB",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Fábio Freitas",
+      "partido": "REPUBLICANOS",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Angelo Ferrari",
+      "partido": "MDB",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Carlos Vinicios",
+      "partido": "MDB",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Martinho Carmona",
+      "partido": "MDB",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Antônio Tonheiro",
+      "partido": "PP",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Ana Cunha",
+      "partido": "PSDB",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Diana Belo",
+      "partido": "MDB",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Dr. Wanderlan",
+      "partido": "MDB",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Eraldo Pimenta",
+      "partido": "MDB",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Thiago Araújo",
+      "partido": "REPUBLICANOS",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Bob Fllay",
+      "partido": "PRD",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Victor Dias",
+      "partido": "UNIÃO",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Andreia Xarão",
+      "partido": "MDB",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Nilton Neves",
+      "partido": "PSD",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Lu Ogawa",
+      "partido": "PP",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Elias Santiago",
+      "partido": "PT",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Maria do Carmo",
+      "partido": "PT",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Wescley Tomaz",
+      "partido": "AVANTE",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Josué Paiva",
+      "partido": "REPUBLICANOS",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Fábio Filgueiras",
+      "partido": "PSB",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Bordalo",
+      "partido": "PT",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Toni Cunha",
+      "partido": "PL",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Lívia Duarte",
+      "partido": "PSOL",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Renato Oliveira",
+      "partido": "MDB",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Aveilton Souza",
+      "partido": "PSD",
+      "municipio": "Pará"
+    },
+    {
+      "nome": "Coronel Neil",
+      "partido": "PL",
+      "municipio": "Pará"
+    }
+  ],
+  "MT": [
+    {
+      "nome": "Janaína Riva",
+      "partido": "MDB",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Max Russi",
+      "partido": "PSB",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Eduardo Botelho",
+      "partido": "UNIÃO",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Nininho",
+      "partido": "PSD",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Lúdio Cabral",
+      "partido": "PT",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Gilberto Cattani",
+      "partido": "PL",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Dilmar Dal Bosco",
+      "partido": "UNIÃO",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Sebastião Rezende",
+      "partido": "UNIÃO",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Júlio Campos",
+      "partido": "UNIÃO",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Thiago Silva",
+      "partido": "MDB",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Faissal Calil",
+      "partido": "CIDADANIA",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Fabinho",
+      "partido": "PSB",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Valdir Barranco",
+      "partido": "PT",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Carlos Avalone",
+      "partido": "PSDB",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Beto Dois a Um",
+      "partido": "PSB",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Cláudio Ferreira",
+      "partido": "PTB",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Diego Guimarães",
+      "partido": "REPUBLICANOS",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Dr. Eugênio",
+      "partido": "PSB",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Valmir Moretto",
+      "partido": "REPUBLICANOS",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Dr. João",
+      "partido": "MDB",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Paulo Araujo",
+      "partido": "PP",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Wilson Santos",
+      "partido": "PSD",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Elizeu Nascimento",
+      "partido": "PL",
+      "municipio": "Mato Grosso"
+    },
+    {
+      "nome": "Juca do Guaraná",
+      "partido": "MDB",
+      "municipio": "Mato Grosso"
+    }
+  ],
+  "MS": [
+    {
+      "nome": "Mara Caseiro",
+      "partido": "PSDB",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Paulo Corrêa",
+      "partido": "PSDB",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Zeca do PT",
+      "partido": "PT",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Jamilson Name",
+      "partido": "PSDB",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Zé Teixeira",
+      "partido": "PSDB",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Lídio Lopes",
+      "partido": "PATRIOTA",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Caravina",
+      "partido": "PSDB",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Coronel David",
+      "partido": "PL",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Pedro Kemp",
+      "partido": "PT",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Lucas de Lima",
+      "partido": "PDT",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Junior Mochi",
+      "partido": "MDB",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "João Henrique Catan",
+      "partido": "PL",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Gerson Claro",
+      "partido": "PP",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Londres Machado",
+      "partido": "PP",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Antônio Vaz",
+      "partido": "REPUBLICANOS",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Rafael Tavares",
+      "partido": "PRTB",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Renato Câmara",
+      "partido": "MDB",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Amarildo Cruz",
+      "partido": "PT",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Gleice Jane",
+      "partido": "PT",
+      "municipio": "Dourados — suplente que assumiu em 11/04/2023"
+    },
+    {
+      "nome": "Paulo Duarte",
+      "partido": "PSB",
+      "municipio": "Campo Grande — suplente que assumiu em 05/03/2024"
+    },
+    {
+      "nome": "João César Mattogrosso",
+      "partido": "PSDB",
+      "municipio": "Campo Grande — suplente que assumiu em 26/05/2026"
+    },
+    {
+      "nome": "Neno Razuk",
+      "partido": "PL",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Marcio Fernandes",
+      "partido": "MDB",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Pedrossian Neto",
+      "partido": "PSD",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Lia Nogueira",
+      "partido": "PSDB",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Roberto Hashioka",
+      "partido": "UNIÃO",
+      "municipio": "Mato Grosso do Sul"
+    },
+    {
+      "nome": "Professor Rinaldo Modesto",
+      "partido": "PODE",
+      "municipio": "Mato Grosso do Sul"
+    }
+  ],
+  "DF": [
+    {
+      "nome": "Fábio Felix",
+      "partido": "PSOL",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Chico Vigilante",
+      "partido": "PT",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Max Maciel",
+      "partido": "PSOL",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Daniel Donizet",
+      "partido": "PL",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Martins Machado",
+      "partido": "REPUBLICANOS",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Robério Negreiros",
+      "partido": "PSD",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Jorge Vianna",
+      "partido": "PSD",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Jaqueline Silva",
+      "partido": "AGIR",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Thiago Manzoni",
+      "partido": "PL",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Eduardo Pedrosa",
+      "partido": "UNIÃO",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Joaquim Roriz Neto",
+      "partido": "PL",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Iolando",
+      "partido": "MDB",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Pastor Daniel de Castro",
+      "partido": "PP",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Hermeto",
+      "partido": "MDB",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Roosevelt Vilela",
+      "partido": "PL",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Doutora Jane",
+      "partido": "AGIR",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Rogério Morro da Cruz",
+      "partido": "PMN",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Gabriel Magno",
+      "partido": "PT",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "João Cardoso",
+      "partido": "AVANTE",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Paula Belmonte",
+      "partido": "CIDADANIA",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Ricardo Vale",
+      "partido": "PT",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Wellington Luiz",
+      "partido": "MDB",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Pepa",
+      "partido": "PP",
+      "municipio": "Distrito Federal"
+    },
+    {
+      "nome": "Dayse Amarilio",
+      "partido": "PSB",
+      "municipio": "Distrito Federal"
+    }
+  ],
+  "RN": [
+    {
+      "nome": "Adjuto Dias",
+      "partido": "MDB",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "Coronel Azevedo",
+      "partido": "PL",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "Cristiane Dantas",
+      "partido": "SOLIDARIEDADE",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "Divaneide",
+      "partido": "PT",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "Dr. Bernardo",
+      "partido": "PSDB",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "Dr. Kerginaldo",
+      "partido": "PSDB",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "Eudiane Macedo",
+      "partido": "PV",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "Ezequiel Ferreira",
+      "partido": "PSDB",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "Francisco do PT",
+      "partido": "PT",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "Galeno Torquato",
+      "partido": "PSDB",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "George Soares",
+      "partido": "PV",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "Gustavo Carvalho",
+      "partido": "PSDB",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "Hermano Morais",
+      "partido": "PV",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "Isolda Dantas",
+      "partido": "PT",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "Ivanilson Oliveira",
+      "partido": "UNIÃO",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "José Dias",
+      "partido": "PSDB",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "Kleber Rodrigues",
+      "partido": "PSDB",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "Luiz Eduardo",
+      "partido": "SOLIDARIEDADE",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "Neilton Diógenes",
+      "partido": "PL",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "Nelter Queiroz",
+      "partido": "PSDB",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "Taveira Jr",
+      "partido": "UNIÃO",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "Terezinha Maia",
+      "partido": "PL",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "Tomba Farias",
+      "partido": "PSDB",
+      "municipio": "Rio Grande do Norte"
+    },
+    {
+      "nome": "Ubaldo Fernandes",
+      "partido": "PSDB",
+      "municipio": "Rio Grande do Norte"
+    }
+  ],
+  "PI": [
+    {
+      "nome": "Georgiano Neto",
+      "partido": "MDB",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Severo Eulálio",
+      "partido": "MDB",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Thales Coelho",
+      "partido": "PP",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Pablo Santos",
+      "partido": "MDB",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Flávio Júnior",
+      "partido": "PT",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Ana Paula",
+      "partido": "MDB",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Wilson Brandão",
+      "partido": "PP",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Jannaína Marques",
+      "partido": "PT",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Limma",
+      "partido": "PT",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Felipe Sampaio",
+      "partido": "MDB",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Jeová Alencar",
+      "partido": "REPUBLICANOS",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "João Madison",
+      "partido": "MDB",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Gustavo Neiva",
+      "partido": "PP",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Firmino Paulo",
+      "partido": "PT",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Gracinha Mão Santa",
+      "partido": "PP",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Hélio Isaias",
+      "partido": "PT",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Dr. Hélio",
+      "partido": "MDB",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Fábio Xavier",
+      "partido": "PT",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Marden Menezes",
+      "partido": "PP",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Nerinho",
+      "partido": "PT",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Dr. Vinícius",
+      "partido": "PT",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Franzé Silva",
+      "partido": "PT",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Rubens Vieira",
+      "partido": "PT",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Gil Carlos",
+      "partido": "PT",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Bárbara do Firmino",
+      "partido": "PP",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Aldo Gil",
+      "partido": "PP",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Coronel Carlos Augusto",
+      "partido": "MDB",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Evaldo Gomes",
+      "partido": "SOLIDARIEDADE",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Henrique Pires",
+      "partido": "MDB",
+      "municipio": "Piauí"
+    },
+    {
+      "nome": "Oliveira Neto",
+      "partido": "PT",
+      "municipio": "Piauí"
+    }
+  ],
+  "SE": [
+    {
+      "nome": "Cristiano Cavalcante",
+      "partido": "UNIÃO",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Dra. Lidiane Lucena",
+      "partido": "REPUBLICANOS",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Jeferson Andrade",
+      "partido": "PSD",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Marcos Oliveira",
+      "partido": "PL",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Carminha",
+      "partido": "REPUBLICANOS",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Luciano Bispo",
+      "partido": "PSD",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Linda Brasil",
+      "partido": "PSOL",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Maísa Mitidieri",
+      "partido": "PSD",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Paulo Jr",
+      "partido": "PV",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Pato Maravilha",
+      "partido": "PL",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Aurea Ribeiro",
+      "partido": "REPUBLICANOS",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Adailton Martins",
+      "partido": "PSD",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Netinho Guimarães",
+      "partido": "PL",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Jorginho Araújo",
+      "partido": "PSD",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Marcelo Sobral",
+      "partido": "UNIÃO",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Kaká Santos",
+      "partido": "UNIÃO",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Chico do Correio",
+      "partido": "PT",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Georgeo Passos",
+      "partido": "CIDADANIA",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Luizão Dona Trampi",
+      "partido": "UNIÃO",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Garibalde",
+      "partido": "PDT",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Luciano Pimentel",
+      "partido": "PP",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Ibrain de Valmir",
+      "partido": "PV",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Dr. Samuel Carvalho",
+      "partido": "CIDADANIA",
+      "municipio": "Sergipe"
+    },
+    {
+      "nome": "Neto Batalha",
+      "partido": "PP",
+      "municipio": "Sergipe"
+    }
+  ],
+  "RO": [
+    {
+      "nome": "Laerte Gomes",
+      "partido": "PSD",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Ieda Chaves",
+      "partido": "UNIÃO",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Ismael Crispin",
+      "partido": "PSB",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Cirone Deiró",
+      "partido": "UNIÃO",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Ezequiel Neiva",
+      "partido": "UNIÃO",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Alex Redano",
+      "partido": "REPUBLICANOS",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Marcelo Cruz",
+      "partido": "PATRIOTA",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Dr. Luís do Hospital",
+      "partido": "MDB",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Cássio Gois",
+      "partido": "PSD",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Jean Oliveira",
+      "partido": "MDB",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Delegado Lucas Torres",
+      "partido": "PP",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Luizinho Goebel",
+      "partido": "PSC",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Affonso Candido",
+      "partido": "PL",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Jean Mendonça",
+      "partido": "PL",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Gislaine Lebrinha",
+      "partido": "UNIÃO",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Rosangela Donadon",
+      "partido": "UNIÃO",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Delegado Rodrigo Camargo",
+      "partido": "REPUBLICANOS",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Pedro Fernandes",
+      "partido": "PTB",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Alan Queiroz",
+      "partido": "PODE",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Ribeiro do Sinpol",
+      "partido": "PATRIOTA",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Cláudia de Jesus",
+      "partido": "PT",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Edevaldo Neves",
+      "partido": "PATRIOTA",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Drª. Taíssa Sousa",
+      "partido": "PSC",
+      "municipio": "Rondônia"
+    },
+    {
+      "nome": "Nim Barroso",
+      "partido": "PSD",
+      "municipio": "Rondônia"
+    }
+  ],
+  "TO": [
+    {
+      "nome": "Léo Barbosa",
+      "partido": "REPUBLICANOS",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Professora Janad Valcari",
+      "partido": "PL",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Jair Farias",
+      "partido": "UNIÃO",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Jorge Frederico",
+      "partido": "REPUBLICANOS",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Amélio Cayres",
+      "partido": "REPUBLICANOS",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Nilton Franco",
+      "partido": "REPUBLICANOS",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Cleiton Cardoso",
+      "partido": "REPUBLICANOS",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Vilmar de Oliveira",
+      "partido": "SOLIDARIEDADE",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Olyntho Neto",
+      "partido": "REPUBLICANOS",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Fabion Gomes",
+      "partido": "PL",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Vanda Monteiro",
+      "partido": "UNIÃO",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Valdemar Júnior",
+      "partido": "REPUBLICANOS",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Ivory de Lira",
+      "partido": "PCdoB",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Luciano Oliveira",
+      "partido": "PSD",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Eduardo do Dertins",
+      "partido": "CIDADANIA",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Eduardo Fortes",
+      "partido": "PSD",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Eduardo Mantoan",
+      "partido": "PSDB",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Marcus Marcelo",
+      "partido": "PL",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Professor Junior Geo",
+      "partido": "PSDB",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Claudia Lelis",
+      "partido": "PV",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Moisemar Marinho",
+      "partido": "PSB",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Wiston Gomes",
+      "partido": "PSD",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Gutierres Torquato",
+      "partido": "PDT",
+      "municipio": "Tocantins"
+    },
+    {
+      "nome": "Gipão",
+      "partido": "PL",
+      "municipio": "Tocantins"
+    }
+  ],
+  "RR": [
+    {
+      "nome": "Soldado Sampaio",
+      "partido": "REPUBLICANOS",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Joilma Teodora",
+      "partido": "PODE",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Marcos Jorge",
+      "partido": "REPUBLICANOS",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Tayla Peres",
+      "partido": "REPUBLICANOS",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Neto Loureiro",
+      "partido": "PMB",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Aurelina Medeiros",
+      "partido": "PP",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Catarina Guerra",
+      "partido": "UNIÃO",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Chico Mozart",
+      "partido": "PP",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Jorge Everton",
+      "partido": "UNIÃO",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Renato Silva",
+      "partido": "PROS",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Marcelo Cabral",
+      "partido": "CIDADANIA",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Odilon",
+      "partido": "PODE",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Idazio da Perfil",
+      "partido": "MDB",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Lucas Souza",
+      "partido": "PROS",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Coronel Chagas",
+      "partido": "PRTB",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Eder Lourinho",
+      "partido": "PSD",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Angela Águida Portella",
+      "partido": "PP",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Dr. Cláudio Cirurgião",
+      "partido": "UNIÃO",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Gabriel Picanço",
+      "partido": "REPUBLICANOS",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Marcinho Belota",
+      "partido": "PRTB",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Dr. Meton",
+      "partido": "MDB",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Rárison Barbosa",
+      "partido": "PMB",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Isamar Júnior",
+      "partido": "PSC",
+      "municipio": "Roraima"
+    },
+    {
+      "nome": "Armando Neto",
+      "partido": "PL",
+      "municipio": "Roraima"
+    }
+  ],
+  "AP": [
+    {
+      "nome": "Delegado Inácio",
+      "partido": "PDT",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Jack JK",
+      "partido": "PDT",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Zeneide Costa",
+      "partido": "PT",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Jesus Pontes",
+      "partido": "PDT",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Alliny Serrão",
+      "partido": "UNIÃO",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Junior Favacho",
+      "partido": "MDB",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Kaká Barbosa",
+      "partido": "PL",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Liliane Abreu",
+      "partido": "PV",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Diogo Senior",
+      "partido": "MDB",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Pastor Oliveira",
+      "partido": "PDT",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Roberto",
+      "partido": "UNIÃO",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Aldilene Souza",
+      "partido": "PDT",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Hildegard",
+      "partido": "REPUBLICANOS",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Jory Oeiras",
+      "partido": "REPUBLICANOS",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Paulo Nogueira",
+      "partido": "PT",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Telma Nery",
+      "partido": "REPUBLICANOS",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Jaime Perez",
+      "partido": "REPUBLICANOS",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Dr. Victor Amoras",
+      "partido": "REDE",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Edna Auzier",
+      "partido": "PV",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Dayse Marques",
+      "partido": "REDE",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Lorran Barreto",
+      "partido": "PSD",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Fabrício Furlan",
+      "partido": "REDE",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "Rayfran Beirão",
+      "partido": "REPUBLICANOS",
+      "municipio": "Amapá"
+    },
+    {
+      "nome": "R. Nelson",
+      "partido": "PODE",
+      "municipio": "Amapá"
+    }
+  ],
+  "AM": [
+    {
+      "nome": "Roberto Cidade",
+      "partido": "UNIÃO",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Joana Darc",
+      "partido": "UNIÃO",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Felipe Souza",
+      "partido": "PRD",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Alessandra Campelo",
+      "partido": "PODE",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Abdala Fraxe",
+      "partido": "AVANTE",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "João Luiz",
+      "partido": "REPUBLICANOS",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Dr. George Lins",
+      "partido": "UNIÃO",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Professor Sinésio",
+      "partido": "PT",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Carlinhos Bessa",
+      "partido": "PV",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Cristiano D'Ângelo",
+      "partido": "MDB",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Cabo Maciel",
+      "partido": "PL",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Daniel Almeida",
+      "partido": "AVANTE",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Mayra Dias",
+      "partido": "AVANTE",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Débora Menezes",
+      "partido": "PL",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Thiago Abrahim",
+      "partido": "UNIÃO",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Dra. Mayara",
+      "partido": "REPUBLICANOS",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Dr. Gomes",
+      "partido": "PODE",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Adjuto Afonso",
+      "partido": "UNIÃO",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Delegado Péricles",
+      "partido": "PL",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Wilker Barreto",
+      "partido": "MOBILIZA",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Mário César Filho",
+      "partido": "UNIÃO",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Comandante Dan",
+      "partido": "PODE",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Rozenha",
+      "partido": "PMB",
+      "municipio": "Amazonas"
+    },
+    {
+      "nome": "Wanderley Monteiro",
+      "partido": "AVANTE",
+      "municipio": "Amazonas"
+    }
+  ],
+  "AC": [
+    {
+      "nome": "Nicolau Júnior",
+      "partido": "PP",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Maria Antônia",
+      "partido": "PP",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Emerson Jarude",
+      "partido": "MDB",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Manoel Moraes",
+      "partido": "PP",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Gilberto Lira",
+      "partido": "UNIÃO",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Clodoaldo Rodrigues",
+      "partido": "REPUBLICANOS",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "André Vale",
+      "partido": "PODE",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Pedro Longo",
+      "partido": "PDT",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Tchê",
+      "partido": "PDT",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Fagner Calegário",
+      "partido": "PODE",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Luiz Gonzaga",
+      "partido": "PSDB",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Whendy Lima",
+      "partido": "UNIÃO",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Tadeu Hassem",
+      "partido": "REPUBLICANOS",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Adailton Cruz",
+      "partido": "PSB",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Michelle Melo",
+      "partido": "PDT",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Edvaldo Magalhães",
+      "partido": "PCdoB",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Afonso Fernandes",
+      "partido": "PL",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Antônia Sales",
+      "partido": "MDB",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Tanizio Sá",
+      "partido": "MDB",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Chico Viga",
+      "partido": "PDT",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Gene Diniz",
+      "partido": "REPUBLICANOS",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Arlenilson Cunha",
+      "partido": "PL",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Pablo Bregense",
+      "partido": "PSD",
+      "municipio": "Acre"
+    },
+    {
+      "nome": "Eduardo Ribeiro",
+      "partido": "PSD",
+      "municipio": "Acre"
+    }
+  ]
+}
