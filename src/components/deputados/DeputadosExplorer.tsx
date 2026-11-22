@@ -7,7 +7,6 @@ import {
   ExternalLink,
   Landmark,
   Loader2,
-  Mail,
   MapPin,
   Receipt,
   Search,
@@ -15,13 +14,13 @@ import {
   X,
 } from "lucide-react";
 import { ABAS_DEPUTADO_ESTADUAL } from "@/lib/abas";
-import { formatarMoeda } from "@/lib/formatters";
 import { getEstadoPorUf, normalizarTexto, REGIOES } from "@/lib/ufs";
 import { PerfilAbas } from "@/components/ui/PerfilAbas";
 import { PainelEleitoralTSE } from "@/components/dados/PainelEleitoralTSE";
 import { PainelFiscalizacaoOficial } from "@/components/dados/PainelFiscalizacaoOficial";
 import { PainelTrajetoriaTSE } from "@/components/dados/PainelTrajetoriaTSE";
 import type {
+  AlespDetalhe,
   Assembleia,
   DadosAlmgDeputado,
   DeputadoEstadual,
@@ -39,16 +38,17 @@ type ApiBancadaResponse = {
   deputados: DeputadoEstadual[];
 };
 
-type ApiPerfilDeputadoResponse = {
+type ApiPerfilDepEstadual = {
   uf: string;
-  nomeConsultado: string;
   tse: PerfilTSE | null;
   almg: DadosAlmgDeputado | null;
-  fontesConsultadas: {
-    tse: boolean;
-    almg: boolean;
-  };
+  alesp: AlespDetalhe | null;
 };
+
+const brl = new Intl.NumberFormat("pt-BR", {
+  style: "currency",
+  currency: "BRL",
+});
 
 export function DeputadosExplorer({ assembleias }: Props) {
   const [regiao, setRegiao] = useState<Regiao | "Todas">("Todas");
@@ -65,9 +65,8 @@ export function DeputadosExplorer({ assembleias }: Props) {
   const [partidoDep, setPartidoDep] = useState("Todos");
   const [depSelecionado, setDepSelecionado] =
     useState<DeputadoEstadual | null>(null);
-
-  const [perfilOficial, setPerfilOficial] =
-    useState<ApiPerfilDeputadoResponse | null>(null);
+  const [perfilDetalhe, setPerfilDetalhe] =
+    useState<ApiPerfilDepEstadual | null>(null);
   const [carregandoPerfil, setCarregandoPerfil] = useState(false);
 
   const assembleiasFiltradas = useMemo(() => {
@@ -85,6 +84,7 @@ export function DeputadosExplorer({ assembleias }: Props) {
     setBuscaDep("");
     setPartidoDep("Todos");
     setDepSelecionado(null);
+    setPerfilDetalhe(null);
     setCarregando(true);
     setErro(null);
 
@@ -107,43 +107,29 @@ export function DeputadosExplorer({ assembleias }: Props) {
     }
   };
 
-  const partidosBancada = useMemo(() => {
-    const set = new Set(deputados.map((d) => d.partido).filter(Boolean));
-    return Array.from(set).sort((a, b) => a.localeCompare(b, "pt-BR"));
-  }, [deputados]);
-
-  const deputadosFiltrados = useMemo(() => {
-    const termo = normalizarTexto(buscaDep);
-    return deputados.filter((d) => {
-      if (partidoDep !== "Todos" && d.partido !== partidoDep) return false;
-      if (!termo) return true;
-      return normalizarTexto(
-        `${d.nome} ${d.partido} ${d.municipio ?? ""}`
-      ).includes(termo);
-    });
-  }, [deputados, buscaDep, partidoDep]);
-
   useEffect(() => {
     if (!depSelecionado || !assembleiaAtiva) {
-      setPerfilOficial(null);
+      setPerfilDetalhe(null);
       setCarregandoPerfil(false);
       return;
     }
 
     const controller = new AbortController();
     setCarregandoPerfil(true);
-    setPerfilOficial(null);
+    setPerfilDetalhe(null);
 
     fetch(
-      `/api/dep-estaduais/${encodeURIComponent(assembleiaAtiva.uf)}/perfil?nome=${encodeURIComponent(depSelecionado.nome)}`,
+      `/api/dep-estaduais/${assembleiaAtiva.uf}/perfil?nome=${encodeURIComponent(
+        depSelecionado.nome
+      )}`,
       { signal: controller.signal }
     )
       .then((res) => (res.ok ? res.json() : null))
-      .then((json: ApiPerfilDeputadoResponse | null) => {
-        if (!controller.signal.aborted) setPerfilOficial(json);
+      .then((data: ApiPerfilDepEstadual | null) => {
+        if (!controller.signal.aborted) setPerfilDetalhe(data);
       })
       .catch(() => {
-        if (!controller.signal.aborted) setPerfilOficial(null);
+        if (!controller.signal.aborted) setPerfilDetalhe(null);
       })
       .finally(() => {
         if (!controller.signal.aborted) setCarregandoPerfil(false);
@@ -160,7 +146,22 @@ export function DeputadosExplorer({ assembleias }: Props) {
     };
   }, [depSelecionado, assembleiaAtiva]);
 
-  // Tela 1: Seleção da Assembleia (27 UFs)
+  const partidosBancada = useMemo(() => {
+    const set = new Set(deputados.map((d) => d.partido).filter(Boolean));
+    return Array.from(set).sort((a, b) => a.localeCompare(b, "pt-BR"));
+  }, [deputados]);
+
+  const deputadosFiltrados = useMemo(() => {
+    const termo = normalizarTexto(buscaDep);
+    return deputados.filter((d) => {
+      if (partidoDep !== "Todos" && d.partido !== partidoDep) return false;
+      if (!termo) return true;
+      return normalizarTexto(
+        `${d.nome} ${d.partido} ${d.municipio ?? ""}`
+      ).includes(termo);
+    });
+  }, [deputados, buscaDep, partidoDep]);
+
   if (!assembleiaAtiva) {
     return (
       <div className="space-y-5">
@@ -176,7 +177,7 @@ export function DeputadosExplorer({ assembleias }: Props) {
                 type="search"
                 value={buscaUf}
                 onChange={(e) => setBuscaUf(e.target.value)}
-                placeholder="Filtrar estado ou sigla da Assembleia (ex: SP, MG, ALESP, ALMG)..."
+                placeholder="Filtrar estado ou sigla da Assembleia (ex: SP, ALESP, Minas)..."
                 className="w-full rounded-xl border border-slate-300 bg-white py-2.5 pr-4 pl-10 text-sm text-slate-900 placeholder:text-slate-400 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 focus:outline-none"
               />
             </div>
@@ -203,7 +204,6 @@ export function DeputadosExplorer({ assembleias }: Props) {
         <div className="grid gap-3.5 sm:grid-cols-2 lg:grid-cols-3">
           {assembleiasFiltradas.map((a) => {
             const info = getEstadoPorUf(a.uf);
-            const temApiAssembleia = a.uf === "MG";
             return (
               <button
                 key={a.uf}
@@ -229,9 +229,14 @@ export function DeputadosExplorer({ assembleias }: Props) {
                     <span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-bold text-slate-700">
                       {a.vagas} vagas
                     </span>
-                    {temApiAssembleia && (
+                    {a.uf === "SP" && (
                       <span className="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-800">
-                        API ALMG ao vivo
+                        TSE + Folha ALESP
+                      </span>
+                    )}
+                    {a.uf === "MG" && (
+                      <span className="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-800">
+                        TSE + Verba ALMG
                       </span>
                     )}
                   </div>
@@ -251,7 +256,6 @@ export function DeputadosExplorer({ assembleias }: Props) {
 
   const estadoAtivo = getEstadoPorUf(assembleiaAtiva.uf);
 
-  // Tela 2: Bancada do estado selecionado
   return (
     <div className="space-y-5">
       <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-xs sm:p-5">
@@ -270,10 +274,9 @@ export function DeputadosExplorer({ assembleias }: Props) {
             </h2>
             <p className="text-xs text-brand-muted">
               {assembleiaAtiva.vagas} cadeiras oficiais • {deputados.length}{" "}
-              parlamentares listados
-              {assembleiaAtiva.uf === "MG"
-                ? " • Verbas indenizatórias ALMG ao vivo"
-                : " • Dados eleitorais TSE ao vivo"}
+              parlamentares listados • Integração TSE ao vivo
+              {assembleiaAtiva.uf === "SP" ? " + Folha/Bio ALESP" : ""}
+              {assembleiaAtiva.uf === "MG" ? " + Verba ALMG ao vivo" : ""}
             </p>
           </div>
         </div>
@@ -289,7 +292,6 @@ export function DeputadosExplorer({ assembleias }: Props) {
         </a>
       </div>
 
-      {/* Filtros da bancada */}
       <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-xs">
         <div className="grid gap-3 md:grid-cols-12">
           <div className="relative md:col-span-6">
@@ -334,7 +336,6 @@ export function DeputadosExplorer({ assembleias }: Props) {
         </div>
       </div>
 
-      {/* Estado de carregamento / erro / lista */}
       {carregando ? (
         <div className="flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white p-12 text-sm font-semibold text-brand-muted">
           <Loader2 className="h-5 w-5 animate-spin text-brand-blue" />
@@ -398,8 +399,7 @@ export function DeputadosExplorer({ assembleias }: Props) {
                   onClick={() => setDepSelecionado(dep)}
                   className="mt-4 w-full rounded-xl bg-slate-900 py-2 text-xs font-bold text-white transition-colors hover:bg-brand-blue"
                 >
-                  Abrir Perfil (TSE
-                  {assembleiaAtiva.uf === "MG" ? " + ALMG" : ""})
+                  Abrir Perfil (8 abas + TSE)
                 </button>
               </article>
             );
@@ -407,7 +407,6 @@ export function DeputadosExplorer({ assembleias }: Props) {
         </div>
       )}
 
-      {/* Modal do Deputado */}
       {depSelecionado && (
         <div
           role="dialog"
@@ -431,41 +430,43 @@ export function DeputadosExplorer({ assembleias }: Props) {
               </button>
 
               <div className="flex flex-col gap-4 pr-12 sm:flex-row sm:items-center">
-                {perfilOficial?.tse?.fotoUrl && (
+                {perfilDetalhe?.tse?.fotoUrl && (
                   <img
-                    src={perfilOficial.tse.fotoUrl}
-                    alt={`Foto oficial de ${depSelecionado.nome}`}
-                    className="h-18 w-18 shrink-0 rounded-2xl border-2 border-white/30 object-cover object-top"
+                    src={perfilDetalhe.tse.fotoUrl}
+                    alt={depSelecionado.nome}
+                    className="h-20 w-20 shrink-0 rounded-2xl border-2 border-white/30 object-cover object-top"
                   />
                 )}
                 <div>
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="inline-block rounded-md bg-emerald-500/20 px-2.5 py-0.5 text-xs font-bold text-emerald-200">
+                    <span className="rounded-md bg-emerald-500/20 px-2.5 py-0.5 text-xs font-bold text-emerald-200">
                       {depSelecionado.partido} • {assembleiaAtiva.uf} (
                       {assembleiaAtiva.sigla})
                     </span>
                     {carregandoPerfil ? (
-                      <span className="inline-flex items-center gap-1 rounded-md bg-white/15 px-2 py-0.5 text-[11px] font-medium text-slate-100">
+                      <span className="inline-flex items-center gap-1 rounded-md bg-white/15 px-2 py-0.5 text-[11px]">
                         <Loader2 className="h-3 w-3 animate-spin" />
                         Consultando fontes oficiais...
                       </span>
                     ) : (
-                      perfilOficial && (
-                        <>
-                          {perfilOficial.fontesConsultadas.tse && (
-                            <span className="inline-flex items-center gap-1 rounded-md bg-emerald-500/25 px-2 py-0.5 text-[11px] font-bold text-emerald-100">
-                              <CheckCircle2 className="h-3 w-3" />
-                              TSE ao vivo
-                            </span>
-                          )}
-                          {perfilOficial.fontesConsultadas.almg && (
-                            <span className="inline-flex items-center gap-1 rounded-md bg-sky-500/25 px-2 py-0.5 text-[11px] font-bold text-sky-100">
-                              <CheckCircle2 className="h-3 w-3" />
-                              ALMG Verbas ao vivo
-                            </span>
-                          )}
-                        </>
-                      )
+                      <>
+                        {perfilDetalhe?.tse && (
+                          <span className="inline-flex items-center gap-1 rounded-md bg-emerald-500/25 px-2 py-0.5 text-[11px] font-bold text-emerald-100">
+                            <CheckCircle2 className="h-3 w-3" />
+                            TSE ao vivo
+                          </span>
+                        )}
+                        {perfilDetalhe?.alesp && (
+                          <span className="inline-flex items-center gap-1 rounded-md bg-blue-400/25 px-2 py-0.5 text-[11px] font-bold text-blue-100">
+                            ALESP Folha/Bio
+                          </span>
+                        )}
+                        {perfilDetalhe?.almg && (
+                          <span className="inline-flex items-center gap-1 rounded-md bg-blue-400/25 px-2 py-0.5 text-[11px] font-bold text-blue-100">
+                            ALMG Verbas ao vivo
+                          </span>
+                        )}
+                      </>
                     )}
                   </div>
                   <h2
@@ -475,9 +476,8 @@ export function DeputadosExplorer({ assembleias }: Props) {
                     {depSelecionado.nome}
                   </h2>
                   <p className="mt-1 text-sm text-slate-200">
-                    Deputado(a){" "}
-                    {assembleiaAtiva.uf === "DF" ? "Distrital" : "Estadual"} •{" "}
-                    {assembleiaAtiva.nome} • Mandato 2023–2027
+                    Deputado(a) Estadual • {assembleiaAtiva.nome} • Mandato
+                    2023–2027
                   </p>
                 </div>
               </div>
@@ -488,6 +488,10 @@ export function DeputadosExplorer({ assembleias }: Props) {
                 abas={ABAS_DEPUTADO_ESTADUAL}
                 entidadeNome={`${depSelecionado.nome} (${assembleiaAtiva.sigla})`}
                 renderConteudoAba={(aba) => {
+                  const alesp = perfilDetalhe?.alesp;
+                  const almg = perfilDetalhe?.almg;
+                  const tse = perfilDetalhe?.tse;
+
                   if (aba.id === "trajetoria") {
                     return (
                       <div className="space-y-4">
@@ -500,10 +504,7 @@ export function DeputadosExplorer({ assembleias }: Props) {
                               {assembleiaAtiva.sigla} — {assembleiaAtiva.nome}
                             </p>
                             <a
-                              href={
-                                perfilOficial?.almg?.portalUrl ??
-                                assembleiaAtiva.portal
-                              }
+                              href={almg?.portalUrl ?? assembleiaAtiva.portal}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="mt-1 inline-flex items-center gap-1 text-xs font-semibold text-brand-blue hover:underline"
@@ -514,120 +515,34 @@ export function DeputadosExplorer({ assembleias }: Props) {
                           </div>
                           <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
                             <p className="text-xs font-semibold text-brand-muted uppercase">
-                              Partido & Gabinete
+                              Partido & Base
                             </p>
                             <p className="mt-1 font-bold text-brand-navy">
                               {depSelecionado.partido}
-                              {perfilOficial?.almg?.situacao
-                                ? ` • ${perfilOficial.almg.situacao}`
-                                : ""}
                             </p>
-                            {perfilOficial?.almg?.email ? (
-                              <p className="mt-0.5 flex items-center gap-1 text-xs text-slate-600">
-                                <Mail className="h-3 w-3 text-slate-400" />
-                                {perfilOficial.almg.email}
-                              </p>
-                            ) : (
-                              <p className="mt-0.5 text-xs text-slate-600">
-                                Município de referência:{" "}
-                                {depSelecionado.municipio ||
-                                  assembleiaAtiva.nome}
-                              </p>
-                            )}
+                            <p className="mt-0.5 text-xs text-slate-600">
+                              {almg?.email ||
+                                depSelecionado.municipio ||
+                                assembleiaAtiva.nome}
+                            </p>
                           </div>
                         </div>
+
+                        {alesp?.biografia && (
+                          <div className="rounded-xl border border-slate-200 bg-white p-4">
+                            <p className="text-xs font-bold tracking-wide text-brand-emerald uppercase">
+                              Biografia Oficial (ALESP)
+                            </p>
+                            <p className="mt-2 text-sm leading-relaxed text-slate-700">
+                              {alesp.biografia}
+                            </p>
+                          </div>
+                        )}
 
                         <PainelTrajetoriaTSE
-                          perfil={perfilOficial?.tse ?? null}
+                          perfil={tse ?? null}
                           carregando={carregandoPerfil}
                         />
-                      </div>
-                    );
-                  }
-
-                  if (aba.id === "custos") {
-                    if (carregandoPerfil && assembleiaAtiva.uf === "MG") {
-                      return (
-                        <div className="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 p-4 text-xs font-medium text-brand-muted">
-                          <Loader2 className="h-4 w-4 animate-spin text-brand-blue" />
-                          Consultando verbas indenizatórias na API oficial da
-                          ALMG...
-                        </div>
-                      );
-                    }
-
-                    const almg = perfilOficial?.almg;
-                    if (almg && almg.itensVerba.length > 0) {
-                      const maxVal = Math.max(
-                        ...almg.itensVerba.map((i) => i.valor),
-                        1
-                      );
-                      return (
-                        <div className="space-y-4">
-                          <div className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-emerald-200 bg-emerald-50/70 px-4 py-2.5 text-xs text-emerald-950">
-                            <span className="font-semibold">
-                              Fonte ao vivo: API Dados Abertos ALMG • Verba
-                              Indenizatória ({almg.mesReferenciaVerba})
-                            </span>
-                            <span className="font-extrabold text-brand-navy">
-                              Total no mês: {formatarMoeda(almg.totalVerbaMes)}
-                            </span>
-                          </div>
-
-                          <div className="rounded-xl border border-slate-200 bg-white p-4">
-                            <h4 className="mb-3 flex items-center gap-1.5 text-sm font-bold text-brand-navy">
-                              <Receipt className="h-4 w-4 text-brand-blue" />
-                              Despesas reembolsadas por categoria (
-                              {almg.mesReferenciaVerba})
-                            </h4>
-                            <div className="space-y-2.5">
-                              {almg.itensVerba.map((item) => (
-                                <div key={item.categoria} className="space-y-1">
-                                  <div className="flex items-center justify-between gap-2 text-xs">
-                                    <span className="font-medium text-slate-800">
-                                      {item.categoria}
-                                    </span>
-                                    <span className="font-bold text-brand-navy">
-                                      {formatarMoeda(item.valor)}
-                                    </span>
-                                  </div>
-                                  <div className="h-2 w-full overflow-hidden rounded-full bg-slate-100">
-                                    <div
-                                      className="h-full rounded-full bg-brand-emerald"
-                                      style={{
-                                        width: `${Math.max(4, Math.round((item.valor / maxVal) * 100))}%`,
-                                      }}
-                                    />
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      );
-                    }
-
-                    return (
-                      <div className="rounded-xl border border-slate-200 bg-white p-4 text-xs text-slate-700">
-                        <p className="font-bold text-brand-navy">
-                          Integração de despesas legislativas por Assembleia
-                        </p>
-                        <p className="mt-1 leading-relaxed">
-                          Diferente da Câmara Federal, não existe API nacional
-                          única para verbas de gabinete das 27 Assembleias.{" "}
-                          <strong>MG (ALMG)</strong> já está conectado ao vivo
-                          neste protótipo como referência; as demais Casas
-                          exigem conectores específicos por estado.
-                        </p>
-                        <a
-                          href={assembleiaAtiva.portal}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="mt-2 inline-flex items-center gap-1 font-bold text-brand-blue hover:underline"
-                        >
-                          Consultar transparência na {assembleiaAtiva.sigla}
-                          <ExternalLink className="h-3.5 w-3.5" />
-                        </a>
                       </div>
                     );
                   }
@@ -635,24 +550,201 @@ export function DeputadosExplorer({ assembleias }: Props) {
                   if (aba.id === "eleicoes") {
                     return (
                       <PainelEleitoralTSE
-                        perfil={perfilOficial?.tse ?? null}
+                        perfil={tse ?? null}
                         carregando={carregandoPerfil}
-                        entidadeNome={`${depSelecionado.nome} (${assembleiaAtiva.uf})`}
+                        entidadeNome={`${depSelecionado.nome} (${assembleiaAtiva.sigla})`}
                       />
                     );
                   }
 
-                  if (aba.id === "controle") {
+                  if (aba.id === "custos") {
+                    if (alesp?.folhas?.length) {
+                      return (
+                        <div className="space-y-3">
+                          <p className="text-xs font-bold text-brand-navy">
+                            Folha salarial publicada pela ALESP (
+                            {alesp.folhas.length} meses conferidos)
+                          </p>
+                          <div className="max-h-96 space-y-2 overflow-y-auto pr-1">
+                            {alesp.folhas.map((f) => (
+                              <div
+                                key={f.mes}
+                                className="flex flex-col justify-between gap-2 rounded-xl border border-slate-200 bg-white p-3.5 sm:flex-row sm:items-center"
+                              >
+                                <div>
+                                  <p className="flex items-center gap-1.5 text-xs font-bold text-brand-navy">
+                                    <Receipt className="h-3.5 w-3.5 text-brand-blue" />
+                                    Mês {f.mes} — {f.nome_folha}
+                                  </p>
+                                  <p className="mt-0.5 text-xs text-slate-500">
+                                    Bruto: {brl.format(Number(f.bruto))} •
+                                    Tributos: {brl.format(Number(f.tributos))}
+                                  </p>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                  <span className="text-sm font-extrabold text-brand-emerald">
+                                    Líquido: {brl.format(Number(f.liquido))}
+                                  </span>
+                                  {f.fonte && (
+                                    <a
+                                      href={f.fonte}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="text-xs font-semibold text-brand-blue hover:underline"
+                                    >
+                                      Fonte
+                                    </a>
+                                  )}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      );
+                    }
+
+                    if (almg?.itensVerba?.length) {
+                      return (
+                        <div className="space-y-3">
+                          <div className="rounded-xl border border-emerald-200 bg-emerald-50/70 p-4">
+                            <p className="text-xs font-semibold text-emerald-900">
+                              Verba Indenizatória ALMG — Referência{" "}
+                              {almg.mesReferenciaVerba}
+                            </p>
+                            <p className="mt-1 text-xl font-extrabold text-brand-emerald">
+                              {brl.format(almg.totalVerbaMes ?? 0)}
+                            </p>
+                          </div>
+                          <div className="space-y-2">
+                            {almg.itensVerba.map((v) => (
+                              <div
+                                key={v.categoria}
+                                className="flex items-center justify-between rounded-xl border border-slate-200 bg-white p-3 text-xs"
+                              >
+                                <span className="font-semibold text-slate-800">
+                                  {v.categoria}
+                                </span>
+                                <span className="font-bold text-brand-navy">
+                                  {brl.format(v.valor)}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      );
+                    }
+                    return (
+                      <div className="rounded-xl border border-slate-200 bg-white p-4 text-xs text-slate-700">
+                        <p className="font-bold text-brand-navy">
+                          Transparência salarial e verbas de gabinete por
+                          Assembleia
+                        </p>
+                        <p className="mt-1 leading-relaxed">
+                          Cada uma das 27 Casas Legislativas publica suas folhas
+                          e verbas em portal próprio.{" "}
+                          <strong>SP (ALESP)</strong> e{" "}
+                          <strong>MG (ALMG)</strong> já estão integradas neste
+                          portal como referência; para {assembleiaAtiva.sigla},
+                          consulte diretamente o portal oficial:
+                        </p>
+                        <a
+                          href={assembleiaAtiva.portal}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-2 inline-flex items-center gap-1 font-bold text-brand-blue hover:underline"
+                        >
+                          Abrir transparência na {assembleiaAtiva.sigla}
+                          <ExternalLink className="h-3.5 w-3.5" />
+                        </a>
+                      </div>
+                    );
+                  }
+
+                  if (
+                    aba.id === "emendas" &&
+                    alesp &&
+                    alesp.totalEmendasRegistradas > 0
+                  ) {
+                    return (
+                      <div className="space-y-3">
+                        <p className="text-xs font-bold text-brand-navy">
+                          {alesp.totalEmendasRegistradas} registros de
+                          emendas/pagamentos conferidos na ALESP/Sefaz-SP
+                          (exibindo até {alesp.emendasAmostra.length} recentes)
+                        </p>
+                        <div className="max-h-96 space-y-2.5 overflow-y-auto pr-1">
+                          {alesp.emendasAmostra.map((em, i) => {
+                            const destinatario =
+                              em.beneficiario_previsto ||
+                              em.credor ||
+                              em.favorecido;
+                            const linkFonte = em.fonte_url || em.fonte;
+                            const valorNum = Number(em.valor) || 0;
+                            return (
+                              <div
+                                key={`${em.documento ?? em.codigo ?? i}-${i}`}
+                                className="rounded-xl border border-slate-200 bg-white p-3.5 text-xs"
+                              >
+                                <div className="flex flex-wrap items-center justify-between gap-2">
+                                  <span className="font-bold text-brand-navy">
+                                    Emenda:{" "}
+                                    {String(
+                                      em.codigo_emenda ?? em.codigo ?? "—"
+                                    )}{" "}
+                                    • Doc: {String(em.documento ?? "—")}
+                                  </span>
+                                  <span className="font-extrabold text-brand-emerald">
+                                    {em.valor_destinado || brl.format(valorNum)}
+                                  </span>
+                                </div>
+                                {destinatario && (
+                                  <p className="mt-1 font-semibold text-slate-800">
+                                    Destinatário: {String(destinatario)}
+                                  </p>
+                                )}
+                                {em.finalidade && (
+                                  <p className="mt-0.5 leading-relaxed text-slate-600">
+                                    Finalidade: {String(em.finalidade)}
+                                  </p>
+                                )}
+                                <div className="mt-1.5 flex flex-wrap items-center justify-between gap-2 text-[11px] text-slate-500">
+                                  <span>
+                                    Data: {String(em.data ?? "—")}
+                                    {em.credor &&
+                                    em.credor !== destinatario
+                                      ? ` • Credor: ${String(em.credor)}`
+                                      : ""}
+                                  </span>
+                                  {linkFonte &&
+                                    /^https?:\/\//i.test(String(linkFonte)) && (
+                                      <a
+                                        href={String(linkFonte)}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1 font-semibold text-brand-blue hover:underline"
+                                      >
+                                        Fonte Sefaz-SP
+                                        <ExternalLink className="h-3 w-3" />
+                                      </a>
+                                    )}
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    );
+                  }
+
+                  if (aba.id === "controle" && estadoAtivo) {
                     return (
                       <PainelFiscalizacaoOficial
                         estado={estadoAtivo}
-                        linkTse={perfilOficial?.tse?.linkOficialTse}
+                        linkTse={tse?.linkOficialTse}
                         portalExtra={{
                           titulo: `Portal Oficial da ${assembleiaAtiva.sigla}`,
                           descricao: `Projetos de lei, sessões plenárias, despesas de gabinete e ouvidoria de ${assembleiaAtiva.nome}.`,
-                          url:
-                            perfilOficial?.almg?.portalUrl ??
-                            assembleiaAtiva.portal,
+                          url: almg?.portalUrl ?? assembleiaAtiva.portal,
                         }}
                       />
                     );

@@ -238,6 +238,48 @@ export function PainelFiscalSiconfi({
         </div>
       </div>
 
+      {/* Indicador da Lei de Responsabilidade Fiscal (RGF - Despesa com Pessoal) */}
+      {siconfi.lrfPessoal && siconfi.lrfPessoal.percentualRcl !== null && (
+        <div className="rounded-xl border border-slate-200 bg-white p-4">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <p className="text-[11px] font-bold tracking-wide text-brand-muted uppercase">
+                Lei de Responsabilidade Fiscal (SICONFI RGF {siconfi.lrfPessoal.exercicio})
+              </p>
+              <p className="mt-0.5 text-sm font-bold text-brand-navy">
+                Despesa com Pessoal:{" "}
+                <span
+                  className={
+                    siconfi.lrfPessoal.percentualRcl >=
+                    siconfi.lrfPessoal.limiteMaximo
+                      ? "text-red-700"
+                      : siconfi.lrfPessoal.percentualRcl >=
+                          siconfi.lrfPessoal.limitePrudencial
+                        ? "text-amber-700"
+                        : "text-brand-emerald"
+                  }
+                >
+                  {formatarPercentual(siconfi.lrfPessoal.percentualRcl)} da RCL
+                </span>
+              </p>
+            </div>
+            <div className="text-right text-xs text-slate-600">
+              <p>
+                Limite legal:{" "}
+                <strong>{siconfi.lrfPessoal.limiteMaximo}%</strong> • Prudencial:{" "}
+                <strong>{siconfi.lrfPessoal.limitePrudencial}%</strong>
+              </p>
+              {siconfi.lrfPessoal.despesaPessoalTotal !== null && (
+                <p className="text-[11px] text-brand-muted">
+                  Folha (12 meses):{" "}
+                  {formatarMoedaCompacta(siconfi.lrfPessoal.despesaPessoalTotal)}
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Despesas por função (RREO Anexo 02) */}
       {siconfi.funcoesPrincipais.length > 0 && (
         <div className="rounded-xl border border-slate-200 bg-white p-4 sm:p-5">

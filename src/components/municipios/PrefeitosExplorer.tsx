@@ -14,11 +14,13 @@ import { ABAS_PREFEITO } from "@/lib/abas";
 import { buscarMunicipiosPorUf } from "@/lib/ibge";
 import { ESTADOS_BRASIL, getEstadoPorUf, normalizarTexto } from "@/lib/ufs";
 import { PerfilAbas } from "@/components/ui/PerfilAbas";
+import { PainelContratacoesPncp } from "@/components/dados/PainelContratacoesPncp";
 import { PainelEleitoralTSE } from "@/components/dados/PainelEleitoralTSE";
 import { PainelFiscalSiconfi } from "@/components/dados/PainelFiscalSiconfi";
 import { PainelFiscalizacaoOficial } from "@/components/dados/PainelFiscalizacaoOficial";
 import { PainelTrajetoriaTSE } from "@/components/dados/PainelTrajetoriaTSE";
 import type {
+  ContratacaoPncp,
   MunicipioIBGE,
   PerfilTSE,
   ResumoFiscalSiconfi,
@@ -31,9 +33,11 @@ type ApiPrefeitoResponse = {
   codigoTse: string | null;
   prefeito: PerfilTSE | null;
   siconfi: ResumoFiscalSiconfi | null;
+  contratacoesPncp: ContratacaoPncp[];
   fontesConsultadas: {
     tse: boolean;
     siconfi: boolean;
+    pncp?: boolean;
   };
 };
 
@@ -409,6 +413,12 @@ export function PrefeitosExplorer() {
                         candidato no TSE DivulgaCandContas.
                       </div>
                     )}
+
+                    <PainelContratacoesPncp
+                      contratacoes={dadosPrefeito?.contratacoesPncp ?? []}
+                      carregando={carregandoDados}
+                      titulo={`${cidadeSelecionada.nome}/${estadoAtual.uf}`}
+                    />
 
                     <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-xs text-slate-700">
                       <p className="font-bold text-brand-navy">

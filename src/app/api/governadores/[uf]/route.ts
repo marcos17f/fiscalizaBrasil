@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { buscarContratacoesPncp } from "@/lib/pncp";
 import { buscarResumoFiscalSiconfi } from "@/lib/siconfi";
 import { buscarGovernadorTse } from "@/lib/tse";
 import { getEstadoPorUf } from "@/lib/ufs";
@@ -20,12 +21,15 @@ export async function GET(
   const { searchParams } = new URL(request.url);
   const nome = (searchParams.get("nome") ?? "").trim() || undefined;
 
-  const [tse, siconfi] = await Promise.all([
+  const [tse, siconfi, contratacoesPncp] = await Promise.all([
     buscarGovernadorTse(estado.uf, nome).catch(() => ({
       eleicao2022: null,
       eleicao2026: null,
     })),
     buscarResumoFiscalSiconfi(estado.codigoIbge).catch(() => null),
+    buscarContratacoesPncp({ uf: estado.uf, esferaPreferida: "E" }).catch(
+      () => []
+    ),
   ]);
 
   return NextResponse.json(
@@ -35,10 +39,12 @@ export async function GET(
       codigoIbge: estado.codigoIbge,
       tse,
       siconfi,
+      contratacoesPncp,
       fontesConsultadas: {
         tse2022: Boolean(tse.eleicao2022),
         tse2026: Boolean(tse.eleicao2026),
         siconfi: Boolean(siconfi),
+        pncp: contratacoesPncp.length > 0,
       },
     },
     {

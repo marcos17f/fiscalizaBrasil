@@ -1,5 +1,0 @@
-{
-  "/api/prefeitos/route": "app/api/prefeitos/route.js",
-  "/page": "app/page.js",
-  "/prefeitos/page": "app/prefeitos/page.js"
-}

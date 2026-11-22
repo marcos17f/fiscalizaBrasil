@@ -16,11 +16,13 @@ import {
 import { ABAS_GOVERNADOR } from "@/lib/abas";
 import { getEstadoPorUf, normalizarTexto, REGIOES } from "@/lib/ufs";
 import { PerfilAbas } from "@/components/ui/PerfilAbas";
+import { PainelContratacoesPncp } from "@/components/dados/PainelContratacoesPncp";
 import { PainelEleitoralTSE } from "@/components/dados/PainelEleitoralTSE";
 import { PainelFiscalSiconfi } from "@/components/dados/PainelFiscalSiconfi";
 import { PainelFiscalizacaoOficial } from "@/components/dados/PainelFiscalizacaoOficial";
 import { PainelTrajetoriaTSE } from "@/components/dados/PainelTrajetoriaTSE";
 import type {
+  ContratacaoPncp,
   Governador,
   PerfilTSE,
   Regiao,
@@ -40,10 +42,12 @@ type ApiGovernadorResponse = {
     eleicao2026: PerfilTSE | null;
   };
   siconfi: ResumoFiscalSiconfi | null;
+  contratacoesPncp: ContratacaoPncp[];
   fontesConsultadas: {
     tse2022: boolean;
     tse2026: boolean;
     siconfi: boolean;
+    pncp?: boolean;
   };
 };
 
@@ -514,6 +518,11 @@ export function GovernadoresExplorer({ governadores }: Props) {
                             </a>
                           </div>
                         )}
+                        <PainelContratacoesPncp
+                          contratacoes={dadosOficiais?.contratacoesPncp ?? []}
+                          carregando={carregandoDados}
+                          titulo={estado?.nome ?? selecionado.uf}
+                        />
                         {estado && (
                           <div className="rounded-xl border border-slate-200 bg-white p-4 text-xs text-slate-700">
                             <p className="font-bold text-brand-navy">

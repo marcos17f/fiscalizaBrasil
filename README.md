@@ -1,28 +1,27 @@
-# Fiscaliza Brasil — Protótipo Next.js 15 + Fontes Oficiais ao Vivo
+# Fiscaliza Brasil — Portal Completo em Next.js 15 + TypeScript
 
-Protótipo demonstrativo construído a partir da análise técnica de `fiscalizabrasil.org`, utilizando **Next.js 15 (App Router) + React 19 + TypeScript + Tailwind CSS v4** com **integração ao vivo a APIs oficiais do governo brasileiro**.
+Reconstrução completa de `fiscalizabrasil.org` em **Next.js 15 (App Router) + React 19 + TypeScript + Tailwind CSS v4**, eliminando o gargalo original de ~8 MB de scripts inline por página e integrando **todas as 6 esferas políticas + 8 páginas institucionais** com carregamento sob demanda.
 
-## Fontes oficiais integradas ao vivo
-1. **TSE DivulgaCandContas** (server-side proxy em `/api/prefeitos`, `/api/vereadores`, `/api/tse/candidato`, `/api/governadores/[uf]` e `/api/dep-estaduais/[uf]/perfil`):
-   - Prefeitos e Vices eleitos (2024) em todos os **5.570 municípios** (foto, partido, coligação, bens declarados, histórico eleitoral, redes sociais e **Plano de Governo em PDF**).
-   - Vereadores eleitos (2024) por município (~58 mil parlamentares) sob demanda, com modal completo em **8 abas**.
-   - Governadores (2022 e 2026) e Deputados Estaduais/Distritais (2022/2026).
-2. **SICONFI / Secretaria do Tesouro Nacional** (`RREO-Anexo 01` e `RREO-Anexo 02`):
-   - Balanço Orçamentário real (Receita Prevista vs Realizada, Impostos Próprios vs Transferências Correntes, Despesa Empenhada vs Liquidada vs Paga) e Top Áreas de Gasto (Saúde, Educação, Segurança, Urbanismo, etc.) para **27 Estados** e **5.570 Municípios**.
-3. **IBGE Localidades**: listagem oficial de municípios por UF.
-4. **ALMG Dados Abertos (Minas Gerais)**: demonstração real de integração estadual de **Verbas Indenizatórias** e gabinete parlamentar para deputados de MG.
-5. **Canais oficiais de controle**: links profundos para TCE/TCM de cada UF, Portal da Transparência estadual, CGU por localidade (`codigoIbge`), DivulgaCandContas e Fala.BR (LAI).
+## Cobertura Completa do Portal
 
-## Como rodar localmente
+### 6 Esferas Políticas
+1. **Senadores (`/senadores`)**: 81 senadores em exercício + histórico de emendas parlamentares traduzidas em linguagem simples (`/api/senadores/[codigo]`), com recebedores, status de pagamento e canais de fiscalização.
+2. **Deputados Federais (`/deputados-federais`)**: 513 deputados em exercício integrados ao vivo à **API v2 da Câmara** (`/api/camara/deputados/[id]`) — perfil, comissões, projetos de lei, presença em eventos/sessões e despesas CEAP.
+3. **Deputados Estaduais (`/dep-estaduais`)**: 27 Assembleias Legislativas (1.067 parlamentares) carregadas sob demanda por UF, combinando **TSE ao vivo** + **Folhas, Biografias e Emendas da ALESP (SP)** + **Verbas Indenizatórias ao vivo da ALMG (MG)**.
+4. **Governadores (`/governadores`)**: 27 governadores com **TSE ao vivo (2022/2026)**, vice, bens, Plano de Governo PDF, **Balanço Orçamentário SICONFI (RREO)** e links dos 27 TCEs.
+5. **Prefeitos (`/prefeitos`)**: todos os **5.570 municípios** via **IBGE + TSE 2024** (prefeito, vice, bens declarados, histórico e Plano de Governo PDF) + **SICONFI RREO** (receitas, empenhado/liquidado/pago e top áreas).
+6. **Vereadores (`/vereadores`)**: todos os **~58 mil vereadores eleitos (TSE 2024)** consultados sob demanda por estado e município, com perfil completo em 8 abas.
+
+### 8 Páginas Institucionais & Participação
+- `/sobre-o-fiscaliza-brasil` · `/politica-explicada` · `/participe` · `/denuncias` · `/quem-apoia-o-fiscaliza-brasil` · `/quem-patrocina-o-fiscaliza-brasil` · `/contato` · `/privacidade` (LGPD)
+- Formulários cidadãos com validação e geração de protocolo em `/api/contato`.
+
+## Como rodar e verificar
 
 ```bash
 npm install
 npm run dev
 ```
-
-Acesse [http://localhost:3000](http://localhost:3000).
-
-## Verificação técnica
 
 ```bash
 npm run typecheck

@@ -1,7 +1,24 @@
 import { NextResponse } from "next/server";
+import alespData from "@/data/alesp-detalhes.json";
 import { buscarDadosAlmgDeputado } from "@/lib/almg";
 import { buscarDeputadoEstadualTse } from "@/lib/tse";
-import { getEstadoPorUf } from "@/lib/ufs";
+import { getEstadoPorUf, normalizarTexto } from "@/lib/ufs";
+import type { AlespDetalhe } from "@/types/politicos";
+
+const alespDetalhes = alespData as Record<string, AlespDetalhe>;
+
+function buscarDetalheAlesp(nome: string): AlespDetalhe | null {
+  const alvo = normalizarTexto(nome);
+  if (alespDetalhes[alvo]) return alespDetalhes[alvo];
+
+  const tokens = alvo.split(" ").filter((t) => t.length > 2);
+  for (const [chave, valor] of Object.entries(alespDetalhes)) {
+    if (tokens.length >= 2 && tokens.every((t) => chave.includes(t))) {
+      return valor;
+    }
+  }
+  return null;
+}
 
 export async function GET(
   request: Request,
@@ -27,6 +44,8 @@ export async function GET(
     );
   }
 
+  const alesp = estado.uf === "SP" ? buscarDetalheAlesp(nome) : null;
+
   const [tse, almg] = await Promise.all([
     buscarDeputadoEstadualTse(estado.uf, nome).catch(() => null),
     estado.uf === "MG"
@@ -40,9 +59,11 @@ export async function GET(
       nomeConsultado: nome,
       tse,
       almg,
+      alesp,
       fontesConsultadas: {
         tse: Boolean(tse),
         almg: Boolean(almg),
+        alesp: Boolean(alesp),
       },
     },
     {

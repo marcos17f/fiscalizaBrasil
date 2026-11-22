@@ -13,6 +13,16 @@ const nextConfig: NextConfig = {
         hostname: "divulgacandcontas.tse.jus.br",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "www.camara.leg.br",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "www.senado.leg.br",
+        pathname: "/**",
+      },
     ],
   },
 };

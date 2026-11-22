@@ -1,5 +1,107 @@
 import type { AbaPerfil } from "@/types/politicos";
 
+export const ABAS_SENADOR: readonly AbaPerfil[] = [
+  {
+    id: "trajetoria",
+    numero: 1,
+    titulo: "Trajetória",
+    explicacao:
+      "Identificação parlamentar, partido, bloco, período do mandato no Senado Federal, titularidade e canais oficiais de contato.",
+    fonteSugerida: "Senado Federal — Dados Abertos",
+  },
+  {
+    id: "emendas",
+    numero: 2,
+    titulo: "Emendas Parlamentares",
+    explicacao:
+      "Recursos indicados pelo senador desde 2019 com tradução em linguagem simples, valor total, valor pago, área (função) e recebedores.",
+    fonteSugerida: "Portal da Transparência (CGU) — Emendas Parlamentares",
+  },
+  {
+    id: "projetos",
+    numero: 3,
+    titulo: "Projetos & Atuação",
+    explicacao:
+      "Proposições legislativas, relatorias e participação em comissões permanentes ou CPIs no Senado Federal.",
+    fonteSugerida: "Senado Federal — Atividade Legislativa",
+  },
+  {
+    id: "votacoes",
+    numero: 4,
+    titulo: "Como Vota",
+    explicacao:
+      "Votações nominais em plenário no Senado Federal com registro de voto (Sim, Não, Abstenção ou Obstrução).",
+    fonteSugerida: "Senado Federal — Votações Nominais",
+  },
+  {
+    id: "custos",
+    numero: 5,
+    titulo: "Cota & Benefícios",
+    explicacao:
+      "CEAPS (Cota para Exercício da Atividade Parlamentar), subsídio, auxílio-moradia e estrutura de gabinete.",
+    fonteSugerida: "Portal da Transparência do Senado Federal",
+  },
+  {
+    id: "controle",
+    numero: 6,
+    titulo: "Fiscalização & Contato",
+    explicacao:
+      "Acesso direto à página oficial no Senado, e-mail de gabinete, Alô Senado e pedido via Lei de Acesso à Informação (LAI).",
+    fonteSugerida: "Senado Federal / e-Cidadania",
+  },
+];
+
+export const ABAS_DEPUTADO_FEDERAL: readonly AbaPerfil[] = [
+  {
+    id: "trajetoria",
+    numero: 1,
+    titulo: "Trajetória",
+    explicacao:
+      "Dados oficiais do parlamentar na 57ª Legislatura (01/02/2023 a 31/01/2027), partido, estado, gabinete e contato.",
+    fonteSugerida: "Câmara dos Deputados — Dados Abertos API v2",
+  },
+  {
+    id: "projetos",
+    numero: 2,
+    titulo: "Projetos",
+    explicacao:
+      "Projetos de lei e proposições de autoria do deputado conferidos diretamente na API oficial da Câmara dos Deputados.",
+    fonteSugerida: "Câmara dos Deputados — /api/v2/proposicoes",
+  },
+  {
+    id: "votacoes",
+    numero: 3,
+    titulo: "Votações",
+    explicacao:
+      "Apenas votações nominais do Plenário em que o voto individual é registrado (Sim, Não, Abstenção ou Obstrução).",
+    fonteSugerida: "Câmara dos Deputados — /api/v2/votacoes",
+  },
+  {
+    id: "presenca",
+    numero: 4,
+    titulo: "Presença",
+    explicacao:
+      "Participação em sessões deliberativas do Plenário e reuniões de comissões permanentes da Câmara.",
+    fonteSugerida: "Câmara dos Deputados — Registro de Frequência",
+  },
+  {
+    id: "gastos",
+    numero: 5,
+    titulo: "Salário e Gastos",
+    explicacao:
+      "Despesas reembolsadas pela Cota Parlamentar (CEAP) com fornecedor, categoria, data, valor líquido e nota fiscal oficial.",
+    fonteSugerida: "Câmara dos Deputados — /api/v2/deputados/{id}/despesas",
+  },
+  {
+    id: "emendas",
+    numero: 6,
+    titulo: "Emendas",
+    explicacao:
+      "Emendas individuais e de bancada destinadas pelo parlamentar com valores empenhados e pagos conforme CGU.",
+    fonteSugerida: "Portal da Transparência (CGU) / Transferegov",
+  },
+];
+
 export const ABAS_GOVERNADOR: readonly AbaPerfil[] = [
   {
     id: "trajetoria",
@@ -15,7 +117,7 @@ export const ABAS_GOVERNADOR: readonly AbaPerfil[] = [
     titulo: "O que faz",
     explicacao:
       "Programas, obras e serviços devem informar local, prazo, orçamento e situação da execução. Anúncio, contratação e entrega são etapas diferentes.",
-    fonteSugerida: "TSE (Plano de Governo), Portal da Transparência Estadual e PPA",
+    fonteSugerida: "Portal da Transparência Estadual e Plano Plurianual (PPA)",
   },
   {
     id: "decisoes",
@@ -31,15 +133,15 @@ export const ABAS_GOVERNADOR: readonly AbaPerfil[] = [
     titulo: "Mapa das Emendas / Recursos",
     explicacao:
       "Repasses recebidos da União e enviados aos municípios separados por origem, destino e fase da despesa.",
-    fonteSugerida: "SICONFI (Transferências Correntes), Portal da Transparência (CGU) e Transferegov",
+    fonteSugerida: "Portal da Transparência Federal (CGU) e Transferegov",
   },
   {
     id: "custos",
     numero: 5,
-    titulo: "Quanto custa & Finanças",
+    titulo: "Quanto custa & Benefícios",
     explicacao:
       "O subsídio e as despesas pessoais do governador separados das despesas gerais da administração. Previsto, empenhado, liquidado e pago são fases distintas.",
-    fonteSugerida: "SICONFI / Tesouro Nacional (RREO ao vivo) e Portal da Transparência Estadual",
+    fonteSugerida: "SICONFI / Tesouro Nacional e Portal da Transparência Estadual",
   },
   {
     id: "agenda",
@@ -54,8 +156,8 @@ export const ABAS_GOVERNADOR: readonly AbaPerfil[] = [
     numero: 7,
     titulo: "Eleições",
     explicacao:
-      "Chapa, vice, bens declarados, histórico de candidaturas e contas de campanha apresentados por eleição, conforme registros da Justiça Eleitoral.",
-    fonteSugerida: "TSE DivulgaCandContas (API oficial ao vivo)",
+      "Chapa, vice, votos, bens declarados e contas de campanha apresentados por eleição, conforme registros da Justiça Eleitoral.",
+    fonteSugerida: "Dados Abertos do TSE (Tribunal Superior Eleitoral)",
   },
   {
     id: "controle",
@@ -63,7 +165,7 @@ export const ABAS_GOVERNADOR: readonly AbaPerfil[] = [
     titulo: "Fiscalização e Controle",
     explicacao:
       "Contas anuais do governo, relatórios fiscais e auditorias com órgão, exercício e situação. Parecer prévio do TCE e julgamento pela Assembleia são atos distintos.",
-    fonteSugerida: "Tribunal de Contas do Estado (TCE), Portal da Transparência e Fala.BR",
+    fonteSugerida: "Tribunal de Contas do Estado (TCE) e Assembleia Legislativa",
   },
 ];
 
@@ -73,8 +175,8 @@ export const ABAS_DEPUTADO_ESTADUAL: readonly AbaPerfil[] = [
     numero: 1,
     titulo: "Trajetória",
     explicacao:
-      "Partido, base eleitoral, mandatos anteriores, formação e dados oficiais de gabinete na Assembleia Legislativa.",
-    fonteSugerida: "TSE DivulgaCandContas e Portal da Assembleia Legislativa",
+      "Partido, biografia oficial da Assembleia, base eleitoral, mandatos anteriores e link de identificação no TSE.",
+    fonteSugerida: "Portal da Assembleia Legislativa e TSE",
   },
   {
     id: "o-que-faz",
@@ -105,8 +207,8 @@ export const ABAS_DEPUTADO_ESTADUAL: readonly AbaPerfil[] = [
     numero: 5,
     titulo: "Quanto custa & Benefícios",
     explicacao:
-      "Subsídio mensal, verba indenizatória de gabinete e quadro de assessores conforme transparência da Casa.",
-    fonteSugerida: "Portal da Transparência da Assembleia Legislativa (ALMG ao vivo)",
+      "Subsídio mensal publicado na folha da Assembleia (bruto, tributos e líquido) e verba indenizatória de gabinete.",
+    fonteSugerida: "Folha de Pagamento Oficial da Assembleia Legislativa",
   },
   {
     id: "presenca",
@@ -121,16 +223,16 @@ export const ABAS_DEPUTADO_ESTADUAL: readonly AbaPerfil[] = [
     numero: 7,
     titulo: "Eleições",
     explicacao:
-      "Situação eleitoral, bens declarados, histórico de candidaturas e teto de gastos de campanha.",
-    fonteSugerida: "TSE DivulgaCandContas (API oficial ao vivo)",
+      "Votação obtida, bens declarados, financiamento de campanha e prestação de contas eleitorais.",
+    fonteSugerida: "Dados Abertos do TSE",
   },
   {
     id: "controle",
     numero: 8,
     titulo: "Fiscalização e controle",
     explicacao:
-      "Links diretos para ouvidoria, pedido de acesso à informação (LAI), Tribunal de Contas e acompanhamento oficial.",
-    fonteSugerida: "Assembleia Legislativa, TCE Estadual e Fala.BR",
+      "Links diretos para ouvidoria, pedido de acesso à informação (LAI) e acompanhamento oficial.",
+    fonteSugerida: "e-SIC / Ouvidoria da Assembleia",
   },
 ];
 
@@ -140,16 +242,16 @@ export const ABAS_PREFEITO: readonly AbaPerfil[] = [
     numero: 1,
     titulo: "Trajetória & Mandato",
     explicacao:
-      "Prefeito(a), vice-prefeito(a), partido, coligação, formação e canais oficiais registrados na Justiça Eleitoral.",
-    fonteSugerida: "TSE DivulgaCandContas (Eleições 2024 ao vivo)",
+      "Prefeito(a), vice-prefeito(a), partido, coligação, data de posse e canais oficiais da Prefeitura.",
+    fonteSugerida: "TSE Eleições Municipais e Portal da Prefeitura",
   },
   {
     id: "projetos",
     numero: 2,
     titulo: "Projetos & Gestão",
     explicacao:
-      "Plano de governo oficial registrado no TSE, obras públicas, entregas de gestão e convênios municipais.",
-    fonteSugerida: "TSE (Plano de Governo PDF) e Portal da Transparência Municipal",
+      "Obras públicas, entregas de gestão, convênios e metas do plano de governo registrado no TSE.",
+    fonteSugerida: "TSE (Plano de Governo) e Portal da Transparência Municipal",
   },
   {
     id: "sancoes",
@@ -162,18 +264,18 @@ export const ABAS_PREFEITO: readonly AbaPerfil[] = [
   {
     id: "emendas",
     numero: 4,
-    titulo: "Emendas & Repasses",
+    titulo: "Emendas Recebidas",
     explicacao:
-      "Recursos recebidos via transferências correntes, emendas federais e estaduais com valor empenhado e pago.",
-    fonteSugerida: "SICONFI (Tesouro Nacional ao vivo) e Portal da Transparência (CGU)",
+      "Recursos recebidos via emendas federais e estaduais com valor empenhado e pago.",
+    fonteSugerida: "Portal da Transparência (CGU) e Transferegov",
   },
   {
     id: "financas",
     numero: 5,
     titulo: "Arrecadação, Gastos & Caixa",
     explicacao:
-      "Receitas realizadas, despesas empenhadas, liquidadas e pagas e distribuição por função (Saúde, Educação, Urbanismo).",
-    fonteSugerida: "SICONFI / Tesouro Nacional (RREO ao vivo)",
+      "Receitas, despesas por função (saúde, educação, obras) e limites da Lei de Responsabilidade Fiscal.",
+    fonteSugerida: "SICONFI (Tesouro Nacional) e Portal da Transparência Municipal",
   },
   {
     id: "agenda",
@@ -181,23 +283,23 @@ export const ABAS_PREFEITO: readonly AbaPerfil[] = [
     titulo: "Agenda & Missões",
     explicacao:
       "Compromissos oficiais, viagens e substituições documentadas em fonte pública.",
-    fonteSugerida: "Gabinete do Prefeito / Portal da Prefeitura",
+    fonteSugerida: "Gabinete do Prefeito",
   },
   {
     id: "eleicoes",
     numero: 7,
-    titulo: "Eleições & Bens",
+    titulo: "Eleições & TCE/TCM",
     explicacao:
-      "Resultado eleitoral 2024, declaração de bens, teto de campanha, histórico eleitoral e prestação de contas.",
-    fonteSugerida: "TSE DivulgaCandContas (API oficial ao vivo)",
+      "Resultado eleitoral, declaração de bens, prestação de contas de campanha e pareceres do Tribunal de Contas.",
+    fonteSugerida: "TSE e Tribunal de Contas (TCE/TCM)",
   },
   {
     id: "fiscalizacao",
     numero: 8,
     titulo: "Fiscalização & Contato",
     explicacao:
-      "Ouvidoria municipal, e-SIC (LAI), Portal da Transparência Federal e Tribunal de Contas do Estado.",
-    fonteSugerida: "TCE/TCM Estadual, Portal da Transparência (CGU) e Fala.BR",
+      "Ouvidoria municipal, e-SIC (LAI), Ministério Público e Tribunal de Contas do Estado.",
+    fonteSugerida: "Ouvidoria Municipal e Fala.BR",
   },
 ];
 
@@ -207,63 +309,63 @@ export const ABAS_VEREADOR: readonly AbaPerfil[] = [
     numero: 1,
     titulo: "Trajetória",
     explicacao:
-      "Nome completo, partido, coligação, formação, ocupação profissional, reeleição e canais oficiais registrados no TSE.",
-    fonteSugerida: "TSE DivulgaCandContas (Eleições 2024 ao vivo)",
+      "Identificação parlamentar, partido, coligação, escolaridade, ocupação e situação eleitoral nas Eleições Municipais 2024.",
+    fonteSugerida: "TSE DivulgaCandContas e Câmara Municipal",
   },
   {
-    id: "o-que-faz",
+    id: "projetos",
     numero: 2,
-    titulo: "O que faz",
+    titulo: "Projetos & Leis",
     explicacao:
-      "Projetos de lei municipal, requerimentos, indicações de melhorias de bairro e atuação em comissões da Câmara.",
-    fonteSugerida: "SAPL / Portal da Câmara Municipal",
+      "Projetos de lei ordinária, requerimentos, indicações e moções apresentados na Câmara Municipal.",
+    fonteSugerida: "SAPL / Portal Legislativo da Câmara Municipal",
   },
   {
-    id: "como-vota",
+    id: "votacoes",
     numero: 3,
-    titulo: "Como vota",
+    titulo: "Como Vota",
     explicacao:
-      "Posicionamento em votações nominais relevantes na Câmara (orçamento, impostos, plano diretor e vetos do prefeito).",
-    fonteSugerida: "Atas e Sessões da Câmara Municipal",
+      "Votações nominais em sessões plenárias municipais sobre orçamento (LOA/LDO), IPTU, plano diretor e leis locais.",
+    fonteSugerida: "Atas e Sessões Plenárias da Câmara Municipal",
   },
   {
     id: "emendas",
     numero: 4,
     titulo: "Emendas Impositivas",
     explicacao:
-      "Destinação de emendas impositivas municipais (quando previstas na Lei Orgânica) por área e entidade beneficiada.",
-    fonteSugerida: "Portal da Transparência Municipal / Câmara Municipal",
+      "Recursos indicados pelo vereador no orçamento municipal para saúde, educação, bairros e entidades locais.",
+    fonteSugerida: "Portal da Transparência Municipal",
   },
   {
     id: "custos",
     numero: 5,
-    titulo: "Quanto custa & Gabinete",
+    titulo: "Subsídio & Gabinete",
     explicacao:
-      "Subsídio mensal do vereador, verba de gabinete, diárias e quadro de assessores parlamentares.",
-    fonteSugerida: "Portal da Transparência da Câmara Municipal e TCE",
+      "Remuneração mensal, diárias, verbas de gabinete e equipe de assessores conforme transparência da Câmara.",
+    fonteSugerida: "Portal da Transparência da Câmara Municipal",
   },
   {
     id: "presenca",
     numero: 6,
     titulo: "Presença",
     explicacao:
-      "Frequência nas sessões ordinárias, extraordinárias e audiências públicas da Câmara Municipal.",
-    fonteSugerida: "Folha de Presença da Câmara Municipal",
+      "Frequência em sessões ordinárias, extraordinárias e reuniões de comissões permanentes.",
+    fonteSugerida: "Registro de Presença da Câmara Municipal",
   },
   {
     id: "eleicoes",
     numero: 7,
-    titulo: "Eleições & Bens",
+    titulo: "Eleições & Bens (TSE)",
     explicacao:
-      "Tipo de eleição (QP ou média), bens declarados à Justiça Eleitoral, histórico de candidaturas e contas de campanha.",
-    fonteSugerida: "TSE DivulgaCandContas (API oficial ao vivo)",
+      "Declaração de bens, gastos de campanha, histórico de candidaturas e link oficial na Justiça Eleitoral.",
+    fonteSugerida: "TSE DivulgaCandContas (2024)",
   },
   {
     id: "controle",
     numero: 8,
-    titulo: "Fiscalização e Controle",
+    titulo: "Fiscalização & Controle",
     explicacao:
-      "Links diretos para conferir a prestação de contas no TSE, Tribunal de Contas do Estado e pedidos de informação (LAI).",
-    fonteSugerida: "TSE DivulgaCandContas, TCE Estadual e Fala.BR",
+      "Canais oficiais para acompanhar contas públicas no Tribunal de Contas (TCE/TCM) e pedidos de acesso à informação (LAI).",
+    fonteSugerida: "Tribunal de Contas (TCE/TCM) e Fala.BR",
   },
 ];

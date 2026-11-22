@@ -40,6 +40,216 @@ export type DeputadoEstadual = {
   municipio?: string;
 };
 
+export type FolhaAlesp = {
+  mes: string;
+  nome_folha: string;
+  bruto: string;
+  tributos: string;
+  liquido: string;
+  fonte: string;
+};
+
+export type EmendaAlesp = {
+  codigo?: string;
+  codigo_emenda?: string;
+  data?: string;
+  documento?: string;
+  empenho?: string;
+  credor?: string;
+  cnpj?: string;
+  beneficiario_previsto?: string;
+  favorecido?: string;
+  valor?: string | number;
+  valor_destinado?: string;
+  finalidade?: string;
+  tipo_despesa?: string;
+  municipio?: string;
+  objeto?: string;
+  fonte?: string;
+  fonte_url?: string;
+  [key: string]: unknown;
+};
+
+export type AlespDetalhe = {
+  nomeOriginal: string;
+  codigoAlesp: string;
+  biografia: string;
+  fonteIdentidade: string;
+  perfilId: string;
+  folhas: FolhaAlesp[];
+  totalEmendasRegistradas: number;
+  emendasAmostra: EmendaAlesp[];
+};
+
+export type Senador = {
+  codigo: string;
+  nome: string;
+  nomeCompleto: string;
+  partido: string;
+  uf: string;
+  foto: string;
+  paginaOficial: string;
+  email: string;
+  bloco: string;
+  mandatoInicio: string;
+  mandatoFim: string;
+  titularidade: string;
+};
+
+export type EmendaSenador = {
+  codigo: string;
+  ano: number;
+  tipoBadge: string;
+  tipoCor?: string;
+  tipoOriginal: string;
+  valorTotal: number;
+  valorPago: number;
+  finalidadeOriginal: string;
+  finalidadeSimples: string;
+  funcao: string;
+  dataIndicacao?: string;
+  recebedores?: Array<{
+    nome: string;
+    uf?: string;
+    valor?: number;
+    status?: string;
+    isPendente?: boolean;
+  }>;
+};
+
+export type AutoriaSenador = {
+  codigo: string;
+  identificacao: string;
+  sigla: string;
+  numero: string;
+  ano: string;
+  ementa: string;
+  data: string;
+  linkOficial: string;
+};
+
+export type VotacaoSenador = {
+  codigoSessaoVotacao: string;
+  data: string;
+  materia: string;
+  ementa: string;
+  descricaoVotacao: string;
+  resultado: string;
+  voto: string;
+};
+
+export type ComissaoSenador = {
+  sigla: string;
+  nome: string;
+  participacao: string;
+  dataInicio: string;
+  ativa: boolean;
+};
+
+export type DespesaCeapsSenador = {
+  id: number;
+  ano: number;
+  mes: number;
+  tipoDespesa: string;
+  fornecedor: string;
+  data: string;
+  detalhamento: string;
+  valorReembolsado: number;
+};
+
+export type ResumoCeapsSenador = {
+  ano: number;
+  totalAno: number;
+  quantidadeLancamentos: number;
+  porCategoria: Array<{ categoria: string; valor: number }>;
+  recentes: DespesaCeapsSenador[];
+};
+
+export type DeputadoFederal = {
+  id: number;
+  nome: string;
+  partido: string;
+  uf: string;
+  foto: string;
+  email: string;
+  idLegislatura: number;
+};
+
+export type DespesaCamara = {
+  ano: number;
+  mes: number;
+  tipoDespesa: string;
+  nomeFornecedor: string;
+  valorLiquido: number;
+  valorDocumento: number;
+  dataDocumento: string | null;
+  urlDocumento: string | null;
+};
+
+export type ProposicaoCamara = {
+  id: number;
+  siglaTipo: string;
+  numero: number;
+  ano: number;
+  ementa: string;
+};
+
+export type OrgaoCamara = {
+  idOrgao: number;
+  siglaOrgao: string;
+  nomeOrgao: string;
+  titulo: string;
+  dataInicio?: string | null;
+  dataFim?: string | null;
+};
+
+export type EventoCamara = {
+  id: number;
+  dataHoraInicio: string;
+  descricaoTipo: string;
+  descricao: string;
+  situacao?: string;
+  orgaos?: Array<{ sigla?: string; nome?: string }>;
+};
+
+export type FrenteCamara = {
+  id: number;
+  titulo: string;
+};
+
+export type VotacaoNominalCamara = {
+  idVotacao: string;
+  data: string;
+  proposicao: string;
+  descricao: string;
+  voto: string;
+  aprovacao: number | null;
+};
+
+export type ContratacaoPncp = {
+  id: string;
+  orgao: string;
+  esfera: string;
+  uf: string;
+  municipio: string | null;
+  modalidade: string;
+  numeroCompra: string;
+  anoCompra: number;
+  objeto: string;
+  valorEstimado: number | null;
+  dataPublicacao: string;
+  linkPncp: string;
+};
+
+export type IndicadorLrfSiconfi = {
+  exercicio: number;
+  periodo: number;
+  despesaPessoalTotal: number | null;
+  percentualRcl: number | null;
+  limiteMaximo: number;
+  limitePrudencial: number;
+};
+
 export type MunicipioIBGE = {
   id: number;
   nome: string;
@@ -53,6 +263,18 @@ export type AbaPerfil = {
   fonteSugerida: string;
 };
 
+export type BlocoInstitucional = {
+  tipo: "h1" | "h2" | "h3" | "h4" | "p" | "li";
+  texto: string;
+};
+
+export type PaginaInstitucional = {
+  slug: string;
+  titulo: string;
+  blocos: BlocoInstitucional[];
+};
+
+// Tipos de integrações oficiais ao vivo (TSE, SICONFI, ALMG)
 export type BemDeclaradoTSE = {
   ordem: number;
   tipo: string;
@@ -91,7 +313,7 @@ export type PerfilTSE = {
   situacaoCandidatura: string | null;
   totalizacao: string | null;
   reeleicao: boolean;
-  fotoUrl: string | null;
+  fotoUrl: string;
   ocupacao: string | null;
   grauInstrucao: string | null;
   dataNascimento: string | null;
@@ -145,7 +367,10 @@ export type ResumoFiscalSiconfi = {
   despesaEmpenhada: number | null;
   despesaLiquidada: number | null;
   despesaPaga: number | null;
+  despesaLegislativa: number | null;
+  percentualLegislativa: number | null;
   funcoesPrincipais: FuncaoDespesaSiconfi[];
+  lrfPessoal?: IndicadorLrfSiconfi | null;
 };
 
 export type ItemVerbaAlmg = {

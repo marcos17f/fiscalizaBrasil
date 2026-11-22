@@ -9,6 +9,7 @@ import {
   X,
 } from "lucide-react";
 import { ABAS_VEREADOR } from "@/lib/abas";
+import { formatarMoedaCompacta, formatarPercentual } from "@/lib/formatters";
 import { buscarMunicipiosPorUf } from "@/lib/ibge";
 import { ESTADOS_BRASIL, getEstadoPorUf, normalizarTexto } from "@/lib/ufs";
 import { PerfilAbas } from "@/components/ui/PerfilAbas";
@@ -21,6 +22,14 @@ import type {
   VereadorEleitoTSE,
 } from "@/types/politicos";
 
+type OrcamentoLegislativo = {
+  exercicio: number;
+  periodo: number;
+  despesaLegislativa: number | null;
+  percentualLegislativa: number | null;
+  despesaTotalMunicipio: number | null;
+};
+
 type ApiVereadoresResponse = {
   uf: string;
   cidade: string;
@@ -28,6 +37,7 @@ type ApiVereadoresResponse = {
   anoEleicao: number;
   totalEleitos: number;
   vereadores: VereadorEleitoTSE[];
+  orcamentoLegislativo: OrcamentoLegislativo | null;
 };
 
 function AvatarVereador({
@@ -74,6 +84,9 @@ export function VereadoresExplorer() {
 
   const [consultado, setConsultado] = useState<MunicipioIBGE | null>(null);
   const [vereadores, setVereadores] = useState<VereadorEleitoTSE[]>([]);
+  const [orcamentoLeg, setOrcamentoLeg] = useState<OrcamentoLegislativo | null>(
+    null
+  );
   const [carregandoVereadores, setCarregandoVereadores] = useState(false);
   const [erroVereadores, setErroVereadores] = useState<string | null>(null);
 
@@ -176,9 +189,14 @@ export function VereadoresExplorer() {
     setCarregandoVereadores(true);
     setErroVereadores(null);
     setVereadores([]);
+    setOrcamentoLeg(null);
 
     try {
-      const params = new URLSearchParams({ uf, cidade: found.nome });
+      const params = new URLSearchParams({
+        uf,
+        cidade: found.nome,
+        ibge: String(found.id),
+      });
       const res = await fetch(`/api/vereadores?${params.toString()}`);
       if (!res.ok) {
         const body = (await res.json().catch(() => null)) as {
@@ -190,6 +208,7 @@ export function VereadoresExplorer() {
       }
       const data: ApiVereadoresResponse = await res.json();
       setVereadores(data.vereadores);
+      setOrcamentoLeg(data.orcamentoLegislativo ?? null);
     } catch (err) {
       setErroVereadores(
         err instanceof Error
@@ -577,6 +596,44 @@ export function VereadoresExplorer() {
                         />
                       </div>
                     );
+                  }
+
+                  if (aba.id === "custos") {
+                    if (orcamentoLeg?.despesaLegislativa) {
+                      return (
+                        <div className="space-y-3">
+                          <div className="rounded-xl border border-emerald-200 bg-emerald-50/70 p-4">
+                            <p className="text-xs font-semibold text-emerald-900">
+                              Fonte ao vivo: SICONFI / Tesouro Nacional (RREO{" "}
+                              {orcamentoLeg.exercicio} • Função Legislativa)
+                            </p>
+                            <p className="mt-1 text-xl font-extrabold text-brand-emerald">
+                              {formatarMoedaCompacta(
+                                orcamentoLeg.despesaLegislativa
+                              )}
+                            </p>
+                            <p className="mt-0.5 text-xs text-emerald-950">
+                              Custo total da função Legislativa em{" "}
+                              <strong>{consultado.nome}</strong>
+                              {orcamentoLeg.percentualLegislativa !== null
+                                ? ` (${formatarPercentual(orcamentoLeg.percentualLegislativa)} do orçamento municipal)`
+                                : ""}
+                              {vereadores.length > 0
+                                ? ` • Média estimada por cadeira (${vereadores.length} vereadores): ${formatarMoedaCompacta(orcamentoLeg.despesaLegislativa / vereadores.length)}/ano`
+                                : ""}
+                            </p>
+                          </div>
+                          <p className="text-xs text-slate-600">
+                            Este valor corresponde ao custo global da Câmara
+                            Municipal (folha, estrutura e gabinetes) declarado
+                            ao Tesouro Nacional. Para ver a folha individual do
+                            vereador, consulte o Portal da Transparência da
+                            Câmara ou o {estadoAtual.tceSigla}.
+                          </p>
+                        </div>
+                      );
+                    }
+                    return undefined;
                   }
 
                   if (aba.id === "eleicoes") {

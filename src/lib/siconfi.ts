@@ -1,11 +1,12 @@
 import type {
   FuncaoDespesaSiconfi,
+  IndicadorLrfSiconfi,
   ResumoFiscalSiconfi,
 } from "@/types/politicos";
 
-const SICONFI_BASE = "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo";
+const SICONFI_RREO = "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo";
+const SICONFI_RGF = "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf";
 
-// Funções oficiais de 1º nível (Portaria MOG nº 42/1999) para evitar duplicidade com subfunções
 const FUNCOES_OFICIAIS = new Set([
   "Legislativa",
   "Judiciária",
@@ -53,25 +54,12 @@ type RawSiconfiItem = {
 
 const cacheSiconfi = new Map<string, ResumoFiscalSiconfi | null>();
 
-async function consultarRreo(
-  idEnte: number,
-  exercicio: number,
-  periodo: number,
-  anexo: "RREO-Anexo 01" | "RREO-Anexo 02"
-): Promise<RawSiconfiItem[]> {
-  const params = new URLSearchParams({
-    an_exercicio: String(exercicio),
-    nr_periodo: String(periodo),
-    co_tipo_demonstrativo: "RREO",
-    no_anexo: anexo,
-    id_ente: String(idEnte),
-  });
-
+async function consultarSiconfi(url: string): Promise<RawSiconfiItem[]> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 14000);
 
   try {
-    const res = await fetch(`${SICONFI_BASE}?${params.toString()}`, {
+    const res = await fetch(url, {
       headers: {
         "User-Agent": "FiscalizaBrasil/1.0 (+https://fiscalizabrasil.org)",
         Accept: "application/json",
@@ -87,6 +75,79 @@ async function consultarRreo(
   } finally {
     clearTimeout(timer);
   }
+}
+
+async function consultarRreo(
+  idEnte: number,
+  exercicio: number,
+  periodo: number,
+  anexo: "RREO-Anexo 01" | "RREO-Anexo 02"
+): Promise<RawSiconfiItem[]> {
+  const params = new URLSearchParams({
+    an_exercicio: String(exercicio),
+    nr_periodo: String(periodo),
+    co_tipo_demonstrativo: "RREO",
+    no_anexo: anexo,
+    id_ente: String(idEnte),
+  });
+  return consultarSiconfi(`${SICONFI_RREO}?${params.toString()}`);
+}
+
+async function consultarRgfPessoal(
+  idEnte: number,
+  exercicio: number,
+  esfera: "E" | "M"
+): Promise<IndicadorLrfSiconfi | null> {
+  const tentativas: Array<{ periodicidade: "Q" | "S"; periodo: number }> = [
+    { periodicidade: "Q", periodo: 3 },
+    { periodicidade: "S", periodo: 2 },
+  ];
+
+  const limiteMaximo = esfera === "E" ? 49 : 54;
+  const limitePrudencial = esfera === "E" ? 46.55 : 51.3;
+
+  for (const { periodicidade, periodo } of tentativas) {
+    const params = new URLSearchParams({
+      an_exercicio: String(exercicio),
+      in_periodicidade: periodicidade,
+      nr_periodo: String(periodo),
+      co_tipo_demonstrativo: "RGF",
+      no_anexo: "RGF-Anexo 01",
+      co_poder: "E",
+      id_ente: String(idEnte),
+    });
+
+    const items = await consultarSiconfi(`${SICONFI_RGF}?${params.toString()}`);
+    if (items.length === 0) continue;
+
+    const itemPercentual = items.find(
+      (i) =>
+        /DespesaComPessoalTotal/i.test(i.cod_conta) &&
+        /%\s*sobre\s*a\s*RCL/i.test(i.coluna)
+    );
+    const itemValor = items.find(
+      (i) =>
+        /DespesaComPessoalTotal/i.test(i.cod_conta) &&
+        (/Valor/i.test(i.coluna) || /TOTAL\s*\(ÚLTIMOS/i.test(i.coluna))
+    );
+
+    if (itemPercentual || itemValor) {
+      return {
+        exercicio,
+        periodo,
+        despesaPessoalTotal:
+          typeof itemValor?.valor === "number" ? itemValor.valor : null,
+        percentualRcl:
+          typeof itemPercentual?.valor === "number"
+            ? itemPercentual.valor
+            : null,
+        limiteMaximo,
+        limitePrudencial,
+      };
+    }
+  }
+
+  return null;
 }
 
 function encontrarValor(
@@ -108,7 +169,6 @@ export async function buscarResumoFiscalSiconfi(
     return cacheSiconfi.get(key) ?? null;
   }
 
-  // Tenta 2025 fechado (6º bimestre); fallback para 2024 fechado (6º bimestre)
   const tentativas: Array<{ exercicio: number; periodo: number }> = [
     { exercicio: 2025, periodo: 6 },
     { exercicio: 2024, periodo: 6 },
@@ -123,14 +183,13 @@ export async function buscarResumoFiscalSiconfi(
     );
     if (anexo1.length === 0) continue;
 
-    const anexo2 = await consultarRreo(
-      idEnte,
-      exercicio,
-      periodo,
-      "RREO-Anexo 02"
-    );
-
     const meta = anexo1[0];
+
+    const [anexo2, lrfPessoal] = await Promise.all([
+      consultarRreo(idEnte, exercicio, periodo, "RREO-Anexo 02"),
+      consultarRgfPessoal(idEnte, exercicio, meta.esfera).catch(() => null),
+    ]);
+
     const receitaPrevistaAtualizada = encontrarValor(
       anexo1,
       "ReceitasExcetoIntraOrcamentarias",
@@ -177,7 +236,6 @@ export async function buscarResumoFiscalSiconfi(
       /DESPESAS PAGAS ATÉ O BIMESTRE/i
     );
 
-    // Agregar funções de 1º nível do Anexo 02
     const mapaFuncoes = new Map<
       string,
       { empenhado: number; liquidado: number; percentual: number }
@@ -206,6 +264,14 @@ export async function buscarResumoFiscalSiconfi(
 
     const totalLiquidadoBase =
       despesaLiquidada && despesaLiquidada > 0 ? despesaLiquidada : 1;
+
+    const leg = mapaFuncoes.get("Legislativa");
+    const despesaLegislativa = leg?.liquidado ?? leg?.empenhado ?? null;
+    const percentualLegislativa = leg
+      ? leg.percentual > 0
+        ? leg.percentual
+        : (leg.liquidado / totalLiquidadoBase) * 100
+      : null;
 
     const funcoesPrincipais: FuncaoDespesaSiconfi[] = Array.from(
       mapaFuncoes.entries()
@@ -240,7 +306,10 @@ export async function buscarResumoFiscalSiconfi(
       despesaEmpenhada,
       despesaLiquidada,
       despesaPaga,
+      despesaLegislativa,
+      percentualLegislativa,
       funcoesPrincipais,
+      lrfPessoal,
     };
 
     cacheSiconfi.set(key, resumo);

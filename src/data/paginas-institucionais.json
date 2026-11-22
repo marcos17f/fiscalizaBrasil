@@ -1,0 +1,2374 @@
+{
+  "sobre-o-fiscaliza-brasil": {
+    "slug": "sobre-o-fiscaliza-brasil",
+    "titulo": "Sobre o Fiscaliza Brasil",
+    "blocos": [
+      {
+        "tipo": "h1",
+        "texto": "SOBRE O FISCALIZA BRASIL"
+      },
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil é um projeto privado e independente criado para aproximar o cidadão das informações públicas sobre seus representantes e sobre a atuação do poder público."
+      },
+      {
+        "tipo": "h2",
+        "texto": "O que você vai ver aqui"
+      },
+      {
+        "tipo": "p",
+        "texto": "Esta página explica por que o Fiscaliza Brasil foi criado, qual é o seu propósito, que tipo de informação o portal organiza, como trabalha com fontes oficiais e quais princípios orientam a apresentação dos dados."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Você votou. E depois?"
+      },
+      {
+        "tipo": "p",
+        "texto": "Quando a eleição termina, o trabalho de quem foi eleito continua."
+      },
+      {
+        "tipo": "p",
+        "texto": "É depois do voto que começam perguntas importantes: o que esse representante está fazendo? Em quais decisões participa? Como votou quando existe registro oficial? De quais comissões participa? Qual é sua presença? Que recursos, gastos, contratos, obras ou outras informações públicas estão relacionados à sua atuação?"
+      },
+      {
+        "tipo": "p",
+        "texto": "E, principalmente: onde o cidadão pode encontrar tudo isso de maneira simples?"
+      },
+      {
+        "tipo": "h2",
+        "texto": "O problema que queremos ajudar a resolver"
+      },
+      {
+        "tipo": "p",
+        "texto": "Grande parte das informações públicas existe, mas está distribuída entre diferentes instituições, portais, sistemas, documentos e bases oficiais."
+      },
+      {
+        "tipo": "p",
+        "texto": "Para quem não acompanha política ou administração pública todos os dias, localizar essas informações, compreender os termos utilizados e relacionar um dado ao outro pode ser difícil."
+      },
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil foi pensado para organizar esse caminho de forma mais simples."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Encontrar"
+      },
+      {
+        "tipo": "p",
+        "texto": "Reunir informações públicas que hoje podem estar espalhadas em diferentes fontes e instituições."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Entender"
+      },
+      {
+        "tipo": "p",
+        "texto": "Explicar termos, contextos e etapas de maneira simples, sem exigir conhecimento técnico ou político prévio."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Conferir"
+      },
+      {
+        "tipo": "p",
+        "texto": "Indicar a origem das informações e, sempre que possível, permitir que o cidadão consulte a fonte oficial."
+      },
+      {
+        "tipo": "h2",
+        "texto": "O Fiscaliza Brasil foi pensado para o cidadão"
+      },
+      {
+        "tipo": "p",
+        "texto": "Você não precisa ser especialista em política, orçamento público ou funcionamento das instituições."
+      },
+      {
+        "tipo": "p",
+        "texto": "O portal foi criado para ajudar quem quer saber o que está acontecendo, mas nem sempre sabe onde procurar ou como interpretar os dados encontrados."
+      },
+      {
+        "tipo": "p",
+        "texto": "Nosso papel é organizar a informação, mostrar sua origem, explicar o que ela representa quando necessário e indicar com clareza quando determinado dado ainda não está disponível."
+      },
+      {
+        "tipo": "h2",
+        "texto": "O que o Fiscaliza Brasil é — e o que não é"
+      },
+      {
+        "tipo": "h3",
+        "texto": "É um portal de informação e fiscalização cidadã"
+      },
+      {
+        "tipo": "p",
+        "texto": "Organiza informações públicas para facilitar o acompanhamento de representantes e instituições."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Não é um portal partidário"
+      },
+      {
+        "tipo": "p",
+        "texto": "Não existe para apoiar, atacar, recomendar ou fazer campanha para políticos, partidos, governos ou grupos."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Não substitui as fontes oficiais"
+      },
+      {
+        "tipo": "p",
+        "texto": "O portal organiza e explica informações, mas os registros oficiais continuam sendo a referência primária dos dados públicos."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Do Brasil à sua cidade"
+      },
+      {
+        "tipo": "p",
+        "texto": "A política e a administração pública não acontecem apenas em Brasília. Muitas decisões que afetam a vida das pessoas são tomadas também nos Estados e nos Municípios."
+      },
+      {
+        "tipo": "p",
+        "texto": "Por isso, o Fiscaliza Brasil foi estruturado para permitir o acompanhamento de diferentes níveis do poder público em um mesmo portal."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Brasil"
+      },
+      {
+        "tipo": "p",
+        "texto": "Senado Federal e Câmara dos Deputados."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Estados"
+      },
+      {
+        "tipo": "p",
+        "texto": "Deputados Estaduais e Governadores."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Municípios"
+      },
+      {
+        "tipo": "p",
+        "texto": "Prefeitos e Vereadores."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Fontes"
+      },
+      {
+        "tipo": "p",
+        "texto": "Registros oficiais relacionados à atuação pública."
+      },
+      {
+        "tipo": "h2",
+        "texto": "O que você pode encontrar"
+      },
+      {
+        "tipo": "p",
+        "texto": "Conforme a disponibilidade das fontes oficiais, o Fiscaliza Brasil organiza informações relacionadas a:"
+      },
+      {
+        "tipo": "li",
+        "texto": "Representantes públicos: Senadores, Deputados Federais, Deputados Estaduais, Governadores, Prefeitos e Vereadores."
+      },
+      {
+        "tipo": "li",
+        "texto": "Atuação: atividades e registros relacionados ao exercício do mandato ou da função pública."
+      },
+      {
+        "tipo": "li",
+        "texto": "Votações: registros oficiais de como representantes votaram, quando essa informação estiver disponível."
+      },
+      {
+        "tipo": "li",
+        "texto": "Comissões e funções: participação em comissões e outras funções oficialmente registradas."
+      },
+      {
+        "tipo": "li",
+        "texto": "Presença: registros de presença e ausência quando divulgados pela instituição responsável."
+      },
+      {
+        "tipo": "li",
+        "texto": "Recursos e emendas: valores, destinações e etapas de execução quando disponíveis em fonte oficial."
+      },
+      {
+        "tipo": "li",
+        "texto": "Gastos, contratos e obras: informações públicas relacionadas à administração e ao uso de recursos públicos."
+      },
+      {
+        "tipo": "li",
+        "texto": "Registros oficiais: referências que permitam identificar de onde vieram os dados apresentados."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Como tratamos a informação"
+      },
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil procura separar com clareza três elementos: o fato publicado pela fonte oficial, o contexto necessário para compreender esse fato e os possíveis efeitos práticos que podem ser explicados sem transformar a informação em opinião."
+      },
+      {
+        "tipo": "p",
+        "texto": "Também buscamos indicar quando uma informação foi verificada ou atualizada."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Nosso princípio editorial"
+      },
+      {
+        "tipo": "p",
+        "texto": "O cidadão não precisa que o Fiscaliza Brasil pense por ele. Precisa de informação clara para poder pensar por si mesmo."
+      },
+      {
+        "tipo": "p",
+        "texto": "Por isso, o portal não classifica políticos como “bons” ou “ruins”, não orienta voto e não recomenda candidatos."
+      },
+      {
+        "tipo": "p",
+        "texto": "Nosso compromisso é apresentar informações públicas de maneira organizada, indicar as fontes e explicar o que for necessário para facilitar a compreensão."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Do voto ao acompanhamento"
+      },
+      {
+        "tipo": "p",
+        "texto": "O voto acontece em um momento. O acompanhamento do mandato acontece ao longo do tempo."
+      },
+      {
+        "tipo": "p",
+        "texto": "Depois de escolher um representante, o cidadão pode acompanhar o que essa pessoa faz dentro das atribuições do cargo para o qual foi eleita."
+      },
+      {
+        "tipo": "p",
+        "texto": "É nesse caminho entre “eu votei” e “eu estou acompanhando” que o Fiscaliza Brasil quer ajudar."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Uma proposta simples"
+      },
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil foi criado para que uma pessoa possa começar por uma pergunta simples e avançar na consulta sem precisar dominar sistemas públicos ou linguagem técnica."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Quem me representa?"
+      },
+      {
+        "tipo": "p",
+        "texto": "Conheça os representantes e as instituições que exercem funções públicas."
+      },
+      {
+        "tipo": "h3",
+        "texto": "O que está acontecendo?"
+      },
+      {
+        "tipo": "p",
+        "texto": "Acompanhe atividades, votações, presença, recursos, gastos e outros registros públicos disponíveis."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Onde posso conferir?"
+      },
+      {
+        "tipo": "p",
+        "texto": "Consulte a origem dos dados e, quando disponível, o registro oficial correspondente."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Para que a informação pública fique mais próxima de você"
+      },
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil não pede que você simplesmente acredite no que vê."
+      },
+      {
+        "tipo": "p",
+        "texto": "Queremos que você possa entender, acompanhar e conferir."
+      },
+      {
+        "tipo": "p",
+        "texto": "Esse é o objetivo do projeto: aproximar o cidadão das informações públicas e tornar mais simples o acompanhamento da atuação de quem exerce funções públicas."
+      },
+      {
+        "tipo": "p",
+        "texto": "Comece acompanhando os representantes e as instituições que fazem parte da sua realidade."
+      },
+      {
+        "tipo": "p",
+        "texto": "Portal Nacional de Informação e Fiscalização Cidadã."
+      },
+      {
+        "tipo": "p",
+        "texto": "Projeto privado e independente, voltado à informação pública e à fiscalização cidadã."
+      },
+      {
+        "tipo": "h3",
+        "texto": "INSTITUCIONAL"
+      },
+      {
+        "tipo": "h3",
+        "texto": "REPRESENTANTES"
+      },
+      {
+        "tipo": "h3",
+        "texto": "PARTICIPAÇÃO"
+      }
+    ]
+  },
+  "politica-explicada": {
+    "slug": "politica-explicada",
+    "titulo": "Política Explicada",
+    "blocos": [
+      {
+        "tipo": "p",
+        "texto": "Entenda antes de fiscalizar"
+      },
+      {
+        "tipo": "h1",
+        "texto": "POLÍTICA EXPLICADA"
+      },
+      {
+        "tipo": "p",
+        "texto": "Entenda, em linguagem simples, quem pode decidir, quem vota, quem executa, quem fiscaliza e como uma decisão pública pode chegar até você."
+      },
+      {
+        "tipo": "h2",
+        "texto": "O que você vai ver aqui"
+      },
+      {
+        "tipo": "p",
+        "texto": "Esta página explica conceitos básicos do funcionamento do poder público para facilitar a leitura das informações apresentadas pelo Fiscaliza Brasil."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Quem faz o quê?"
+      },
+      {
+        "tipo": "p",
+        "texto": "Uma visão simples das atribuições de vereadores, prefeitos, deputados estaduais, governadores, deputados federais, senadores e presidente da República."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Como uma decisão acontece?"
+      },
+      {
+        "tipo": "p",
+        "texto": "Uma explicação geral sobre propostas, análise, discussão, votação, decisão e execução, quando aplicável."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Como circulam os recursos públicos?"
+      },
+      {
+        "tipo": "p",
+        "texto": "Uma visão introdutória sobre arrecadação, orçamento, destinação, despesas, contratos e fiscalização."
+      },
+      {
+        "tipo": "h3",
+        "texto": "O que o cidadão pode acompanhar?"
+      },
+      {
+        "tipo": "p",
+        "texto": "Votações, presença, despesas, emendas, contratos, obras, decisões e outras informações públicas, quando disponíveis nas fontes oficiais."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Como funciona o poder público?"
+      },
+      {
+        "tipo": "p",
+        "texto": "No Brasil, a Constituição organiza o Estado e distribui competências entre União, Estados, Distrito Federal e Municípios. Também estabelece os Poderes Legislativo, Executivo e Judiciário, que são independentes e harmônicos entre si."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Poder Legislativo"
+      },
+      {
+        "tipo": "p",
+        "texto": "Exerce, entre outras atribuições, a função de elaborar leis e fiscalizar o Poder Executivo, dentro das competências previstas na Constituição e nas leis."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Poder Executivo"
+      },
+      {
+        "tipo": "p",
+        "texto": "Exerce, entre outras atribuições, a função administrativa do Estado e executa políticas públicas, serviços e orçamento dentro de suas competências."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Poder Judiciário"
+      },
+      {
+        "tipo": "p",
+        "texto": "Exerce a função jurisdicional, julgando conflitos e questões submetidas à Justiça, nos termos da Constituição e das leis."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Controle e fiscalização"
+      },
+      {
+        "tipo": "p",
+        "texto": "Além dos mecanismos internos de cada Poder, existem instituições de controle e mecanismos de participação social. O cidadão também pode acompanhar informações públicas."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Vereador"
+      },
+      {
+        "tipo": "p",
+        "texto": "Município — Poder Legislativo. Atua na Câmara Municipal, participa das discussões e votações e exerce funções de fiscalização dentro de suas competências."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Prefeito"
+      },
+      {
+        "tipo": "p",
+        "texto": "Município — Poder Executivo. Administra o município e executa políticas, serviços, obras e o orçamento municipal dentro de suas atribuições."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Deputado Estadual"
+      },
+      {
+        "tipo": "p",
+        "texto": "Estado — Poder Legislativo. Atua na Assembleia Legislativa, participa da elaboração das leis estaduais e exerce funções de fiscalização dentro de suas competências."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Governador"
+      },
+      {
+        "tipo": "p",
+        "texto": "Estado — Poder Executivo. Administra o Estado e executa políticas públicas, serviços e o orçamento estadual dentro de suas competências."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Deputado Federal"
+      },
+      {
+        "tipo": "p",
+        "texto": "União — Poder Legislativo. Atua na Câmara dos Deputados, participa da elaboração das leis federais e exerce atribuições de fiscalização previstas na Constituição."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Senador"
+      },
+      {
+        "tipo": "p",
+        "texto": "União — Poder Legislativo. Atua no Senado Federal e exerce as atribuições legislativas e de fiscalização previstas na Constituição."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Presidente da República"
+      },
+      {
+        "tipo": "p",
+        "texto": "União — Poder Executivo. Exerce a chefia do Poder Executivo Federal e desempenha as atribuições estabelecidas pela Constituição e pelas leis."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Como uma decisão pode chegar ao cidadão?"
+      },
+      {
+        "tipo": "p",
+        "texto": "O caminho muda conforme o tipo de matéria e a instituição envolvida. Como visão geral, uma decisão legislativa pode passar por etapas como estas:"
+      },
+      {
+        "tipo": "p",
+        "texto": "Dependendo da matéria, podem existir comissões, pareceres, emendas, análise por outra Casa, sanção ou veto, promulgação e publicação. Nem toda decisão pública segue exatamente essa sequência."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Como funciona o dinheiro público?"
+      },
+      {
+        "tipo": "p",
+        "texto": "O uso de recursos públicos envolve regras orçamentárias, receitas, despesas e mecanismos de controle. Uma visão simplificada pode ajudar a entender onde procurar as informações."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Arrecadação"
+      },
+      {
+        "tipo": "p",
+        "texto": "Entradas de recursos públicos provenientes das receitas previstas e arrecadadas."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Orçamento"
+      },
+      {
+        "tipo": "p",
+        "texto": "Instrumentos que planejam receitas e despesas públicas e estabelecem autorizações e previsões conforme as regras aplicáveis."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Destinação"
+      },
+      {
+        "tipo": "p",
+        "texto": "Definição e autorização de aplicações de recursos conforme o planejamento e a legislação orçamentária."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Despesa"
+      },
+      {
+        "tipo": "p",
+        "texto": "Utilização de recursos públicos para custear bens, serviços, obras, pessoal e outras obrigações públicas."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Contratos e execução"
+      },
+      {
+        "tipo": "p",
+        "texto": "Quando houver contratação, obra ou serviço, existem atos e etapas que podem ser acompanhados nos registros públicos."
+      },
+      {
+        "tipo": "p",
+        "texto": "Órgãos de controle, instituições públicas e cidadãos podem acompanhar informações, conforme as competências e os dados disponíveis."
+      },
+      {
+        "tipo": "h2",
+        "texto": "O que o cidadão pode fiscalizar?"
+      },
+      {
+        "tipo": "li",
+        "texto": "Votações: registros de participação e resultados, quando disponíveis."
+      },
+      {
+        "tipo": "li",
+        "texto": "Presença: sessões, reuniões e registros de presença ou ausência, quando publicados."
+      },
+      {
+        "tipo": "li",
+        "texto": "Gastos: despesas e utilização de recursos divulgadas pelos órgãos públicos."
+      },
+      {
+        "tipo": "li",
+        "texto": "Emendas: recursos indicados, destinados ou recebidos conforme os registros oficiais disponíveis."
+      },
+      {
+        "tipo": "li",
+        "texto": "Contratos e obras: informações sobre contratação, execução e acompanhamento, quando publicadas."
+      },
+      {
+        "tipo": "li",
+        "texto": "Proposições: projetos, autores, tramitação, pareceres e resultados."
+      },
+      {
+        "tipo": "li",
+        "texto": "Decisões: atos e decisões públicas com indicação da instituição responsável."
+      },
+      {
+        "tipo": "li",
+        "texto": "Dados oficiais: informações divulgadas pelos órgãos públicos e sistemas oficiais consultados."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Participação popular também é fiscalização"
+      },
+      {
+        "tipo": "p",
+        "texto": "O cidadão pode acompanhar decisões, consultar informações públicas, participar de consultas e audiências quando disponíveis, apresentar sugestões e utilizar os canais oficiais das instituições."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Informação"
+      },
+      {
+        "tipo": "p",
+        "texto": "Procure documentos, dados e registros nas fontes oficiais."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Acompanhamento"
+      },
+      {
+        "tipo": "p",
+        "texto": "Observe o andamento de propostas, decisões, gastos e ações públicas."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Participação"
+      },
+      {
+        "tipo": "p",
+        "texto": "Use os canais institucionais disponíveis para apresentar sugestões e acompanhar processos."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Fiscalização cidadã"
+      },
+      {
+        "tipo": "p",
+        "texto": "Compare informações públicas, verifique as fontes e tire suas próprias conclusões."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Iniciativa popular: existe, mas as regras mudam"
+      },
+      {
+        "tipo": "p",
+        "texto": "O cidadão pode participar da criação de leis, mas o caminho e os requisitos mudam conforme a esfera de governo, o assunto e as regras de iniciativa aplicáveis."
+      },
+      {
+        "tipo": "h3",
+        "texto": "União"
+      },
+      {
+        "tipo": "p",
+        "texto": "Na esfera federal, a Constituição prevê projeto de lei de iniciativa popular apresentado à Câmara dos Deputados. É necessário o apoio de pelo menos 1% do eleitorado nacional , distribuído por pelo menos cinco Estados , com no mínimo 0,3% dos eleitores de cada um deles ."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Estados"
+      },
+      {
+        "tipo": "p",
+        "texto": "A Constituição determina que a legislação disponha sobre a iniciativa popular no processo legislativo estadual. Por isso, os requisitos devem ser conferidos na Constituição do Estado e nas regras da respectiva Assembleia Legislativa."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Municípios"
+      },
+      {
+        "tipo": "p",
+        "texto": "A Constituição prevê iniciativa popular de projetos de lei de interesse específico do Município, da cidade ou de bairros mediante manifestação de pelo menos 5% do eleitorado , observadas também as regras locais aplicáveis."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Uma ideia não é automaticamente um projeto"
+      },
+      {
+        "tipo": "p",
+        "texto": "Encaminhar uma sugestão a um vereador, deputado, senador ou órgão público é uma forma de participação cidadã, mas não equivale automaticamente à apresentação formal de um projeto de lei de iniciativa popular."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Como usar o Fiscaliza Brasil"
+      },
+      {
+        "tipo": "p",
+        "texto": "Depois de entender a estrutura, você pode ir diretamente às áreas de acompanhamento do portal."
+      },
+      {
+        "tipo": "p",
+        "texto": "Acompanhe representantes, votações, proposições, presença e outras informações públicas disponíveis."
+      },
+      {
+        "tipo": "p",
+        "texto": "Consultar Senadores →"
+      },
+      {
+        "tipo": "h3",
+        "texto": "Deputados Federais"
+      },
+      {
+        "tipo": "p",
+        "texto": "Consulte proposições, votações, presença, gastos e outras informações públicas disponíveis."
+      },
+      {
+        "tipo": "p",
+        "texto": "Consultar Deputados Federais →"
+      },
+      {
+        "tipo": "h3",
+        "texto": "Deputados Estaduais"
+      },
+      {
+        "tipo": "p",
+        "texto": "Acompanhe informações das Assembleias Legislativas e de seus representantes."
+      },
+      {
+        "tipo": "p",
+        "texto": "Consultar Deputados Estaduais →"
+      },
+      {
+        "tipo": "p",
+        "texto": "Consulte informações públicas sobre governos estaduais, recursos, gastos e outras áreas disponíveis."
+      },
+      {
+        "tipo": "p",
+        "texto": "Consultar Governadores →"
+      },
+      {
+        "tipo": "p",
+        "texto": "Acompanhe informações públicas sobre a administração municipal e os representantes."
+      },
+      {
+        "tipo": "p",
+        "texto": "Consultar Prefeitos →"
+      },
+      {
+        "tipo": "p",
+        "texto": "Conheça os representantes da Câmara Municipal e acompanhe as informações públicas disponíveis."
+      },
+      {
+        "tipo": "p",
+        "texto": "Consultar Vereadores →"
+      },
+      {
+        "tipo": "h2",
+        "texto": "ENTENDER É O PRIMEIRO PASSO"
+      },
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil organiza informações públicas para que você possa acompanhar as instituições, as decisões e os recursos públicos e formar sua própria opinião."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Fontes e limites da informação"
+      },
+      {
+        "tipo": "p",
+        "texto": "As explicações desta página são introdutórias. As competências e os procedimentos exatos dependem da Constituição, das leis, dos regimentos e das regras da instituição envolvida."
+      },
+      {
+        "tipo": "p",
+        "texto": "Quando o Fiscaliza Brasil apresentar um dado sobre uma autoridade, órgão, proposição, gasto ou decisão, a informação deve ser relacionada à fonte pública correspondente e ao período consultado."
+      },
+      {
+        "tipo": "p",
+        "texto": "Referências institucionais utilizadas para esta explicação: Constituição da República Federativa do Brasil — Presidência da República Entenda o processo legislativo — Câmara dos Deputados Atribuições do Senado Federal — Senado Federal"
+      },
+      {
+        "tipo": "p",
+        "texto": "Portal Nacional de Informação e Fiscalização Cidadã."
+      },
+      {
+        "tipo": "p",
+        "texto": "Projeto privado e independente, voltado à informação pública e à fiscalização cidadã."
+      },
+      {
+        "tipo": "h3",
+        "texto": "INSTITUCIONAL"
+      },
+      {
+        "tipo": "h3",
+        "texto": "REPRESENTANTES"
+      },
+      {
+        "tipo": "h3",
+        "texto": "PARTICIPAÇÃO"
+      }
+    ]
+  },
+  "participe": {
+    "slug": "participe",
+    "titulo": "Participe",
+    "blocos": [
+      {
+        "tipo": "li",
+        "texto": "FISCALIZA BRASIL Seu voto escolhe. A informação esclarece. Você fiscaliza. Aqui na Fiscaliza Brasil você conhece seus políticos e acompanha o que estão fazendo em benefício da população e do Brasil. Home Sobre Política Explicada Participe Denúncias Apoie Patrocine Contato Senadores Dep. Federais Dep. Estaduais Governadores Prefeitos Vereadores O FISCALIZA BRASIL NÃO JULGA. NÃO EMITE OPINIÕES. Apresenta informações públicas, verificadas em fontes oficiais, para que você possa acompanhar e fiscalizar. Participação cidadã PARTICIPE Sua ideia, seu documento, sua foto, seu vídeo ou sua sugestão de pauta pode ajudar o Fiscaliza Brasil a encontrar assuntos que merecem ser pesquisados e explicados. Você pode ajudar a encontrar o que merece ser explicado O Fiscaliza Brasil reúne informações públicas e procura explicar, em linguagem simples, assuntos que afetam a população. Muitas vezes, o cidadão é quem primeiro percebe um problema, encontra um documento ou identifica um assunto que merece atenção. Por isso, este canal existe para receber colaborações e sugestões de pautas . 💡 Sugestão de pauta Você conhece um assunto que deveria ser pesquisado? Conte qual é o problema, onde acontece e por que acredita que merece ser explicado. 📄 Documentos Você encontrou um documento público, relatório, contrato, publicação ou outro material que possa ajudar na pesquisa? Envie. 📷 Fotos Uma foto pode ajudar a mostrar uma situação ou indicar um assunto que merece ser pesquisado. 🎥 Vídeos Um vídeo pode fornecer elementos para compreender melhor uma situação. Envie o material e explique o que ele mostra. Você também pode ter uma ideia para uma nova lei Uma mudança pode começar com uma necessidade percebida pelo cidadão. Pode ser um problema que precisa ser resolvido, uma regra que precisa ser criada ou uma lei existente que precisa ser modificada. Importante: ter uma ideia é diferente de apresentar formalmente um Projeto de Lei. As regras mudam conforme o Município, o Estado ou a União, e algumas matérias só podem ser propostas por determinadas autoridades. Por isso, o primeiro passo é descobrir quem tem competência para tratar do assunto. A regra mais importante Não é simplesmente a Casa que você escolhe. É o assunto que indica o caminho. Um problema municipal pode envolver a Câmara Municipal. Um assunto estadual pode envolver a Assembleia Legislativa. Um assunto de competência da União pode seguir para o Congresso Nacional. Antes de preparar uma proposta, descubra qual é a esfera correta e quais são as regras daquela Casa. Como transformar uma ideia em uma proposta Não comece pela linguagem jurídica. Comece explicando o problema. Depois organize a solução. 1 Identifique o problema Escreva com suas próprias palavras o que está acontecendo. Não precisa usar termos jurídicos. 2 Explique quem é afetado Diga quem sofre com o problema: moradores, estudantes, pacientes, trabalhadores, consumidores ou a população em geral. 3 Explique o que deveria mudar Não diga apenas que algo precisa melhorar. Explique qual mudança você deseja e como ela poderia funcionar. 4 Descubra quem tem competência Verifique se o assunto pertence ao Município, ao Estado ou à União e se existe alguma regra especial de iniciativa. 5 Pesquise as leis existentes Veja se já existe uma lei sobre o assunto. Talvez seja necessário alterar uma regra existente, e não criar uma lei nova. 6 Pesquise propostas semelhantes Procure projetos anteriores, leis de outras localidades, estudos e dados oficiais. Isso pode melhorar sua proposta. 7 Organize a proposta Explique o problema, a solução, quem será beneficiado e como a solução funcionará na prática. 8 Prepare a estrutura Quando couber um Projeto de Lei, a proposta normalmente terá ementa, texto com os artigos e justificativa. A estrutura exata depende das regras aplicáveis. 9 Indique as fontes Se usar números, pesquisas, estatísticas ou documentos, informe de onde vieram. Não invente dados. 10 Revise antes de encaminhar Confira se a proposta está clara, se a Casa pode tratar do assunto e se você identificou corretamente o caminho de participação. O que deve existir dentro de uma proposta? Ementa Uma frase curta que informa o que a proposta pretende fazer. Texto do projeto É a parte que apresenta as regras que se pretende criar ou alterar. Os artigos devem dizer com clareza o que deverá acontecer. Justificativa Explica por que a proposta é necessária, qual problema pretende resolver, quem será beneficiado e quais dados sustentam a ideia. Fontes e documentos Informações que ajudam a demonstrar o problema e permitem que outras pessoas confiram os dados. Atenção: uma proposta bem-intencionada não é automaticamente uma proposta juridicamente possível. É necessário verificar competência, Constituição, legislação e regras da Casa Legislativa. Para qual Casa devo levar minha ideia? 🏙️ Câmara Municipal — Município Se o assunto estiver dentro da competência municipal, o cidadão pode procurar a Câmara Municipal de sua cidade, seus vereadores e os canais de participação oferecidos pela própria Câmara. Passo a passo: Defina o problema da cidade."
+      },
+      {
+        "tipo": "li",
+        "texto": "Pesquise a legislação municipal."
+      },
+      {
+        "tipo": "li",
+        "texto": "Verifique se a matéria realmente é municipal."
+      },
+      {
+        "tipo": "li",
+        "texto": "Organize a ideia, a solução, os dados e os documentos."
+      },
+      {
+        "tipo": "li",
+        "texto": "Procure um vereador ou o canal oficial de participação da Câmara."
+      },
+      {
+        "tipo": "li",
+        "texto": "Explique que você tem uma proposta e quer saber como ela pode ser encaminhada."
+      },
+      {
+        "tipo": "li",
+        "texto": "Se existir iniciativa popular municipal para aquela matéria, verifique os requisitos específicos."
+      },
+      {
+        "tipo": "li",
+        "texto": "Anote o número da proposição, se houver, e acompanhe sua tramitação."
+      },
+      {
+        "tipo": "h3",
+        "texto": "🏛️ Assembleia Legislativa — Estado"
+      },
+      {
+        "tipo": "p",
+        "texto": "Se o assunto estiver dentro da competência estadual, procure a Assembleia Legislativa do seu Estado, seus deputados estaduais e os canais oficiais de participação."
+      },
+      {
+        "tipo": "p",
+        "texto": "Passo a passo:"
+      },
+      {
+        "tipo": "li",
+        "texto": "Defina o problema existente no Estado."
+      },
+      {
+        "tipo": "li",
+        "texto": "Pesquise as leis estaduais e propostas anteriores."
+      },
+      {
+        "tipo": "li",
+        "texto": "Verifique se a matéria pode ser tratada pela Assembleia."
+      },
+      {
+        "tipo": "li",
+        "texto": "Prepare a proposta com problema, solução, justificativa, dados e fontes."
+      },
+      {
+        "tipo": "li",
+        "texto": "Procure um deputado estadual ou o canal oficial de participação."
+      },
+      {
+        "tipo": "li",
+        "texto": "Pergunte qual é o procedimento correto para encaminhar a sugestão."
+      },
+      {
+        "tipo": "li",
+        "texto": "Se a ideia virar proposição, anote o número e acompanhe comissões, pareceres e votações."
+      },
+      {
+        "tipo": "h3",
+        "texto": "🇧🇷 Câmara dos Deputados e Senado Federal — União"
+      },
+      {
+        "tipo": "p",
+        "texto": "Quando o assunto for de competência da União, existem diferentes caminhos de participação no Congresso Nacional. Uma pessoa pode apresentar sua ideia a um deputado federal ou senador para avaliação, utilizar mecanismos de participação existentes ou, quando a Constituição permitir e todos os requisitos forem cumpridos, participar de uma iniciativa popular formal."
+      },
+      {
+        "tipo": "p",
+        "texto": "Passo a passo para levar uma ideia a um parlamentar:"
+      },
+      {
+        "tipo": "li",
+        "texto": "Defina claramente o problema."
+      },
+      {
+        "tipo": "li",
+        "texto": "Pesquise a legislação federal existente."
+      },
+      {
+        "tipo": "li",
+        "texto": "Pesquise projetos semelhantes."
+      },
+      {
+        "tipo": "li",
+        "texto": "Verifique se a matéria é de competência da União."
+      },
+      {
+        "tipo": "li",
+        "texto": "Prepare a proposta e sua justificativa."
+      },
+      {
+        "tipo": "li",
+        "texto": "Separe documentos e fontes."
+      },
+      {
+        "tipo": "li",
+        "texto": "Procure os canais oficiais de contato de um deputado federal ou senador."
+      },
+      {
+        "tipo": "li",
+        "texto": "Explique o problema e a solução que você está propondo."
+      },
+      {
+        "tipo": "li",
+        "texto": "Peça que o parlamentar avalie se a proposta pode ser apresentada formalmente."
+      },
+      {
+        "tipo": "li",
+        "texto": "Se houver uma proposição, acompanhe seu número e todas as etapas."
+      },
+      {
+        "tipo": "h2",
+        "texto": "E depois que a proposta é apresentada?"
+      },
+      {
+        "tipo": "p",
+        "texto": "Apresentar uma proposta não significa que ela virou lei. O processo depende da Casa e do tipo de proposição."
+      },
+      {
+        "tipo": "p",
+        "texto": "Conforme o caso, podem existir comissões, pareceres, emendas, análise por outra Casa, sanção, veto, promulgação e publicação. Por isso, o cidadão deve acompanhar a proposta até o resultado final."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Uma proposta pode ser modificada ou rejeitada"
+      },
+      {
+        "tipo": "p",
+        "texto": "Ela pode ser aprovada, receber alterações, ser rejeitada, ser arquivada ou continuar em análise. Isso faz parte do processo legislativo. Apresentar uma ideia não garante sua aprovação."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Como acompanhar uma proposta"
+      },
+      {
+        "tipo": "p",
+        "texto": "Depois de encaminhar sua ideia, não pare por aí. Anote e acompanhe:"
+      },
+      {
+        "tipo": "li",
+        "texto": "Número da proposição"
+      },
+      {
+        "tipo": "li",
+        "texto": "Data de apresentação"
+      },
+      {
+        "tipo": "li",
+        "texto": "Autor da proposição"
+      },
+      {
+        "tipo": "li",
+        "texto": "Casa Legislativa"
+      },
+      {
+        "tipo": "li",
+        "texto": "Comissões"
+      },
+      {
+        "tipo": "li",
+        "texto": "Relator"
+      },
+      {
+        "tipo": "li",
+        "texto": "Pareceres"
+      },
+      {
+        "tipo": "li",
+        "texto": "Votações"
+      },
+      {
+        "tipo": "li",
+        "texto": "Resultado"
+      },
+      {
+        "tipo": "li",
+        "texto": "Próxima etapa"
+      },
+      {
+        "tipo": "h2",
+        "texto": "Antes de enviar sua ideia, faça esta conferência"
+      },
+      {
+        "tipo": "li",
+        "texto": "Expliquei claramente o problema?"
+      },
+      {
+        "tipo": "li",
+        "texto": "Expliquei quem é afetado?"
+      },
+      {
+        "tipo": "li",
+        "texto": "Expliquei o que quero mudar?"
+      },
+      {
+        "tipo": "li",
+        "texto": "Pesquisei se já existe uma lei?"
+      },
+      {
+        "tipo": "li",
+        "texto": "Pesquisei propostas semelhantes?"
+      },
+      {
+        "tipo": "li",
+        "texto": "Descobri se o assunto é municipal, estadual ou federal?"
+      },
+      {
+        "tipo": "li",
+        "texto": "Identifiquei quem pode tratar do assunto?"
+      },
+      {
+        "tipo": "li",
+        "texto": "Verifiquei se existe alguma regra especial de iniciativa?"
+      },
+      {
+        "tipo": "li",
+        "texto": "Organizei minha proposta?"
+      },
+      {
+        "tipo": "li",
+        "texto": "Coloquei as fontes dos dados?"
+      },
+      {
+        "tipo": "li",
+        "texto": "Expliquei como a solução funcionaria?"
+      },
+      {
+        "tipo": "li",
+        "texto": "Sei como acompanhar o andamento?"
+      },
+      {
+        "tipo": "h2",
+        "texto": "VOCÊ TEM UMA IDEIA?"
+      },
+      {
+        "tipo": "p",
+        "texto": "Envie sua sugestão de pauta, documento, foto, vídeo ou proposta de assunto para o Fiscaliza Brasil. Sua colaboração pode ajudar a encontrar informações que merecem ser pesquisadas e explicadas."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Uma ideia pode ser o começo de uma mudança"
+      },
+      {
+        "tipo": "p",
+        "texto": "Você não precisa começar sabendo escrever como um especialista. Comece explicando o problema, a mudança que gostaria de ver e por que acredita que ela pode ajudar."
+      },
+      {
+        "tipo": "p",
+        "texto": "A democracia não acontece somente no dia da eleição. O cidadão também participa quando acompanha, sugere, propõe e fiscaliza."
+      },
+      {
+        "tipo": "p",
+        "texto": "Portal Nacional de Informação e Fiscalização Cidadã."
+      },
+      {
+        "tipo": "p",
+        "texto": "Projeto privado e independente, voltado à informação pública e à fiscalização cidadã."
+      },
+      {
+        "tipo": "h3",
+        "texto": "INSTITUCIONAL"
+      },
+      {
+        "tipo": "h3",
+        "texto": "REPRESENTANTES"
+      },
+      {
+        "tipo": "h3",
+        "texto": "PARTICIPAÇÃO"
+      }
+    ]
+  },
+  "denuncias": {
+    "slug": "denuncias",
+    "titulo": "Denúncias",
+    "blocos": [
+      {
+        "tipo": "h1",
+        "texto": "DENÚNCIAS"
+      },
+      {
+        "tipo": "p",
+        "texto": "Este espaço permite que o cidadão informe fatos que possam ser de interesse público, envolvendo agentes públicos, órgãos públicos, serviços, obras, contratos ou utilização de recursos públicos."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Como funciona"
+      },
+      {
+        "tipo": "p",
+        "texto": "O cidadão apresenta a informação da forma mais clara possível. Sempre que tiver, pode anexar documentos, fotografias, vídeos ou áudios que ajudem a compreender o fato."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Você informa"
+      },
+      {
+        "tipo": "p",
+        "texto": "Relate o que aconteceu, onde aconteceu, quando aconteceu e quem está envolvido."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Você pode anexar provas"
+      },
+      {
+        "tipo": "p",
+        "texto": "Fotografias, vídeos, áudios e documentos podem ajudar na análise da informação."
+      },
+      {
+        "tipo": "h3",
+        "texto": "A informação é registrada"
+      },
+      {
+        "tipo": "p",
+        "texto": "A denúncia recebe um registro para que possa ser analisada e, quando cabível, encaminhada."
+      },
+      {
+        "tipo": "h2",
+        "texto": "O que pode ser informado"
+      },
+      {
+        "tipo": "p",
+        "texto": "Podem ser apresentadas informações relacionadas ao interesse público, especialmente situações que envolvam:"
+      },
+      {
+        "tipo": "li",
+        "texto": "agentes políticos e agentes públicos;"
+      },
+      {
+        "tipo": "li",
+        "texto": "órgãos e instituições públicas;"
+      },
+      {
+        "tipo": "li",
+        "texto": "obras e serviços públicos;"
+      },
+      {
+        "tipo": "li",
+        "texto": "contratos e compras públicas;"
+      },
+      {
+        "tipo": "li",
+        "texto": "utilização de recursos públicos;"
+      },
+      {
+        "tipo": "li",
+        "texto": "emendas e recursos destinados ao poder público;"
+      },
+      {
+        "tipo": "li",
+        "texto": "problemas na prestação de serviços públicos;"
+      },
+      {
+        "tipo": "li",
+        "texto": "outras situações que mereçam ser verificadas."
+      },
+      {
+        "tipo": "h2",
+        "texto": "O que é importante informar"
+      },
+      {
+        "tipo": "p",
+        "texto": "Quanto mais clara e objetiva for a informação, mais fácil será compreender o fato relatado."
+      },
+      {
+        "tipo": "li",
+        "texto": "o que aconteceu;"
+      },
+      {
+        "tipo": "li",
+        "texto": "quando aconteceu;"
+      },
+      {
+        "tipo": "li",
+        "texto": "onde aconteceu;"
+      },
+      {
+        "tipo": "li",
+        "texto": "quem está envolvido;"
+      },
+      {
+        "tipo": "li",
+        "texto": "qual órgão ou autoridade pública está relacionado ao fato;"
+      },
+      {
+        "tipo": "li",
+        "texto": "quais documentos ou provas podem ajudar na verificação."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Importante"
+      },
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil não transforma automaticamente uma informação recebida em acusação ou fato comprovado."
+      },
+      {
+        "tipo": "p",
+        "texto": "A informação será registrada e poderá ser analisada com base em documentos e fontes públicas disponíveis."
+      },
+      {
+        "tipo": "p",
+        "texto": "Não utilize este espaço para ameaças, ofensas, perseguições, informações deliberadamente falsas ou exposição desnecessária de dados pessoais de terceiros."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Privacidade e responsabilidade"
+      },
+      {
+        "tipo": "p",
+        "texto": "As informações fornecidas serão utilizadas para o tratamento da denúncia dentro da finalidade do Fiscaliza Brasil."
+      },
+      {
+        "tipo": "p",
+        "texto": "Dados pessoais não devem ser publicados desnecessariamente. O cidadão deve evitar enviar informações pessoais de terceiros que não sejam necessárias para compreender o fato relatado."
+      },
+      {
+        "tipo": "h2",
+        "texto": "O que acontece depois do envio"
+      },
+      {
+        "tipo": "p",
+        "texto": "Depois de registrada, a informação poderá passar por análise. Conforme o caso, poderá ser necessário verificar documentos, consultar fontes oficiais ou solicitar informações adicionais."
+      },
+      {
+        "tipo": "p",
+        "texto": "Quando houver fundamento e for adequado, a informação poderá ser encaminhada ao órgão ou autoridade competente."
+      },
+      {
+        "tipo": "p",
+        "texto": "O envio de uma denúncia não garante investigação, providência ou resultado específico. Cada caso será tratado de acordo com as informações disponíveis."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Envie sua denúncia"
+      },
+      {
+        "tipo": "p",
+        "texto": "O formulário abaixo é o canal para registrar a informação. O Fiscaliza Brasil é um portal independente e este canal não substitui os canais oficiais dos órgãos públicos competentes."
+      },
+      {
+        "tipo": "p",
+        "texto": "O formulário de denúncias é inserido automaticamente pelo sistema do Fiscaliza Brasil."
+      }
+    ]
+  },
+  "quem-apoia-o-fiscaliza-brasil": {
+    "slug": "quem-apoia-o-fiscaliza-brasil",
+    "titulo": "Quem Apoia o Fiscaliza Brasil",
+    "blocos": [
+      {
+        "tipo": "h1",
+        "texto": "APOIE O FISCALIZA BRASIL"
+      },
+      {
+        "tipo": "p",
+        "texto": "O apoio ajuda a manter um projeto privado e independente dedicado a organizar informações públicas e facilitar a fiscalização cidadã."
+      },
+      {
+        "tipo": "h2",
+        "texto": "O que você vai ver aqui"
+      },
+      {
+        "tipo": "p",
+        "texto": "Esta página explica o que significa apoiar o Fiscaliza Brasil, como o apoio se diferencia do patrocínio e quais regras protegem a independência editorial do portal."
+      },
+      {
+        "tipo": "h3",
+        "texto": "O que é apoiar?"
+      },
+      {
+        "tipo": "p",
+        "texto": "É contribuir voluntariamente para a continuidade e o desenvolvimento do projeto, sem adquirir qualquer poder sobre o conteúdo publicado."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Independência preservada"
+      },
+      {
+        "tipo": "p",
+        "texto": "Quem apoia não escolhe o que será publicado, retirado, destacado ou alterado no Fiscaliza Brasil."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Transparência"
+      },
+      {
+        "tipo": "p",
+        "texto": "Quando houver identificação pública de apoiadores, ela será apresentada de forma separada do conteúdo editorial do portal."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Por que apoiar?"
+      },
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil precisa manter infraestrutura tecnológica, desenvolvimento do portal, organização de dados, atualização de informações e ferramentas que permitam ao cidadão consultar dados públicos de forma mais simples."
+      },
+      {
+        "tipo": "p",
+        "texto": "O apoio ajuda na continuidade dessas atividades e no desenvolvimento de novas funcionalidades."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Quem pode apoiar?"
+      },
+      {
+        "tipo": "p",
+        "texto": "Pessoas físicas, empresas e instituições podem manifestar interesse em apoiar o Fiscaliza Brasil, desde que respeitem a independência e as regras do projeto."
+      },
+      {
+        "tipo": "p",
+        "texto": "O exercício atual ou anterior de cargo político, por si só, não cria direito a tratamento especial nem altera a forma como informações públicas relacionadas a essa pessoa serão apresentadas no portal."
+      },
+      {
+        "tipo": "h2",
+        "texto": "O apoio não dá direito a interferir no conteúdo"
+      },
+      {
+        "tipo": "p",
+        "texto": "Quem apoia o Fiscaliza Brasil não pode determinar:"
+      },
+      {
+        "tipo": "li",
+        "texto": "o que será publicado;"
+      },
+      {
+        "tipo": "li",
+        "texto": "o que deixará de ser publicado;"
+      },
+      {
+        "tipo": "li",
+        "texto": "a retirada de informações públicas;"
+      },
+      {
+        "tipo": "li",
+        "texto": "a alteração de dados para favorecer ou prejudicar alguém;"
+      },
+      {
+        "tipo": "li",
+        "texto": "decisões editoriais;"
+      },
+      {
+        "tipo": "li",
+        "texto": "tratamento diferenciado para políticos, partidos, governos, empresas, instituições ou qualquer outra pessoa."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Apoio e patrocínio são diferentes"
+      },
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil mantém separados o apoio ao projeto, o patrocínio e o conteúdo editorial."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Apoio"
+      },
+      {
+        "tipo": "p",
+        "texto": "É uma forma voluntária de contribuir para a continuidade e o desenvolvimento do Fiscaliza Brasil."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Patrocínio"
+      },
+      {
+        "tipo": "p",
+        "texto": "Possui condições próprias e uma página específica, onde são apresentadas as regras aplicáveis a essa modalidade."
+      },
+      {
+        "tipo": "p",
+        "texto": "Conhecer as regras de patrocínio →"
+      },
+      {
+        "tipo": "h3",
+        "texto": "Conteúdo editorial"
+      },
+      {
+        "tipo": "p",
+        "texto": "Permanece independente de apoio, patrocínio, publicidade ou qualquer outra relação financeira."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Como apoiar o Fiscaliza Brasil"
+      },
+      {
+        "tipo": "p",
+        "texto": "Carregando as orientações de apoio…"
+      },
+      {
+        "tipo": "p",
+        "texto": "As orientações e o formulário de apoio estão disponíveis mais abaixo nesta página."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Independência editorial"
+      },
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil é um projeto privado e independente. Seu conteúdo não deve ser determinado por apoiadores, patrocinadores, anunciantes, políticos, partidos, governos, empresas ou outras instituições."
+      },
+      {
+        "tipo": "p",
+        "texto": "A função do portal é organizar e apresentar informações públicas para que cada cidadão possa acompanhar os fatos e formar sua própria opinião."
+      },
+      {
+        "tipo": "p",
+        "texto": "Portal Nacional de Informação e Fiscalização Cidadã."
+      },
+      {
+        "tipo": "p",
+        "texto": "Projeto privado e independente, voltado à informação pública e à fiscalização cidadã."
+      },
+      {
+        "tipo": "h3",
+        "texto": "INSTITUCIONAL"
+      },
+      {
+        "tipo": "h3",
+        "texto": "REPRESENTANTES"
+      },
+      {
+        "tipo": "h3",
+        "texto": "PARTICIPAÇÃO"
+      },
+      {
+        "tipo": "h2",
+        "texto": "QUERO APOIAR"
+      },
+      {
+        "tipo": "p",
+        "texto": "O apoio ao Fiscaliza Brasil é voluntário, com contribuição mínima de R$ 10,00 . Você escolhe quanto deseja contribuir e informa o valor no aplicativo do seu banco ao fazer o Pix."
+      },
+      {
+        "tipo": "p",
+        "texto": "Chave Pix (CPF): 18554489802 Banco: Nubank. Confira o nome do destinatário no aplicativo antes de confirmar."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Quer aparecer na lista de apoiadores?"
+      },
+      {
+        "tipo": "p",
+        "texto": "Depois de fazer o Pix, clique em “Já fiz o Pix e quero meu nome na lista” . Informe o nome que deseja publicar, o nome do pagador, o valor e a data do pagamento, e autorize a publicação."
+      },
+      {
+        "tipo": "p",
+        "texto": "Após conferirmos o Pix, seu nome aparecerá na lista pública “Quem Apoia o Fiscaliza Brasil” , aqui na página Apoie, acessível pelo botão abaixo. Serão divulgados o nome e, se enviados e aprovados, a mensagem e o vídeo autorizados. O valor, a data e o nome do pagador usados para conferir o pagamento ficam restritos à administração."
+      },
+      {
+        "tipo": "p",
+        "texto": "Você também pode contribuir sem preencher o formulário e sem publicar seu nome. Se preferir, pode enviar uma mensagem ou um vídeo de apoio sem fazer Pix, pelo botão “Quero enviar uma mensagem ou vídeo de apoio”."
+      },
+      {
+        "tipo": "p",
+        "texto": "O apoio não dá direito a interferir no conteúdo ou nas decisões editoriais do Fiscaliza Brasil."
+      },
+      {
+        "tipo": "p",
+        "texto": "Dúvidas sobre o apoio: financeiro@fiscalizabrasil.org . Para pedir a inclusão do nome na lista após o Pix, utilize o formulário abaixo."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Por que apoiar o Fiscaliza Brasil?"
+      },
+      {
+        "tipo": "p",
+        "texto": "Aos meus 70 anos, continuo inconformado com a distância entre a política e a vida das pessoas. Durante muitos anos, vi cidadãos escolherem seus candidatos e, depois da eleição, ficarem sem uma maneira simples de saber o que eles estão fazendo. Não por falta de interesse, mas porque as informações são difíceis de encontrar e, muitas vezes, ainda mais difíceis de entender."
+      },
+      {
+        "tipo": "p",
+        "texto": "A política está no atendimento de saúde, na escola, na segurança, nas ruas e nas oportunidades de cada cidade. Mesmo assim, muita gente sente que esse assunto está longe demais, complicado demais, como se não tivesse o direito de compreendê-lo. Foi essa inquietação que me levou a criar o Fiscaliza Brasil."
+      },
+      {
+        "tipo": "p",
+        "texto": "Quero ajudar você a entender quem o representa, acompanhar suas ações e fazer perguntas com base em informações públicas verificadas. Não quero escolher por você. Quero que você tenha condições de fazer suas próprias escolhas e acompanhar o candidato em quem depositou sua confiança."
+      },
+      {
+        "tipo": "p",
+        "texto": "Apoiar o Fiscaliza Brasil é ajudar a aproximar a informação de quem mais precisa dela. É contribuir para que o cidadão possa compreender, acompanhar e fiscalizar o poder público."
+      },
+      {
+        "tipo": "p",
+        "texto": "Desideriu Sebestyen Jr. — criador do Fiscaliza Brasil"
+      },
+      {
+        "tipo": "h3",
+        "texto": "Por que é importante apoiar o Fiscaliza Brasil?"
+      },
+      {
+        "tipo": "p",
+        "texto": "Até aqui, criei e desenvolvi este projeto sozinho. Cada etapa exigiu tempo, aprendizado, trabalho e recursos próprios. Fiz isso porque acredito que entender a política e acompanhar nossos representantes deve estar ao alcance de qualquer pessoa."
+      },
+      {
+        "tipo": "p",
+        "texto": "Mas há um limite para o que uma pessoa consegue fazer sozinha. O Fiscaliza Brasil quer oferecer muito mais: informações mais completas, organizadas e atualizadas sobre a política da sua cidade, do seu estado e do país. Para avançar com responsabilidade, precisamos de apoio financeiro."
+      },
+      {
+        "tipo": "p",
+        "texto": "Esse apoio poderá ajudar a manter o portal e, conforme os recursos disponíveis, contratar analistas políticos, profissionais de pesquisa, verificação de informações e tecnologia. O trabalho dessa equipe será voltado a explicar o funcionamento das instituições e organizar dados de fontes oficiais, preservando a independência do projeto."
+      },
+      {
+        "tipo": "p",
+        "texto": "Cada contribuição ajuda a dar continuidade ao que já foi construído e a criar condições para os próximos passos. A ampliação da equipe e dos serviços dependerá dos recursos arrecadados e será apresentada com transparência."
+      },
+      {
+        "tipo": "p",
+        "texto": "Se você acredita que informação clara pode fortalecer a participação cidadã, seu apoio pode ajudar este trabalho a chegar mais longe — com cuidado, independência e responsabilidade."
+      },
+      {
+        "tipo": "p",
+        "texto": "Veja Quem Apoia o Fiscaliza Brasil"
+      }
+    ]
+  },
+  "quem-patrocina-o-fiscaliza-brasil": {
+    "slug": "quem-patrocina-o-fiscaliza-brasil",
+    "titulo": "Quem Patrocina o Fiscaliza Brasil",
+    "blocos": [
+      {
+        "tipo": "h1",
+        "texto": "PATROCINE O FISCALIZA BRASIL"
+      },
+      {
+        "tipo": "p",
+        "texto": "O patrocínio ajuda a manter a infraestrutura, a tecnologia, a organização e a atualização das informações públicas, além do desenvolvimento do portal."
+      },
+      {
+        "tipo": "h2",
+        "texto": "O que você vai ver aqui"
+      },
+      {
+        "tipo": "p",
+        "texto": "Esta página explica quem pode patrocinar o Fiscaliza Brasil, o valor do patrocínio, como realizar o pagamento, como registrar o pedido pelo formulário, como funciona a identificação pública do patrocinador e quais regras preservam a independência editorial do projeto."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Quem pode patrocinar?"
+      },
+      {
+        "tipo": "p",
+        "texto": "Pessoas físicas, empresas e instituições podem patrocinar o Fiscaliza Brasil, desde que respeitem a independência e as regras do projeto."
+      },
+      {
+        "tipo": "p",
+        "texto": "O exercício atual ou anterior de cargo político não concede tratamento especial e não altera a forma como informações públicas relacionadas a essa pessoa serão apresentadas no portal."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Por que é importante patrocinar o Fiscaliza Brasil?"
+      },
+      {
+        "tipo": "p",
+        "texto": "Uma população bem informada tem melhores condições de compreender as decisões que afetam sua vida, acompanhar seus representantes e participar do futuro da sua cidade, do seu estado e do país. Para isso, precisa encontrar informações públicas claras, organizadas e verificáveis."
+      },
+      {
+        "tipo": "p",
+        "texto": "Patrocinar o Fiscaliza Brasil é ajudar esse trabalho a continuar e alcançar mais pessoas. O patrocínio contribui para manter a tecnologia, a pesquisa, a organização de dados e a atualização do portal. Conforme os recursos disponíveis, também poderá permitir a participação de profissionais que ampliem a qualidade e a abrangência das informações."
+      },
+      {
+        "tipo": "p",
+        "texto": "É um compromisso com o direito da população de saber, perguntar e acompanhar. O cidadão não deve depender de informações difíceis de encontrar para entender o que seus representantes estão fazendo."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Quando o patrocinador também é um representante político"
+      },
+      {
+        "tipo": "p",
+        "texto": "Quando o patrocinador exerce um cargo político, esse compromisso ganha uma responsabilidade especial: apoiar um projeto de fiscalização significa aceitar que suas próprias ações também sejam acompanhadas com o mesmo rigor aplicado aos demais representantes."
+      },
+      {
+        "tipo": "p",
+        "texto": "Essa relação exige transparência adicional e cuidado redobrado para preservar a isenção e a responsabilidade com a população. A independência do Fiscaliza Brasil permanece a mesma para todos, e a identificação pública do patrocínio deve deixar clara a existência dessa relação."
+      },
+      {
+        "tipo": "p",
+        "texto": "O patrocínio não compra aprovação, proteção ou influência editorial. Não impede a publicação de informações de interesse público nem altera os critérios de pesquisa e verificação. A população continua tendo o direito de conhecer as ações dos seus representantes, inclusive quando eles patrocinam o projeto."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Patrocínio"
+      },
+      {
+        "tipo": "p",
+        "texto": "O patrocínio corresponde a um período de seis meses e representa uma forma de contribuição para a manutenção e o desenvolvimento do Fiscaliza Brasil."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Como patrocinar"
+      },
+      {
+        "tipo": "p",
+        "texto": "O patrocínio é de R$ 600,00 por semestre . Você pode conversar com a administração antes de pagar ou registrar um Pix já realizado pelo formulário abaixo."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Pagamento por Pix"
+      },
+      {
+        "tipo": "p",
+        "texto": "Para o patrocínio semestral, faça um Pix de R$ 600,00 pelo aplicativo do seu banco."
+      },
+      {
+        "tipo": "p",
+        "texto": "Chave Pix (CPF):"
+      },
+      {
+        "tipo": "p",
+        "texto": "18554489802"
+      },
+      {
+        "tipo": "p",
+        "texto": "Banco: Nubank. Confira o nome do destinatário antes de confirmar e guarde o comprovante."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Registre seu pedido"
+      },
+      {
+        "tipo": "p",
+        "texto": "Preencha o formulário e escolha “Já fiz o Pix”. Informe o nome do pagador, o valor e a data e anexe o comprovante no próprio formulário . Tudo será enviado em um único pedido."
+      },
+      {
+        "tipo": "p",
+        "texto": "Se ainda deseja conversar, selecione “Quero conversar antes de pagar”. O pedido ficará registrado e será analisado pela administração."
+      },
+      {
+        "tipo": "p",
+        "texto": "Dúvidas: patrocinio@fiscalizabrasil.org ."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Seu pedido de patrocínio"
+      },
+      {
+        "tipo": "p",
+        "texto": "Os dados de contato e de conferência do pagamento ficam restritos à administração. A publicação do nome, cidade/UF, período, mensagem de até 300 caracteres e vídeo é opcional e depende da sua autorização e da aprovação do patrocínio. Para vídeos, informe um link público do YouTube ou Vimeo."
+      },
+      {
+        "tipo": "p",
+        "texto": "O formulário de patrocínio será exibido aqui após a ativação do plugin FB Patrocínio."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Confirmação do patrocínio"
+      },
+      {
+        "tipo": "p",
+        "texto": "A administração conferirá o pagamento e analisará o pedido. O comprovante anexado ao formulário ficará restrito à administração e será utilizado para conferência, sem publicação no site."
+      },
+      {
+        "tipo": "p",
+        "texto": "Somente após a confirmação administrativa do pagamento o patrocinador poderá ser apresentado na área pública “Quem Patrocina o Fiscaliza Brasil”."
+      },
+      {
+        "tipo": "p",
+        "texto": "O comprovante será utilizado para fins administrativos de conferência e não será publicado no portal."
+      },
+      {
+        "tipo": "p",
+        "texto": "O semestre começa na data definida e comunicada pela administração após a confirmação. Não há renovação automática. Fotos, logomarcas e outros materiais poderão ser combinados posteriormente, mediante análise e autorização específica."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Independência editorial"
+      },
+      {
+        "tipo": "p",
+        "texto": "O patrocínio não compra influência sobre o Fiscaliza Brasil."
+      },
+      {
+        "tipo": "p",
+        "texto": "O patrocinador não pode determinar:"
+      },
+      {
+        "tipo": "li",
+        "texto": "o que será publicado;"
+      },
+      {
+        "tipo": "li",
+        "texto": "o que deixará de ser publicado;"
+      },
+      {
+        "tipo": "li",
+        "texto": "a retirada de informações públicas;"
+      },
+      {
+        "tipo": "li",
+        "texto": "a alteração de dados para favorecer ou prejudicar alguém;"
+      },
+      {
+        "tipo": "li",
+        "texto": "decisões editoriais;"
+      },
+      {
+        "tipo": "li",
+        "texto": "tratamento diferenciado para qualquer pessoa ou instituição."
+      },
+      {
+        "tipo": "p",
+        "texto": "As informações do Fiscaliza Brasil seguem seus critérios editoriais e são apresentadas com base em informações públicas e fontes verificáveis."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Transparência"
+      },
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil mantém separados o patrocínio, o apoio financeiro e o conteúdo editorial."
+      },
+      {
+        "tipo": "p",
+        "texto": "Ser patrocinador significa contribuir para a manutenção e o desenvolvimento do projeto."
+      },
+      {
+        "tipo": "p",
+        "texto": "Não significa apoio político, aprovação de qualquer pessoa ou concordância com todo o conteúdo publicado pelo portal."
+      },
+      {
+        "tipo": "p",
+        "texto": "Da mesma forma, o Fiscaliza Brasil não declara apoio político ao patrocinador."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Quem patrocina o Fiscaliza Brasil"
+      },
+      {
+        "tipo": "p",
+        "texto": "Os patrocinadores com pagamento confirmado, semestre vigente e publicação autorizada são apresentados nesta área."
+      },
+      {
+        "tipo": "p",
+        "texto": "A lista de patrocinadores será exibida após a ativação do plugin FB Patrocínio."
+      },
+      {
+        "tipo": "p",
+        "texto": "A presença nesta área identifica exclusivamente a existência do patrocínio. Não representa apoio político, recomendação, aprovação ou vínculo editorial do Fiscaliza Brasil com o patrocinador."
+      },
+      {
+        "tipo": "p",
+        "texto": "Portal Nacional de Informação e Fiscalização Cidadã."
+      },
+      {
+        "tipo": "p",
+        "texto": "Projeto privado e independente, voltado à informação pública e à fiscalização cidadã."
+      },
+      {
+        "tipo": "h3",
+        "texto": "INSTITUCIONAL"
+      },
+      {
+        "tipo": "h3",
+        "texto": "REPRESENTANTES"
+      },
+      {
+        "tipo": "h3",
+        "texto": "PARTICIPAÇÃO"
+      }
+    ]
+  },
+  "contato": {
+    "slug": "contato",
+    "titulo": "Contato",
+    "blocos": [
+      {
+        "tipo": "h3",
+        "texto": "Fale com o Fiscaliza Brasil"
+      },
+      {
+        "tipo": "p",
+        "texto": "Este canal é destinado a dúvidas sobre o portal, pedidos de esclarecimento sobre seu funcionamento, sugestões, comunicação de problemas no site e assuntos gerais relacionados ao Fiscaliza Brasil."
+      },
+      {
+        "tipo": "p",
+        "texto": "Preencha o formulário abaixo. Os campos marcados com asterisco são obrigatórios. Estado, cidade e WhatsApp são opcionais. Confira seu e-mail para que possamos responder."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Escolha o canal adequado"
+      },
+      {
+        "tipo": "p",
+        "texto": "DENÚNCIAS Tem conhecimento de uma possível irregularidade? Utilize a página Denúncias , com seu formulário próprio e protocolo de recebimento."
+      },
+      {
+        "tipo": "p",
+        "texto": "PARTICIPE Quer sugerir um tema, colaborar com informações ou enviar referências para o projeto? Acesse Participe . Você também pode pedir esclarecimentos sobre projetos de lei e sobre a participação do cidadão no processo legislativo."
+      },
+      {
+        "tipo": "p",
+        "texto": "APOIE Deseja contribuir por Pix ou enviar uma mensagem ou vídeo de apoio? Acesse Apoie e conheça as orientações e a lista de apoiadores."
+      },
+      {
+        "tipo": "p",
+        "texto": "PATROCINE Deseja patrocinar o projeto? Acesse Patrocine para conhecer o valor semestral, registrar seu pedido e enviar o comprovante do Pix."
+      },
+      {
+        "tipo": "h3",
+        "texto": "Envie sua mensagem"
+      },
+      {
+        "tipo": "p",
+        "texto": "Para contato geral, utilize o formulário abaixo. Se preferir escrever diretamente, nosso e-mail é contato@fiscalizabrasil.org ."
+      }
+    ]
+  },
+  "privacy-policy": {
+    "slug": "privacy-policy",
+    "titulo": "Privacy Policy",
+    "blocos": [
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil respeita a privacidade dos seus usuários e busca tratar dados pessoais de forma responsável, transparente e segura."
+      },
+      {
+        "tipo": "p",
+        "texto": "Esta Política de Privacidade explica, em linguagem simples, quais informações podem ser tratadas durante a utilização do site Fiscaliza Brasil , para quais finalidades elas podem ser utilizadas, em quais situações podem ser compartilhadas e quais são os direitos das pessoas a quem esses dados pertencem."
+      },
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil é um projeto privado e independente , voltado à informação pública e à fiscalização cidadã."
+      },
+      {
+        "tipo": "p",
+        "texto": "Esta Política deve ser interpretada de acordo com a legislação brasileira aplicável, especialmente a Lei nº 13.709/2018 — Lei Geral de Proteção de Dados Pessoais (LGPD) ."
+      },
+      {
+        "tipo": "h2",
+        "texto": "1. A quem esta Política se aplica"
+      },
+      {
+        "tipo": "p",
+        "texto": "Esta Política aplica-se às pessoas que acessam ou utilizam o site Fiscaliza Brasil e seus recursos, inclusive aquelas que enviam informações por meio dos formulários e canais disponibilizados no portal."
+      },
+      {
+        "tipo": "p",
+        "texto": "Ela se refere ao tratamento de dados pessoais relacionado à utilização do site."
+      },
+      {
+        "tipo": "h2",
+        "texto": "2. Quais dados pessoais podem ser tratados"
+      },
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil procura limitar a coleta de dados pessoais ao necessário para o funcionamento do portal, atendimento dos usuários, segurança e realização das finalidades informadas."
+      },
+      {
+        "tipo": "p",
+        "texto": "Dependendo da forma de utilização do site, poderão ser tratados dados como:"
+      },
+      {
+        "tipo": "li",
+        "texto": "nome;"
+      },
+      {
+        "tipo": "li",
+        "texto": "endereço de e-mail;"
+      },
+      {
+        "tipo": "li",
+        "texto": "telefone, quando informado voluntariamente;"
+      },
+      {
+        "tipo": "li",
+        "texto": "Estado e município, quando necessários ao formulário ou serviço utilizado;"
+      },
+      {
+        "tipo": "li",
+        "texto": "informações fornecidas pelo próprio usuário em mensagens, solicitações, sugestões, manifestações, denúncias ou outros formulários;"
+      },
+      {
+        "tipo": "li",
+        "texto": "endereço IP;"
+      },
+      {
+        "tipo": "li",
+        "texto": "informações técnicas do navegador e do dispositivo;"
+      },
+      {
+        "tipo": "li",
+        "texto": "registros de acesso, data e horário;"
+      },
+      {
+        "tipo": "li",
+        "texto": "cookies e tecnologias semelhantes, quando utilizados."
+      },
+      {
+        "tipo": "p",
+        "texto": "Outras informações poderão ser tratadas quando forem voluntariamente fornecidas pelo próprio usuário e forem necessárias para atender à finalidade do respectivo canal."
+      },
+      {
+        "tipo": "h2",
+        "texto": "3. Formulários e informações enviadas pelo usuário"
+      },
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil poderá disponibilizar formulários para contato, participação cidadã, denúncias, apoio, patrocínio e outras finalidades relacionadas ao funcionamento do projeto."
+      },
+      {
+        "tipo": "p",
+        "texto": "Quando uma pessoa envia um formulário, os dados informados poderão ser utilizados para:"
+      },
+      {
+        "tipo": "li",
+        "texto": "receber e analisar a solicitação;"
+      },
+      {
+        "tipo": "li",
+        "texto": "responder ao usuário quando necessário;"
+      },
+      {
+        "tipo": "li",
+        "texto": "verificar informações encaminhadas;"
+      },
+      {
+        "tipo": "li",
+        "texto": "organizar manifestações e participações;"
+      },
+      {
+        "tipo": "li",
+        "texto": "prevenir abusos, spam e utilização indevida do portal;"
+      },
+      {
+        "tipo": "li",
+        "texto": "cumprir obrigações legais ou regulatórias;"
+      },
+      {
+        "tipo": "li",
+        "texto": "proteger direitos do Fiscaliza Brasil, dos usuários e de terceiros."
+      },
+      {
+        "tipo": "p",
+        "texto": "O envio de informações por um formulário não significa que o conteúdo será automaticamente publicado no site ."
+      },
+      {
+        "tipo": "p",
+        "texto": "Quando houver possibilidade de publicação ou utilização pública de informações fornecidas pelo usuário, essa finalidade deverá ser avaliada de acordo com o contexto, a legislação aplicável e as regras editoriais do Fiscaliza Brasil."
+      },
+      {
+        "tipo": "h2",
+        "texto": "4. Denúncias"
+      },
+      {
+        "tipo": "p",
+        "texto": "As informações enviadas pelos canais de denúncia poderão exigir tratamento específico, inclusive porque o conteúdo pode mencionar outras pessoas, autoridades, órgãos ou fatos que necessitem de verificação."
+      },
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil poderá analisar o material recebido antes de qualquer utilização editorial."
+      },
+      {
+        "tipo": "p",
+        "texto": "O envio de uma denúncia não significa publicação automática, confirmação dos fatos relatados ou conclusão de que houve irregularidade."
+      },
+      {
+        "tipo": "p",
+        "texto": "Sempre que possível, informações pessoais que não sejam necessárias à compreensão e à verificação dos fatos deverão ser protegidas."
+      },
+      {
+        "tipo": "p",
+        "texto": "O usuário deve evitar o envio de dados pessoais desnecessários, especialmente informações sensíveis ou documentos que não sejam indispensáveis para a análise da manifestação."
+      },
+      {
+        "tipo": "h2",
+        "texto": "5. Dados públicos sobre autoridades e agentes públicos"
+      },
+      {
+        "tipo": "p",
+        "texto": "A atividade do Fiscaliza Brasil envolve a organização e apresentação de informações públicas relacionadas a representantes políticos, autoridades, órgãos e instituições."
+      },
+      {
+        "tipo": "p",
+        "texto": "Essas informações poderão ser obtidas em fontes públicas e oficiais, como portais de transparência, casas legislativas, tribunais eleitorais, governos, prefeituras, câmaras municipais, sistemas públicos e outras bases institucionais."
+      },
+      {
+        "tipo": "p",
+        "texto": "O fato de uma informação estar publicamente disponível não elimina a necessidade de tratamento responsável."
+      },
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil procura utilizar essas informações de acordo com sua finalidade editorial e de fiscalização cidadã, respeitando a legislação aplicável, o contexto, a necessidade e os direitos envolvidos."
+      },
+      {
+        "tipo": "h2",
+        "texto": "6. Para que os dados podem ser utilizados"
+      },
+      {
+        "tipo": "p",
+        "texto": "Os dados pessoais tratados pelo Fiscaliza Brasil poderão ser utilizados, conforme o caso, para:"
+      },
+      {
+        "tipo": "li",
+        "texto": "permitir o funcionamento do site;"
+      },
+      {
+        "tipo": "li",
+        "texto": "receber e responder contatos;"
+      },
+      {
+        "tipo": "li",
+        "texto": "processar formulários;"
+      },
+      {
+        "tipo": "li",
+        "texto": "possibilitar participação cidadã;"
+      },
+      {
+        "tipo": "li",
+        "texto": "receber e analisar denúncias e informações;"
+      },
+      {
+        "tipo": "li",
+        "texto": "manter a segurança do portal;"
+      },
+      {
+        "tipo": "li",
+        "texto": "prevenir fraude, spam e abuso;"
+      },
+      {
+        "tipo": "li",
+        "texto": "diagnosticar falhas técnicas;"
+      },
+      {
+        "tipo": "li",
+        "texto": "produzir estatísticas de utilização quando aplicável;"
+      },
+      {
+        "tipo": "li",
+        "texto": "melhorar o funcionamento e a experiência de utilização do portal;"
+      },
+      {
+        "tipo": "li",
+        "texto": "cumprir obrigações legais e regulatórias;"
+      },
+      {
+        "tipo": "li",
+        "texto": "exercer direitos em processos administrativos, judiciais ou extrajudiciais;"
+      },
+      {
+        "tipo": "li",
+        "texto": "atender outras finalidades legítimas e compatíveis com a atividade do Fiscaliza Brasil, observada a legislação aplicável."
+      },
+      {
+        "tipo": "h2",
+        "texto": "7. Bases legais"
+      },
+      {
+        "tipo": "p",
+        "texto": "O tratamento de dados pessoais pelo Fiscaliza Brasil deverá ocorrer quando houver uma hipótese legal aplicável."
+      },
+      {
+        "tipo": "p",
+        "texto": "Dependendo da situação, o tratamento poderá estar fundamentado, entre outras hipóteses previstas na LGPD, no:"
+      },
+      {
+        "tipo": "li",
+        "texto": "consentimento do titular, quando aplicável;"
+      },
+      {
+        "tipo": "li",
+        "texto": "cumprimento de obrigação legal ou regulatória;"
+      },
+      {
+        "tipo": "li",
+        "texto": "exercício regular de direitos;"
+      },
+      {
+        "tipo": "li",
+        "texto": "legítimo interesse, quando juridicamente aplicável e observados os direitos e liberdades fundamentais do titular;"
+      },
+      {
+        "tipo": "li",
+        "texto": "atendimento de outras hipóteses autorizadas pela legislação."
+      },
+      {
+        "tipo": "p",
+        "texto": "A base legal adequada depende da finalidade e das circunstâncias específicas de cada tratamento."
+      },
+      {
+        "tipo": "h2",
+        "texto": "8. Cookies e informações técnicas"
+      },
+      {
+        "tipo": "p",
+        "texto": "O site poderá utilizar cookies e tecnologias semelhantes necessárias ao seu funcionamento, segurança, desempenho e, quando aplicável, análise de utilização."
+      },
+      {
+        "tipo": "p",
+        "texto": "Cookies são pequenos arquivos armazenados no dispositivo do usuário que podem permitir ao site reconhecer determinadas informações durante a navegação."
+      },
+      {
+        "tipo": "p",
+        "texto": "Alguns cookies podem ser estritamente necessários para o funcionamento técnico do site."
+      },
+      {
+        "tipo": "p",
+        "texto": "Caso sejam utilizados cookies ou tecnologias que dependam de consentimento segundo a legislação aplicável, deverão ser apresentados mecanismos apropriados para informação e escolha do usuário."
+      },
+      {
+        "tipo": "p",
+        "texto": "O usuário também pode controlar determinados cookies por meio das configurações do próprio navegador."
+      },
+      {
+        "tipo": "p",
+        "texto": "A desativação de cookies necessários poderá afetar o funcionamento de determinadas funcionalidades."
+      },
+      {
+        "tipo": "h2",
+        "texto": "9. Conteúdo e serviços de terceiros"
+      },
+      {
+        "tipo": "p",
+        "texto": "Algumas páginas poderão conter links, recursos ou conteúdos provenientes de serviços de terceiros."
+      },
+      {
+        "tipo": "p",
+        "texto": "Ao acessar um site externo, o usuário passa a estar sujeito também às políticas e práticas daquele serviço."
+      },
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil não controla automaticamente as práticas de privacidade de sites independentes acessados por meio de links externos."
+      },
+      {
+        "tipo": "p",
+        "texto": "Recomenda-se que o usuário consulte a política de privacidade do serviço externo utilizado."
+      },
+      {
+        "tipo": "h2",
+        "texto": "10. Compartilhamento de dados"
+      },
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil não comercializa dados pessoais dos usuários ."
+      },
+      {
+        "tipo": "p",
+        "texto": "Dados poderão ser compartilhados somente quando isso for necessário e juridicamente permitido, por exemplo:"
+      },
+      {
+        "tipo": "li",
+        "texto": "com fornecedores responsáveis pela hospedagem e infraestrutura tecnológica;"
+      },
+      {
+        "tipo": "li",
+        "texto": "com prestadores de serviços necessários ao funcionamento do portal;"
+      },
+      {
+        "tipo": "li",
+        "texto": "para prevenção e investigação de fraude, abuso ou incidentes de segurança;"
+      },
+      {
+        "tipo": "li",
+        "texto": "para cumprimento de obrigação legal, regulatória ou determinação válida de autoridade competente;"
+      },
+      {
+        "tipo": "li",
+        "texto": "para exercício regular de direitos;"
+      },
+      {
+        "tipo": "li",
+        "texto": "em outras situações permitidas pela legislação."
+      },
+      {
+        "tipo": "p",
+        "texto": "Quando terceiros atuarem no tratamento de dados em nome do Fiscaliza Brasil, deverão ser observadas as responsabilidades e medidas aplicáveis à proteção dessas informações."
+      },
+      {
+        "tipo": "h2",
+        "texto": "11. Transferência e armazenamento de dados"
+      },
+      {
+        "tipo": "p",
+        "texto": "Alguns fornecedores de tecnologia utilizados pelo site poderão armazenar ou processar informações em infraestrutura localizada fora do Brasil."
+      },
+      {
+        "tipo": "p",
+        "texto": "Quando houver transferência internacional de dados pessoais, deverão ser observadas as exigências previstas na legislação brasileira aplicável."
+      },
+      {
+        "tipo": "h2",
+        "texto": "12. Por quanto tempo os dados são mantidos"
+      },
+      {
+        "tipo": "p",
+        "texto": "Os dados pessoais não devem ser mantidos por prazo superior ao necessário para as finalidades que justificaram seu tratamento, ressalvadas as hipóteses de conservação permitidas ou exigidas pela legislação."
+      },
+      {
+        "tipo": "p",
+        "texto": "O período de retenção poderá variar conforme:"
+      },
+      {
+        "tipo": "li",
+        "texto": "a finalidade do tratamento;"
+      },
+      {
+        "tipo": "li",
+        "texto": "a natureza das informações;"
+      },
+      {
+        "tipo": "li",
+        "texto": "obrigações legais ou regulatórias;"
+      },
+      {
+        "tipo": "li",
+        "texto": "necessidade de prevenção de fraude e segurança;"
+      },
+      {
+        "tipo": "li",
+        "texto": "necessidade de preservação de registros."
+      },
+      {
+        "tipo": "p",
+        "texto": "Quando não houver mais fundamento para a manutenção dos dados, eles poderão ser eliminados, anonimizados ou submetidos a outro tratamento permitido pela legislação."
+      },
+      {
+        "tipo": "h2",
+        "texto": "13. Segurança das informações"
+      },
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil busca adotar medidas técnicas e administrativas adequadas para proteger dados pessoais contra acessos não autorizados e situações acidentais ou ilícitas de destruição, perda, alteração, comunicação ou utilização inadequada."
+      },
+      {
+        "tipo": "p",
+        "texto": "Nenhum sistema conectado à internet, entretanto, pode oferecer garantia absoluta contra todos os riscos."
+      },
+      {
+        "tipo": "p",
+        "texto": "Caso seja identificado incidente envolvendo dados pessoais, serão adotadas as providências cabíveis de acordo com as circunstâncias e a legislação aplicável."
+      },
+      {
+        "tipo": "h2",
+        "texto": "14. Direitos do titular dos dados"
+      },
+      {
+        "tipo": "p",
+        "texto": "Nos termos da LGPD e observadas as condições previstas em lei, o titular poderá exercer direitos relacionados aos seus dados pessoais, incluindo:"
+      },
+      {
+        "tipo": "li",
+        "texto": "confirmação da existência de tratamento;"
+      },
+      {
+        "tipo": "li",
+        "texto": "acesso aos dados pessoais;"
+      },
+      {
+        "tipo": "li",
+        "texto": "correção de dados incompletos, inexatos ou desatualizados;"
+      },
+      {
+        "tipo": "li",
+        "texto": "anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade com a legislação;"
+      },
+      {
+        "tipo": "li",
+        "texto": "portabilidade, quando aplicável e conforme regulamentação;"
+      },
+      {
+        "tipo": "li",
+        "texto": "eliminação dos dados tratados com fundamento no consentimento, ressalvadas as hipóteses legais de conservação;"
+      },
+      {
+        "tipo": "li",
+        "texto": "informação sobre entidades públicas e privadas com as quais tenha ocorrido uso compartilhado dos dados;"
+      },
+      {
+        "tipo": "li",
+        "texto": "informação sobre a possibilidade de não fornecer consentimento e sobre as consequências dessa decisão;"
+      },
+      {
+        "tipo": "li",
+        "texto": "revogação do consentimento, quando essa for a base utilizada;"
+      },
+      {
+        "tipo": "li",
+        "texto": "oposição ao tratamento, nas hipóteses admitidas pela legislação;"
+      },
+      {
+        "tipo": "li",
+        "texto": "demais direitos previstos na legislação aplicável."
+      },
+      {
+        "tipo": "p",
+        "texto": "O exercício de um direito poderá estar sujeito à verificação da identidade do solicitante e às limitações previstas em lei."
+      },
+      {
+        "tipo": "h2",
+        "texto": "15. Como exercer seus direitos"
+      },
+      {
+        "tipo": "p",
+        "texto": "Para solicitar informações ou exercer direitos relacionados aos seus dados pessoais tratados pelo Fiscaliza Brasil, entre em contato pelo canal:"
+      },
+      {
+        "tipo": "p",
+        "texto": "E-mail: contato@fiscalizabrasil.org"
+      },
+      {
+        "tipo": "p",
+        "texto": "Na solicitação, informe de maneira clara qual direito deseja exercer e forneça somente as informações necessárias para permitir a identificação e análise do pedido."
+      },
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil poderá solicitar informações adicionais quando isso for necessário para confirmar a identidade do solicitante e proteger os dados contra acesso indevido."
+      },
+      {
+        "tipo": "p",
+        "texto": "O atendimento dos direitos será realizado de acordo com os requisitos, prazos e exceções previstos na legislação aplicável."
+      },
+      {
+        "tipo": "p",
+        "texto": "Caso o titular considere que seus direitos não foram adequadamente atendidos, poderá utilizar os meios previstos na legislação, inclusive os canais disponibilizados pela Autoridade Nacional de Proteção de Dados — ANPD, quando aplicável."
+      },
+      {
+        "tipo": "h2",
+        "texto": "16. Dados de crianças e adolescentes"
+      },
+      {
+        "tipo": "p",
+        "texto": "O Fiscaliza Brasil não tem como finalidade principal oferecer serviços destinados especificamente a crianças."
+      },
+      {
+        "tipo": "p",
+        "texto": "Caso ocorra tratamento de dados pessoais de crianças ou adolescentes, deverão ser observadas as regras e proteções específicas previstas na legislação aplicável, considerando especialmente o seu melhor interesse."
+      },
+      {
+        "tipo": "p",
+        "texto": "O envio desnecessário de dados pessoais de crianças e adolescentes por formulários do portal deve ser evitado."
+      },
+      {
+        "tipo": "h2",
+        "texto": "17. Alterações desta Política"
+      },
+      {
+        "tipo": "p",
+        "texto": "Esta Política de Privacidade poderá ser atualizada para refletir mudanças no funcionamento do Fiscaliza Brasil, nos recursos oferecidos, nos serviços utilizados ou na legislação aplicável."
+      },
+      {
+        "tipo": "p",
+        "texto": "Quando houver alteração relevante, a versão atualizada deverá ser disponibilizada nesta página com indicação da data de atualização."
+      },
+      {
+        "tipo": "p",
+        "texto": "Recomenda-se a consulta periódica desta Política."
+      },
+      {
+        "tipo": "h2",
+        "texto": "18. Responsável e contato"
+      },
+      {
+        "tipo": "p",
+        "texto": "Para fins desta Política, o tratamento de dados relacionado ao funcionamento do portal é realizado no âmbito do:"
+      },
+      {
+        "tipo": "p",
+        "texto": "Fiscaliza Brasil Portal Nacional de Informação e Fiscalização Cidadã Site: fiscalizabrasil.org Contato sobre privacidade e dados pessoais: contato@fiscalizabrasil.org"
+      },
+      {
+        "tipo": "p",
+        "texto": "Caso futuramente haja alteração na identificação jurídica do responsável pelo tratamento ou na estrutura do projeto, esta Política deverá ser atualizada para refletir a nova situação."
+      },
+      {
+        "tipo": "h2",
+        "texto": "19. Legislação e referência institucional"
+      },
+      {
+        "tipo": "p",
+        "texto": "Esta Política considera especialmente a Lei nº 13.709/2018 — Lei Geral de Proteção de Dados Pessoais (LGPD) e as orientações da Autoridade Nacional de Proteção de Dados — ANPD ."
+      },
+      {
+        "tipo": "p",
+        "texto": "O objetivo é oferecer ao usuário informação clara sobre o tratamento de seus dados e meios para exercer seus direitos."
+      },
+      {
+        "tipo": "p",
+        "texto": "FISCALIZA BRASIL"
+      },
+      {
+        "tipo": "p",
+        "texto": "Portal Nacional de Informação e Fiscalização Cidadã."
+      },
+      {
+        "tipo": "p",
+        "texto": "Projeto privado e independente, voltado à informação pública e à fiscalização cidadã."
+      }
+    ]
+  }
+}
