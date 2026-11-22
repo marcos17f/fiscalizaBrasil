@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-import { CheckCircle2, Loader2, Send } from "lucide-react";
+import { useId, useState } from "react";
+import { CheckCircle2, Loader2, Send, ShieldCheck } from "lucide-react";
 import { ESTADOS_BRASIL } from "@/lib/ufs";
 
 type Props = {
@@ -20,6 +20,7 @@ export function FormularioCidadao({
   opcoesAssunto,
   textoBotao,
 }: Props) {
+  const uid = useId();
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
@@ -73,30 +74,40 @@ export function FormularioCidadao({
   };
 
   return (
-    <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs sm:p-8">
-      <h2 className="text-xl font-extrabold text-brand-navy sm:text-2xl">
-        {titulo}
-      </h2>
-      <p className="mt-1 text-sm text-brand-muted">{descricao}</p>
+    <section className="rounded-3xl border border-slate-200/90 bg-white p-6 shadow-xs sm:p-9">
+      <div className="flex items-start justify-between gap-4 border-b border-slate-100 pb-5">
+        <div>
+          <p className="text-[11px] font-bold tracking-[0.14em] text-brand-emerald uppercase">
+            Canal Cidadão • Protocolo imediato
+          </p>
+          <h2 className="mt-1 text-xl font-extrabold text-brand-navy sm:text-2xl">
+            {titulo}
+          </h2>
+          <p className="mt-1 text-sm text-brand-muted">{descricao}</p>
+        </div>
+        <div className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-mint text-brand-emerald sm:flex">
+          <ShieldCheck className="h-5 w-5" />
+        </div>
+      </div>
 
       {protocolo ? (
-        <div className="mt-6 rounded-xl border border-emerald-200 bg-emerald-50 p-5">
-          <div className="flex items-start gap-3">
+        <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50/80 p-6">
+          <div className="flex items-start gap-3.5">
             <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-brand-emerald" />
             <div>
               <p className="font-bold text-emerald-950">
                 Registro recebido com sucesso!
               </p>
-              <p className="mt-1 text-sm text-emerald-900">
+              <p className="mt-1.5 text-sm text-emerald-900">
                 Seu número de protocolo:{" "}
-                <strong className="rounded bg-white px-2 py-0.5 font-mono">
+                <strong className="tabular-nums rounded-lg border border-emerald-200 bg-white px-2.5 py-1 font-mono text-brand-navy">
                   {protocolo}
                 </strong>
               </p>
               <button
                 type="button"
                 onClick={() => setProtocolo(null)}
-                className="mt-3 text-xs font-bold text-brand-emerald hover:underline"
+                className="mt-4 inline-flex items-center rounded-lg bg-brand-emerald px-3.5 py-2 text-xs font-bold text-white transition-colors hover:bg-brand-emerald-dark"
               >
                 Enviar outro registro
               </button>
@@ -107,52 +118,69 @@ export function FormularioCidadao({
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <label className="mb-1 block text-xs font-bold text-brand-navy">
+              <label
+                htmlFor={`${uid}-nome`}
+                className="mb-1.5 block text-xs font-bold text-brand-navy"
+              >
                 Nome *
               </label>
               <input
+                id={`${uid}-nome`}
                 type="text"
                 required
                 value={nome}
                 onChange={(e) => setNome(e.target.value)}
-                className="w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 focus:outline-none"
+                className="w-full rounded-xl border border-slate-300 bg-slate-50/40 px-3.5 py-2.5 text-sm transition-colors focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:outline-none"
               />
             </div>
 
             <div>
-              <label className="mb-1 block text-xs font-bold text-brand-navy">
+              <label
+                htmlFor={`${uid}-email`}
+                className="mb-1.5 block text-xs font-bold text-brand-navy"
+              >
                 E-mail *
               </label>
               <input
+                id={`${uid}-email`}
                 type="email"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 focus:outline-none"
+                className="w-full rounded-xl border border-slate-300 bg-slate-50/40 px-3.5 py-2.5 text-sm transition-colors focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:outline-none"
               />
             </div>
 
             <div>
-              <label className="mb-1 block text-xs font-bold text-brand-navy">
+              <label
+                htmlFor={`${uid}-whats`}
+                className="mb-1.5 block text-xs font-bold text-brand-navy"
+              >
                 WhatsApp com DDD (opcional)
               </label>
               <input
+                id={`${uid}-whats`}
                 type="tel"
+                inputMode="tel"
                 value={whatsapp}
                 onChange={(e) => setWhatsapp(e.target.value)}
                 placeholder="(11) 99999-9999"
-                className="w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 focus:outline-none"
+                className="w-full rounded-xl border border-slate-300 bg-slate-50/40 px-3.5 py-2.5 text-sm transition-colors focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:outline-none"
               />
             </div>
 
             <div>
-              <label className="mb-1 block text-xs font-bold text-brand-navy">
+              <label
+                htmlFor={`${uid}-uf`}
+                className="mb-1.5 block text-xs font-bold text-brand-navy"
+              >
                 Estado (opcional)
               </label>
               <select
+                id={`${uid}-uf`}
                 value={uf}
                 onChange={(e) => setUf(e.target.value)}
-                className="w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm focus:border-brand-blue focus:outline-none"
+                className="w-full rounded-xl border border-slate-300 bg-slate-50/40 px-3.5 py-2.5 text-sm transition-colors focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:outline-none"
               >
                 <option value="">Selecione</option>
                 {ESTADOS_BRASIL.map((e) => (
@@ -166,13 +194,17 @@ export function FormularioCidadao({
 
           {opcoesAssunto && opcoesAssunto.length > 0 ? (
             <div>
-              <label className="mb-1 block text-xs font-bold text-brand-navy">
+              <label
+                htmlFor={`${uid}-assunto`}
+                className="mb-1.5 block text-xs font-bold text-brand-navy"
+              >
                 Categoria / Assunto *
               </label>
               <select
+                id={`${uid}-assunto`}
                 value={assunto}
                 onChange={(e) => setAssunto(e.target.value)}
-                className="w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm focus:border-brand-blue focus:outline-none"
+                className="w-full rounded-xl border border-slate-300 bg-slate-50/40 px-3.5 py-2.5 text-sm transition-colors focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:outline-none"
               >
                 {opcoesAssunto.map((op) => (
                   <option key={op} value={op}>
@@ -183,39 +215,47 @@ export function FormularioCidadao({
             </div>
           ) : (
             <div>
-              <label className="mb-1 block text-xs font-bold text-brand-navy">
+              <label
+                htmlFor={`${uid}-assunto`}
+                className="mb-1.5 block text-xs font-bold text-brand-navy"
+              >
                 Assunto *
               </label>
               <input
+                id={`${uid}-assunto`}
                 type="text"
                 required
                 value={assunto}
                 onChange={(e) => setAssunto(e.target.value)}
-                className="w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 focus:outline-none"
+                className="w-full rounded-xl border border-slate-300 bg-slate-50/40 px-3.5 py-2.5 text-sm transition-colors focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:outline-none"
               />
             </div>
           )}
 
           <div>
-            <label className="mb-1 block text-xs font-bold text-brand-navy">
+            <label
+              htmlFor={`${uid}-msg`}
+              className="mb-1.5 block text-xs font-bold text-brand-navy"
+            >
               Mensagem / Detalhes *
             </label>
             <textarea
+              id={`${uid}-msg`}
               rows={5}
               required
               value={mensagem}
               onChange={(e) => setMensagem(e.target.value)}
               placeholder="Se possível, informe datas, local e links de fontes oficiais. Evite dados pessoais sensíveis de terceiros."
-              className="w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 focus:outline-none"
+              className="w-full rounded-xl border border-slate-300 bg-slate-50/40 px-3.5 py-2.5 text-sm transition-colors focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:outline-none"
             />
           </div>
 
-          <label className="flex items-start gap-2.5 text-xs text-slate-600">
+          <label className="flex cursor-pointer items-start gap-2.5 rounded-xl border border-slate-200/80 bg-slate-50/70 p-3.5 text-xs text-slate-600">
             <input
               type="checkbox"
               checked={aceite}
               onChange={(e) => setAceite(e.target.checked)}
-              className="mt-0.5 h-4 w-4 rounded border-slate-300"
+              className="mt-0.5 h-4 w-4 rounded border-slate-300 text-brand-emerald focus:ring-brand-emerald"
             />
             <span>
               Concordo que meus dados sejam usados para análise e resposta deste
@@ -231,7 +271,7 @@ export function FormularioCidadao({
           </label>
 
           {erro && (
-            <p className="rounded-xl border border-red-200 bg-red-50 px-3.5 py-2.5 text-xs font-semibold text-red-800">
+            <p className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-xs font-semibold text-red-800">
               {erro}
             </p>
           )}
@@ -239,7 +279,7 @@ export function FormularioCidadao({
           <button
             type="submit"
             disabled={enviando}
-            className="inline-flex items-center gap-2 rounded-xl bg-brand-emerald px-6 py-3 text-sm font-bold text-white shadow-xs transition-colors hover:bg-brand-emerald-dark disabled:opacity-60"
+            className="inline-flex items-center gap-2 rounded-xl bg-brand-emerald px-6 py-3 text-sm font-bold text-white shadow-sm transition-all hover:bg-brand-emerald-dark disabled:opacity-60"
           >
             {enviando ? (
               <Loader2 className="h-4 w-4 animate-spin" />

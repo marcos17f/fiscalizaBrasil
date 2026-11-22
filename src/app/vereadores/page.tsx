@@ -1,35 +1,35 @@
 import type { Metadata } from "next";
+import { PageHero } from "@/components/layout/PageHero";
 import { AvisoFiscalizacao } from "@/components/ui/AvisoFiscalizacao";
 import { VereadoresExplorer } from "@/components/municipios/VereadoresExplorer";
 
 export const metadata: Metadata = {
   title: "Vereadores",
   description:
-    "Pesquise vereadores por estado e município com integração ao vivo na API de localidades do IBGE e arquitetura preparada para a base TSE.",
+    "Pesquise os ~58 mil vereadores eleitos nas 5.570 Câmaras Municipais com integração ao vivo no IBGE, TSE 2024 e orçamento legislativo no SICONFI.",
 };
 
 export default function VereadoresPage() {
   return (
-    <div className="mx-auto max-w-7xl space-y-6 px-4 py-8 sm:px-6 sm:py-10">
-      <div className="space-y-2">
-        <p className="text-xs font-bold tracking-wider text-brand-emerald uppercase">
-          Câmaras Municipais • ~58 mil vereadores no Brasil
-        </p>
-        <h1 className="text-3xl font-extrabold tracking-tight text-brand-navy sm:text-4xl">
-          Vereadores
-        </h1>
-        <p className="max-w-2xl text-sm text-brand-muted sm:text-base">
-          Escolha seu estado e sua cidade para localizar a Câmara Municipal.
-          Todos os 27 estados estão padronizados corretamente e integrados à API
-          oficial do IBGE.
-        </p>
-      </div>
-
-      <AvisoFiscalizacao
-        mensagem="Integração ao vivo com IBGE e TSE DivulgaCandContas (Eleições Municipais 2024): ao escolher qualquer uma das 5.570 cidades, a Câmara Municipal é carregada sob demanda sem pesar no celular, com perfil individual em 8 abas."
+    <div>
+      <PageHero
+        categoria="Câmaras Municipais • ~58 mil Vereadores"
+        titulo="Vereadores do Brasil"
+        descricao="Selecione seu estado e sua cidade para listar todos os vereadores eleitos nas Eleições Municipais 2024, abrir o perfil completo em 8 abas e conferir o custo anual do Legislativo municipal no SICONFI."
+        breadcrumb="Vereadores"
+        metricas={[
+          { valor: "~58 mil", label: "Vereadores (TSE)" },
+          { valor: "5.570", label: "Cidades (IBGE)" },
+          { valor: "Ao vivo", label: "TSE 2024 + SICONFI", destaque: true },
+        ]}
       />
 
-      <VereadoresExplorer />
+      <div className="mx-auto max-w-7xl space-y-6 px-4 py-8 sm:px-6 sm:py-10">
+        <AvisoFiscalizacao
+          mensagem="Consulta sob demanda por estado e cidade via IBGE, TSE DivulgaCandContas (Eleições 2024) e SICONFI / Tesouro Nacional (Função Legislativa) — garantindo carregamento leve no celular."
+        />
+        <VereadoresExplorer />
+      </div>
     </div>
   );
 }

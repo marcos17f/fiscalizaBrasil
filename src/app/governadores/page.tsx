@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import governadoresData from "@/data/governadores.json";
+import { PageHero } from "@/components/layout/PageHero";
 import { AvisoFiscalizacao } from "@/components/ui/AvisoFiscalizacao";
 import { GovernadoresExplorer } from "@/components/governadores/GovernadoresExplorer";
 import type { Governador } from "@/types/politicos";
@@ -7,34 +8,33 @@ import type { Governador } from "@/types/politicos";
 export const metadata: Metadata = {
   title: "Governadores",
   description:
-    "Consulte os 27 governadores do Brasil por estado, região ou partido e acesse o perfil estruturado em 8 abas de transparência.",
+    "Consulte os 27 governadores do Brasil com dados eleitorais do TSE, Plano de Governo PDF, finanças SICONFI, LRF e licitações recentes no PNCP.",
 };
 
 export default function GovernadoresPage() {
   const governadores = governadoresData as Governador[];
 
   return (
-    <div className="mx-auto max-w-7xl space-y-6 px-4 py-8 sm:px-6 sm:py-10">
-      <div className="space-y-2">
-        <p className="text-xs font-bold tracking-wider text-brand-emerald uppercase">
-          Poder Executivo Estadual
-        </p>
-        <h1 className="text-3xl font-extrabold tracking-tight text-brand-navy sm:text-4xl">
-          Governadores do Brasil
-        </h1>
-        <p className="max-w-2xl text-sm text-brand-muted sm:text-base">
-          Acompanhe os representantes das 27 unidades federativas. Filtre por
-          nome, estado, região ou partido e clique em qualquer card para abrir o
-          perfil completo.
-        </p>
-      </div>
-
-      <AvisoFiscalizacao
-        mensagem="Identificação e períodos do cadastro em conferência editorial contínua. O Fiscaliza Brasil apresenta informações públicas oficiais sem emitir juízo de valor."
-        notaEditorial="Referência de extração do cadastro atual: 29/10/2026 • 27 unidades federativas."
+    <div>
+      <PageHero
+        categoria="Poder Executivo Estadual • 27 UFs"
+        titulo="Governadores do Brasil"
+        descricao="Acompanhe os chefes do Executivo nos 26 estados e no Distrito Federal. Filtre por nome, estado, região ou partido e abra o perfil completo com TSE, Plano de Governo PDF, SICONFI (RREO + LRF) e editais PNCP."
+        breadcrumb="Governadores"
+        metricas={[
+          { valor: String(governadores.length), label: "Estados + DF" },
+          { valor: "8 abas", label: "Transparência" },
+          { valor: "Ao vivo", label: "TSE + SICONFI + PNCP", destaque: true },
+        ]}
       />
 
-      <GovernadoresExplorer governadores={governadores} />
+      <div className="mx-auto max-w-7xl space-y-6 px-4 py-8 sm:px-6 sm:py-10">
+        <AvisoFiscalizacao
+          mensagem="Identificação e mandatos em conferência editorial contínua. O balanço orçamentário, o indicador da Lei de Responsabilidade Fiscal (LRF), os bens declarados e os editais são consultados em fontes oficiais."
+          notaEditorial="Fontes integradas: TSE DivulgaCandContas (2022/2026), SICONFI / Tesouro Nacional, PNCP e 27 TCEs."
+        />
+        <GovernadoresExplorer governadores={governadores} />
+      </div>
     </div>
   );
 }

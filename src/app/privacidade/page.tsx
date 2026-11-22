@@ -19,12 +19,14 @@ export default function PrivacidadePage() {
   };
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-10">
-      <PaginaInstitucionalView
-        pagina={pagina}
-        categoria="LGPD & Transparência"
-        mostrarAviso={false}
-      />
-    </div>
+    <PaginaInstitucionalView
+      pagina={pagina}
+      categoria="LGPD & Transparência"
+      subtitulo="Saiba como o Fiscaliza Brasil trata, protege e respeita os seus dados pessoais em total conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018)."
+      metricas={[
+        { valor: "LGPD", label: "Lei 13.709/2018", destaque: true },
+      ]}
+      mostrarAviso={false}
+    />
   );
 }
