@@ -77,7 +77,7 @@ export async function GET(
   ] = await Promise.all([
     fetchJsonSafe<CamaraDetalheApi>(`${base}/deputados/${id}`),
     fetchJsonSafe<{ dados?: DespesaCamara[] }>(
-      `${base}/deputados/${id}/despesas?ordem=DESC&ordenarPor=ano&itens=20`
+      `${base}/deputados/${id}/despesas?ano=2026&ano=2025&ordem=DESC&ordenarPor=ano&itens=20`
     ),
     fetchJsonSafe<{ dados?: ProposicaoCamara[] }>(
       `${base}/proposicoes?idDeputadoAutor=${id}&ordem=DESC&ordenarPor=id&itens=15`

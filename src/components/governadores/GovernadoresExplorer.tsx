@@ -513,7 +513,7 @@ export function GovernadoresExplorer({ governadores }: Props) {
                               rel="noopener noreferrer"
                               className="inline-flex items-center gap-1.5 rounded-lg bg-brand-emerald px-3.5 py-2 text-xs font-bold text-white hover:bg-brand-emerald-dark"
                             >
-                              Baixar PDF oficial
+                              Ver Plano no TSE
                               <ExternalLink className="h-3.5 w-3.5" />
                             </a>
                           </div>

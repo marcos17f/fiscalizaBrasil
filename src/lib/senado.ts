@@ -19,14 +19,18 @@ function toArray<T>(val: T | T[] | undefined | null): T[] {
   return Array.isArray(val) ? val : [val];
 }
 
-async function fetchJson<T>(url: string, timeoutMs = 12000): Promise<T | null> {
+async function fetchJson<T>(
+  url: string,
+  timeoutMs = 12000,
+  noStore = false
+): Promise<T | null> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
   try {
     const res = await fetch(url, {
       headers: HEADERS,
       signal: controller.signal,
-      next: { revalidate: 3600 },
+      ...(noStore ? { cache: "no-store" as const } : { next: { revalidate: 3600 } }),
     });
     if (!res.ok) return null;
     return (await res.json()) as T;
@@ -102,7 +106,8 @@ async function carregarIndiceCeaps(ano: number): Promise<Map<number, RawCeapsIte
   const p = (async () => {
     const lista = await fetchJson<RawCeapsItem[]>(
       `${SENADO_ADM_BASE}/senadores/despesas_ceaps/${ano}`,
-      18000
+      18000,
+      true
     );
     const mapa = new Map<number, RawCeapsItem[]>();
     if (Array.isArray(lista)) {

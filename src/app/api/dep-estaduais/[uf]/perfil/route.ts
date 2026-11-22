@@ -5,6 +5,8 @@ import { buscarDeputadoEstadualTse } from "@/lib/tse";
 import { getEstadoPorUf, normalizarTexto } from "@/lib/ufs";
 import type { AlespDetalhe } from "@/types/politicos";
 
+export const preferredRegion = "gru1";
+
 const alespDetalhes = alespData as Record<string, AlespDetalhe>;
 
 function buscarDetalheAlesp(nome: string): AlespDetalhe | null {

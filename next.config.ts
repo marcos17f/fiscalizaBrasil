@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  outputFileTracingIncludes: {
+    "/api/prefeitos": ["./src/data/tse2024/*.json.gz"],
+    "/api/vereadores": ["./src/data/tse2024/*.json.gz"],
+    "/api/tse/candidato": ["./src/data/tse2024/*.json.gz"],
+  },
   images: {
     remotePatterns: [
       {

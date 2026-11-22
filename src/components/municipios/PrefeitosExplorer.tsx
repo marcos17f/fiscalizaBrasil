@@ -281,13 +281,13 @@ export function PrefeitosExplorer() {
                           {dadosPrefeito.fontesConsultadas.tse && (
                             <span className="inline-flex items-center gap-1 rounded-md bg-emerald-500/25 px-2 py-0.5 text-[11px] font-bold text-emerald-100">
                               <CheckCircle2 className="h-3 w-3" />
-                              TSE 2024 ao vivo
+                              TSE 2024 oficial
                             </span>
                           )}
                           {dadosPrefeito.fontesConsultadas.siconfi && (
                             <span className="inline-flex items-center gap-1 rounded-md bg-sky-500/25 px-2 py-0.5 text-[11px] font-bold text-sky-100">
                               <CheckCircle2 className="h-3 w-3" />
-                              SICONFI RREO
+                              SICONFI {dadosPrefeito.siconfi?.exercicio ?? "RREO"}
                             </span>
                           )}
                         </>
@@ -311,7 +311,9 @@ export function PrefeitosExplorer() {
                           : ""}
                       </>
                     ) : carregandoDados ? (
-                      "Buscando prefeito eleito nas Eleições 2024 e balanço fiscal no Tesouro Nacional..."
+                      "Buscando prefeito eleito nas Eleições 2024 e balanço fiscal atualizado no Tesouro Nacional..."
+                    ) : estadoAtual.uf === "DF" ? (
+                      "O Distrito Federal não possui prefeituras municipais — a gestão local é exercida pelo Governo do Distrito Federal (consulte a aba Governadores)."
                     ) : (
                       `Prefeitura Municipal de ${cidadeSelecionada.nome}/${estadoAtual.uf} (verifique eleições suplementares no TSE se aplicável)`
                     )}
@@ -403,7 +405,31 @@ export function PrefeitosExplorer() {
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1.5 rounded-lg bg-brand-emerald px-3.5 py-2 text-xs font-bold text-white hover:bg-brand-emerald-dark"
                         >
-                          Abrir PDF do Plano
+                          Ver Plano no TSE
+                          <ExternalLink className="h-3.5 w-3.5" />
+                        </a>
+                      </div>
+                    ) : prefeito?.linkOficialTse ? (
+                      <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-emerald-200 bg-white p-4">
+                        <div className="flex items-center gap-2.5">
+                          <FileText className="h-5 w-5 text-brand-emerald" />
+                          <div>
+                            <p className="text-sm font-bold text-brand-navy">
+                              Plano de Governo Oficial — {prefeito.nomeUrna} (2024)
+                            </p>
+                            <p className="text-xs text-slate-600">
+                              Consulte e baixe o PDF protocolado diretamente na
+                              ficha oficial do TSE DivulgaCandContas.
+                            </p>
+                          </div>
+                        </div>
+                        <a
+                          href={prefeito.linkOficialTse}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 rounded-lg bg-brand-emerald px-3.5 py-2 text-xs font-bold text-white hover:bg-brand-emerald-dark"
+                        >
+                          Ver Plano no TSE
                           <ExternalLink className="h-3.5 w-3.5" />
                         </a>
                       </div>

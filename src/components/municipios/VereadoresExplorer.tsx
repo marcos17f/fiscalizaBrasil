@@ -149,6 +149,7 @@ export function VereadoresExplorer() {
       ue: verSelecionado.ueCodigo,
       eleicao: String(verSelecionado.eleicaoId),
       id: String(verSelecionado.id),
+      ...(uf ? { uf } : {}),
     });
 
     fetch(`/api/tse/candidato?${params.toString()}`, {
@@ -375,7 +376,7 @@ export function VereadoresExplorer() {
                 <CheckCircle2 className="h-3.5 w-3.5" />
                 {carregandoVereadores
                   ? "Consultando TSE..."
-                  : `${vereadores.length} eleitos (TSE ao vivo)`}
+                  : `${vereadores.length} eleitos (TSE oficial)`}
               </span>
             </div>
 

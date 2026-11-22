@@ -3,6 +3,8 @@ import { buscarResumoFiscalSiconfi } from "@/lib/siconfi";
 import { buscarVereadoresEleitosTse } from "@/lib/tse";
 import { getEstadoPorUf } from "@/lib/ufs";
 
+export const preferredRegion = "gru1";
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const uf = (searchParams.get("uf") ?? "").toUpperCase().trim();
@@ -30,6 +32,7 @@ export async function GET(request: Request) {
         uf: estado.uf,
         cidade,
         codigoTse: tseRes.codigoTse,
+        origemTse: tseRes.origem,
         anoEleicao: 2024,
         totalEleitos: tseRes.vereadores.length,
         vereadores: tseRes.vereadores,
@@ -54,7 +57,7 @@ export async function GET(request: Request) {
     return NextResponse.json(
       {
         error:
-          "Não foi possível consultar a API oficial do TSE neste momento. Tente novamente em instantes.",
+          "Não foi possível consultar os registros do TSE neste momento. Tente novamente em instantes.",
       },
       { status: 502 }
     );

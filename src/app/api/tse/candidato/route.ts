@@ -1,12 +1,15 @@
 import { NextResponse } from "next/server";
 import { buscarDetalheCandidatoTse } from "@/lib/tse";
 
+export const preferredRegion = "gru1";
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const ano = Number(searchParams.get("ano"));
   const eleicao = Number(searchParams.get("eleicao"));
   const id = Number(searchParams.get("id"));
   const ue = (searchParams.get("ue") ?? "").trim();
+  const uf = (searchParams.get("uf") ?? "").trim().toUpperCase() || undefined;
 
   if (
     !Number.isInteger(ano) ||
@@ -21,7 +24,7 @@ export async function GET(request: Request) {
   }
 
   try {
-    const perfil = await buscarDetalheCandidatoTse(ano, ue, eleicao, id);
+    const perfil = await buscarDetalheCandidatoTse(ano, ue, eleicao, id, uf);
     return NextResponse.json(
       { perfil },
       {

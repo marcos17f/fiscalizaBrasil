@@ -1,4 +1,10 @@
 import { normalizarTexto } from "@/lib/ufs";
+import {
+  buscarCandidatoSnapshotPorId,
+  buscarPrefeitoSnapshot,
+  buscarVereadoresSnapshot,
+  encontrarMelhorMunicipio,
+} from "@/lib/tse-snapshot";
 import type {
   BemDeclaradoTSE,
   EleicaoAnteriorTSE,
@@ -86,23 +92,47 @@ type RawCandidatoDetalhe = RawCandidatoLista & {
 
 const cacheMunicipiosPorUf = new Map<string, RawMunicipioTSE[]>();
 const cacheCandidatosLista = new Map<string, RawCandidatoLista[]>();
+const cacheDetalheCandidato = new Map<string, PerfilTSE>();
 
-async function fetchTseJson<T>(path: string, timeoutMs = 12000): Promise<T> {
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), timeoutMs);
-  try {
-    const res = await fetch(`${TSE_BASE}${path}`, {
-      headers: FETCH_HEADERS,
-      signal: controller.signal,
-      next: { revalidate: 3600 },
-    });
-    if (!res.ok) {
-      throw new Error(`TSE retornou HTTP ${res.status}`);
+async function fetchTseJson<T>(
+  path: string,
+  timeoutMs = 7000,
+  tentativas = 2
+): Promise<T> {
+  let ultimoErro: unknown;
+
+  for (let i = 0; i < tentativas; i++) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    try {
+      const res = await fetch(`${TSE_BASE}${path}`, {
+        headers: FETCH_HEADERS,
+        signal: controller.signal,
+        cache: "no-store",
+      });
+      if (!res.ok) {
+        const err = new Error(`TSE retornou HTTP ${res.status}`);
+        // Não faz retry em bloqueio WAF (403) ou recurso inexistente (404)
+        if (res.status === 403 || res.status === 404 || res.status === 400) {
+          throw err;
+        }
+        ultimoErro = err;
+        continue;
+      }
+      return (await res.json()) as T;
+    } catch (err) {
+      ultimoErro = err;
+      if (err instanceof Error && /HTTP 40[034]/.test(err.message)) {
+        throw err;
+      }
+    } finally {
+      clearTimeout(timer);
     }
-    return (await res.json()) as T;
-  } finally {
-    clearTimeout(timer);
   }
+
+  throw ultimoErro instanceof Error
+    ? ultimoErro
+    : new Error("Falha ao consultar API do TSE");
 }
 
 export function isEleito(totalizacao?: string | null): boolean {
@@ -132,34 +162,29 @@ export async function buscarCodigoMunicipioTse(
   nomeMunicipio: string
 ): Promise<string | null> {
   const sigla = uf.toUpperCase().trim();
+  if (sigla === "DF") return null;
+
   let lista = cacheMunicipiosPorUf.get(sigla);
 
   if (!lista) {
     const data = await fetchTseJson<{ municipios?: RawMunicipioTSE[] }>(
-      `/eleicao/buscar/${encodeURIComponent(sigla)}/${ELEICAO_MUNICIPAL_2024.id}/municipios`
+      `/eleicao/buscar/${encodeURIComponent(sigla)}/${ELEICAO_MUNICIPAL_2024.id}/municipios`,
+      7000
     );
     lista = data.municipios ?? [];
     cacheMunicipiosPorUf.set(sigla, lista);
   }
 
-  const alvo = normalizarTexto(nomeMunicipio);
-  const exato = lista.find((m) => normalizarTexto(m.nome) === alvo);
-  if (exato) return exato.codigo;
-
-  // Fallback para pequenas variações ortográficas (ex: Mogi Mirim / Moji Mirim)
-  const parcial = lista.find(
-    (m) =>
-      normalizarTexto(m.nome).includes(alvo) ||
-      alvo.includes(normalizarTexto(m.nome))
-  );
-  return parcial?.codigo ?? null;
+  const encontrado = encontrarMelhorMunicipio(lista, nomeMunicipio);
+  return encontrado?.codigo ?? null;
 }
 
 async function listarCandidatosRaw(
   ano: number,
   ueCodigo: string,
   eleicaoId: number,
-  cargoCodigo: number
+  cargoCodigo: number,
+  timeoutMs = 12000
 ): Promise<RawCandidatoLista[]> {
   const cacheKey = `${ano}:${ueCodigo}:${eleicaoId}:${cargoCodigo}`;
   const cached = cacheCandidatosLista.get(cacheKey);
@@ -167,7 +192,7 @@ async function listarCandidatosRaw(
 
   const data = await fetchTseJson<{ candidatos?: RawCandidatoLista[] }>(
     `/candidatura/listar/${ano}/${encodeURIComponent(ueCodigo)}/${eleicaoId}/${cargoCodigo}/candidatos`,
-    18000
+    timeoutMs
   );
   const lista = data.candidatos ?? [];
   cacheCandidatosLista.set(cacheKey, lista);
@@ -178,133 +203,234 @@ export async function buscarDetalheCandidatoTse(
   ano: number,
   ueCodigo: string,
   eleicaoId: number,
-  candidatoId: number
+  candidatoId: number,
+  ufHint?: string
 ): Promise<PerfilTSE> {
-  const raw = await fetchTseJson<RawCandidatoDetalhe>(
-    `/candidatura/buscar/${ano}/${encodeURIComponent(ueCodigo)}/${eleicaoId}/candidato/${candidatoId}`
-  );
+  const cacheKey = `${ano}:${ueCodigo}:${eleicaoId}:${candidatoId}`;
+  const cached = cacheDetalheCandidato.get(cacheKey);
+  if (cached) return cached;
 
-  const bens: BemDeclaradoTSE[] = (raw.bens ?? [])
-    .map((b, idx) => ({
-      ordem: b.ordem ?? idx + 1,
-      tipo: b.descricaoDeTipoDeBem ?? "Bem declarado",
-      descricao: b.descricao ?? "",
-      valor: typeof b.valor === "number" ? b.valor : 0,
-    }))
-    .sort((a, b) => b.valor - a.valor);
+  try {
+    const raw = await fetchTseJson<RawCandidatoDetalhe>(
+      `/candidatura/buscar/${ano}/${encodeURIComponent(ueCodigo)}/${eleicaoId}/candidato/${candidatoId}`,
+      6000,
+      1
+    );
 
-  const vices: ViceTSE[] = (raw.vices ?? []).map((v) => ({
-    nomeUrna: v.nm_URNA ?? v.nm_CANDIDATO ?? "Vice",
-    nomeCompleto: v.nm_CANDIDATO ?? v.nm_URNA ?? "",
-    partido: v.sg_PARTIDO ?? "",
-    fotoUrl: v.urlFoto ?? null,
-  }));
+    const bens: BemDeclaradoTSE[] = (raw.bens ?? [])
+      .map((b, idx) => ({
+        ordem: b.ordem ?? idx + 1,
+        tipo: b.descricaoDeTipoDeBem ?? "Bem declarado",
+        descricao: b.descricao ?? "",
+        valor: typeof b.valor === "number" ? b.valor : 0,
+      }))
+      .sort((a, b) => b.valor - a.valor);
 
-  const proposta = (raw.arquivos ?? []).find(
-    (a) => a.codTipo === "5" || (a.nome && /proposta|plano/i.test(a.nome))
-  );
-  const planoDeGovernoUrl =
-    proposta?.url && proposta?.nome
-      ? `https://divulgacandcontas.tse.jus.br/${proposta.url.replace(/^\/+/, "")}${encodeURIComponent(proposta.nome)}`
-      : null;
+    const vices: ViceTSE[] = (raw.vices ?? []).map((v) => ({
+      nomeUrna: v.nm_URNA ?? v.nm_CANDIDATO ?? "Vice",
+      nomeCompleto: v.nm_CANDIDATO ?? v.nm_URNA ?? "",
+      partido: v.sg_PARTIDO ?? "",
+      fotoUrl: v.urlFoto ?? null,
+    }));
 
-  const eleicoesAnteriores: EleicaoAnteriorTSE[] = (
-    raw.eleicoesAnteriores ?? []
-  )
-    .map((e) => ({
-      ano: e.nrAno ?? 0,
-      cargo: e.cargo ?? "—",
-      partido: e.partido ?? "—",
-      situacaoTotalizacao: e.situacaoTotalizacao ?? "—",
-      local: e.local ?? "—",
-    }))
-    .sort((a, b) => b.ano - a.ano);
+    const linkOficialTse = buildLinkOficialTse(
+      ano,
+      eleicaoId,
+      ueCodigo,
+      raw.id
+    );
 
-  const naturalidade =
-    raw.nomeMunicipioNascimento && raw.sgUfNascimento
-      ? `${raw.nomeMunicipioNascimento}/${raw.sgUfNascimento}`
-      : null;
+    const temProposta = (raw.arquivos ?? []).some(
+      (a) => a.codTipo === "5" || (a.nome && /proposta|plano/i.test(a.nome))
+    );
+    // O download direto /candidaturas/oficial/*.pdf retorna HTTP 403 pelo WAF do TSE.
+    // Direcionamos para a ficha oficial no DivulgaCandContas onde o PDF abre sem bloqueio.
+    const planoDeGovernoUrl = temProposta ? linkOficialTse : null;
 
-  const sitesLimpos = (raw.sites ?? []).filter(
-    (s) => typeof s === "string" && /^https?:\/\//i.test(s.trim())
-  );
+    const eleicoesAnteriores: EleicaoAnteriorTSE[] = (
+      raw.eleicoesAnteriores ?? []
+    )
+      .map((e) => ({
+        ano: e.nrAno ?? 0,
+        cargo: e.cargo ?? "—",
+        partido: e.partido ?? "—",
+        situacaoTotalizacao: e.situacaoTotalizacao ?? "—",
+        local: e.local ?? "—",
+      }))
+      .sort((a, b) => b.ano - a.ano);
 
-  return {
-    id: raw.id,
-    ano,
-    eleicaoId,
-    ueCodigo,
-    nomeUrna: raw.nomeUrna,
-    nomeCompleto: raw.nomeCompleto,
-    numero: raw.numero,
-    cargo: raw.cargo?.nome ?? "",
-    partidoSigla: raw.partido?.sigla ?? "",
-    partidoNome: raw.partido?.nome ?? null,
-    coligacao: raw.nomeColigacao ?? null,
-    composicaoColigacao:
-      raw.composicaoColigacao && raw.composicaoColigacao !== "**"
-        ? raw.composicaoColigacao
-        : null,
-    situacaoCandidatura: raw.descricaoSituacao ?? null,
-    totalizacao: raw.descricaoTotalizacao ?? null,
-    reeleicao: Boolean(raw.st_REELEICAO),
-    fotoUrl: raw.fotoUrl ?? buildFotoUrlTse(eleicaoId, raw.id, ueCodigo),
-    ocupacao: raw.ocupacao ?? null,
-    grauInstrucao: raw.grauInstrucao ?? null,
-    dataNascimento: raw.dataDeNascimento ?? null,
-    naturalidade,
-    totalDeBens: typeof raw.totalDeBens === "number" ? raw.totalDeBens : 0,
-    bens,
-    vices,
-    sites: sitesLimpos,
-    gastoCampanha1T:
-      typeof raw.gastoCampanha1T === "number" && raw.gastoCampanha1T > 0
-        ? raw.gastoCampanha1T
-        : null,
-    planoDeGovernoUrl,
-    eleicoesAnteriores,
-    linkOficialTse: buildLinkOficialTse(ano, eleicaoId, ueCodigo, raw.id),
-  };
+    const naturalidade =
+      raw.nomeMunicipioNascimento && raw.sgUfNascimento
+        ? `${raw.nomeMunicipioNascimento}/${raw.sgUfNascimento}`
+        : null;
+
+    const sitesLimpos = (raw.sites ?? []).filter(
+      (s) => typeof s === "string" && /^https?:\/\//i.test(s.trim())
+    );
+
+    const perfil: PerfilTSE = {
+      id: raw.id,
+      ano,
+      eleicaoId,
+      ueCodigo,
+      nomeUrna: raw.nomeUrna,
+      nomeCompleto: raw.nomeCompleto,
+      numero: raw.numero,
+      cargo: raw.cargo?.nome ?? "",
+      partidoSigla: raw.partido?.sigla ?? "",
+      partidoNome: raw.partido?.nome ?? null,
+      coligacao: raw.nomeColigacao ?? null,
+      composicaoColigacao:
+        raw.composicaoColigacao && raw.composicaoColigacao !== "**"
+          ? raw.composicaoColigacao
+          : null,
+      situacaoCandidatura: raw.descricaoSituacao ?? null,
+      totalizacao: raw.descricaoTotalizacao ?? null,
+      reeleicao: Boolean(raw.st_REELEICAO),
+      fotoUrl: raw.fotoUrl ?? buildFotoUrlTse(eleicaoId, raw.id, ueCodigo),
+      ocupacao: raw.ocupacao ?? null,
+      grauInstrucao: raw.grauInstrucao ?? null,
+      dataNascimento: raw.dataDeNascimento ?? null,
+      naturalidade,
+      totalDeBens: typeof raw.totalDeBens === "number" ? raw.totalDeBens : 0,
+      bens,
+      vices,
+      sites: sitesLimpos,
+      gastoCampanha1T:
+        typeof raw.gastoCampanha1T === "number" && raw.gastoCampanha1T > 0
+          ? raw.gastoCampanha1T
+          : null,
+      planoDeGovernoUrl,
+      eleicoesAnteriores,
+      linkOficialTse,
+    };
+
+    cacheDetalheCandidato.set(cacheKey, perfil);
+    return perfil;
+  } catch (err) {
+    // Fallback automático para a base oficial do Portal de Dados Abertos TSE 2024
+    if (ano === ELEICAO_MUNICIPAL_2024.ano) {
+      const snap = await buscarCandidatoSnapshotPorId(
+        ueCodigo,
+        candidatoId,
+        ufHint
+      );
+      if (snap) return snap;
+    }
+    throw err;
+  }
 }
 
 export async function buscarPrefeitoEleitoTse(
   uf: string,
   nomeMunicipio: string
-): Promise<{ codigoTse: string | null; prefeito: PerfilTSE | null }> {
-  const codigoTse = await buscarCodigoMunicipioTse(uf, nomeMunicipio);
-  if (!codigoTse) return { codigoTse: null, prefeito: null };
+): Promise<{
+  codigoTse: string | null;
+  prefeito: PerfilTSE | null;
+  origem: "ao-vivo" | "dados-abertos" | null;
+}> {
+  const sigla = uf.toUpperCase().trim();
+  if (sigla === "DF") {
+    return { codigoTse: null, prefeito: null, origem: null };
+  }
 
-  const lista = await listarCandidatosRaw(
-    ELEICAO_MUNICIPAL_2024.ano,
-    codigoTse,
-    ELEICAO_MUNICIPAL_2024.id,
-    11
-  );
+  // 1. Base oficial local do Portal de Dados Abertos TSE 2024 (< 5ms, imune a WAF 403)
+  const snapshot = await buscarPrefeitoSnapshot(sigla, nomeMunicipio);
 
-  const eleito = lista.find((c) => isEleito(c.descricaoTotalizacao));
-  if (!eleito) return { codigoTse, prefeito: null };
+  // 2. Se já temos o prefeito no snapshot, tentamos enriquecer ao vivo (histórico/teto) com timeout curto
+  if (snapshot.codigoTse && snapshot.prefeito) {
+    try {
+      const aoVivo = await buscarDetalheCandidatoTse(
+        ELEICAO_MUNICIPAL_2024.ano,
+        snapshot.codigoTse,
+        ELEICAO_MUNICIPAL_2024.id,
+        snapshot.prefeito.id,
+        sigla
+      );
+      return {
+        codigoTse: snapshot.codigoTse,
+        prefeito: aoVivo,
+        origem:
+          aoVivo.eleicoesAnteriores.length > 0 || aoVivo.gastoCampanha1T
+            ? "ao-vivo"
+            : "dados-abertos",
+      };
+    } catch {
+      return {
+        codigoTse: snapshot.codigoTse,
+        prefeito: snapshot.prefeito,
+        origem: "dados-abertos",
+      };
+    }
+  }
 
-  const detalhe = await buscarDetalheCandidatoTse(
-    ELEICAO_MUNICIPAL_2024.ano,
-    codigoTse,
-    ELEICAO_MUNICIPAL_2024.id,
-    eleito.id
-  );
-  return { codigoTse, prefeito: detalhe };
+  // 3. Fallback completo via API ao vivo se o município não estiver no snapshot
+  try {
+    const codigoTse = await buscarCodigoMunicipioTse(sigla, nomeMunicipio);
+    if (!codigoTse) return { codigoTse: null, prefeito: null, origem: null };
+
+    const lista = await listarCandidatosRaw(
+      ELEICAO_MUNICIPAL_2024.ano,
+      codigoTse,
+      ELEICAO_MUNICIPAL_2024.id,
+      11,
+      8000
+    );
+
+    const eleito = lista.find((c) => isEleito(c.descricaoTotalizacao));
+    if (!eleito) return { codigoTse, prefeito: null, origem: null };
+
+    const detalhe = await buscarDetalheCandidatoTse(
+      ELEICAO_MUNICIPAL_2024.ano,
+      codigoTse,
+      ELEICAO_MUNICIPAL_2024.id,
+      eleito.id,
+      sigla
+    );
+    return { codigoTse, prefeito: detalhe, origem: "ao-vivo" };
+  } catch {
+    return {
+      codigoTse: snapshot.codigoTse,
+      prefeito: snapshot.prefeito,
+      origem: snapshot.prefeito ? "dados-abertos" : null,
+    };
+  }
 }
 
 export async function buscarVereadoresEleitosTse(
   uf: string,
   nomeMunicipio: string
-): Promise<{ codigoTse: string | null; vereadores: VereadorEleitoTSE[] }> {
-  const codigoTse = await buscarCodigoMunicipioTse(uf, nomeMunicipio);
-  if (!codigoTse) return { codigoTse: null, vereadores: [] };
+): Promise<{
+  codigoTse: string | null;
+  vereadores: VereadorEleitoTSE[];
+  origem: "ao-vivo" | "dados-abertos" | null;
+}> {
+  const sigla = uf.toUpperCase().trim();
+  if (sigla === "DF") {
+    return { codigoTse: null, vereadores: [], origem: null };
+  }
+
+  // 1. Snapshot oficial do Portal de Dados Abertos TSE 2024 (< 5ms, evita payloads > 2 MB e WAF 403)
+  const snapshot = await buscarVereadoresSnapshot(sigla, nomeMunicipio);
+  if (snapshot.codigoTse && snapshot.vereadores.length > 0) {
+    return {
+      codigoTse: snapshot.codigoTse,
+      vereadores: snapshot.vereadores,
+      origem: "dados-abertos",
+    };
+  }
+
+  // 2. Fallback para API ao vivo do TSE
+  const codigoTse =
+    snapshot.codigoTse ?? (await buscarCodigoMunicipioTse(sigla, nomeMunicipio));
+  if (!codigoTse) return { codigoTse: null, vereadores: [], origem: null };
 
   const lista = await listarCandidatosRaw(
     ELEICAO_MUNICIPAL_2024.ano,
     codigoTse,
     ELEICAO_MUNICIPAL_2024.id,
-    13
+    13,
+    15000
   );
 
   const eleitos: VereadorEleitoTSE[] = lista
@@ -325,7 +451,7 @@ export async function buscarVereadoresEleitosTse(
     }))
     .sort((a, b) => a.nomeUrna.localeCompare(b.nomeUrna, "pt-BR"));
 
-  return { codigoTse, vereadores: eleitos };
+  return { codigoTse, vereadores: eleitos, origem: "ao-vivo" };
 }
 
 function casarPorNome(candidato: RawCandidatoLista, nomeAlvo: string): number {
@@ -357,7 +483,13 @@ export async function buscarGovernadorTse(
     pleito: typeof ELEICAO_GERAL_2022 | typeof ELEICAO_GERAL_2026
   ): Promise<PerfilTSE | null> => {
     try {
-      const lista = await listarCandidatosRaw(pleito.ano, sigla, pleito.id, 3);
+      const lista = await listarCandidatosRaw(
+        pleito.ano,
+        sigla,
+        pleito.id,
+        3,
+        10000
+      );
       let escolhido: RawCandidatoLista | undefined;
 
       if (nomeReferencia) {
@@ -377,7 +509,8 @@ export async function buscarGovernadorTse(
         pleito.ano,
         sigla,
         pleito.id,
-        escolhido.id
+        escolhido.id,
+        sigla
       );
     } catch {
       return null;
@@ -407,7 +540,8 @@ export async function buscarDeputadoEstadualTse(
         pleito.ano,
         sigla,
         pleito.id,
-        cargoCodigo
+        cargoCodigo,
+        12000
       );
       const candidatosComScore = lista
         .map((c) => {
@@ -425,7 +559,8 @@ export async function buscarDeputadoEstadualTse(
         pleito.ano,
         sigla,
         pleito.id,
-        melhor.id
+        melhor.id,
+        sigla
       );
     } catch {
       return null;

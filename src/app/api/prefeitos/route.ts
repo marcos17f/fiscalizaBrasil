@@ -4,6 +4,8 @@ import { buscarResumoFiscalSiconfi } from "@/lib/siconfi";
 import { buscarPrefeitoEleitoTse } from "@/lib/tse";
 import { getEstadoPorUf } from "@/lib/ufs";
 
+export const preferredRegion = "gru1";
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const uf = (searchParams.get("uf") ?? "").toUpperCase().trim();
@@ -27,6 +29,7 @@ export async function GET(request: Request) {
     buscarPrefeitoEleitoTse(estado.uf, cidade).catch(() => ({
       codigoTse: null,
       prefeito: null,
+      origem: null,
     })),
     buscarResumoFiscalSiconfi(ibge).catch(() => null),
     buscarContratacoesPncp({
@@ -42,6 +45,7 @@ export async function GET(request: Request) {
       ibge,
       cidade,
       codigoTse: tseResult.codigoTse,
+      origemTse: tseResult.origem,
       prefeito: tseResult.prefeito,
       siconfi,
       contratacoesPncp,

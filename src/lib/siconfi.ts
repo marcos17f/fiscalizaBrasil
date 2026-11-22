@@ -65,7 +65,7 @@ async function consultarSiconfi(url: string): Promise<RawSiconfiItem[]> {
         Accept: "application/json",
       },
       signal: controller.signal,
-      next: { revalidate: 21600 },
+      cache: "no-store",
     });
     if (!res.ok) return [];
     const data = (await res.json()) as { items?: RawSiconfiItem[] };
@@ -98,17 +98,30 @@ async function consultarRgfPessoal(
   exercicio: number,
   esfera: "E" | "M"
 ): Promise<IndicadorLrfSiconfi | null> {
-  const tentativas: Array<{ periodicidade: "Q" | "S"; periodo: number }> = [
-    { periodicidade: "Q", periodo: 3 },
-    { periodicidade: "S", periodo: 2 },
-  ];
+  const tentativas: Array<{
+    ano: number;
+    periodicidade: "Q" | "S";
+    periodo: number;
+  }> =
+    exercicio >= 2026
+      ? [
+          { ano: exercicio, periodicidade: "Q", periodo: 2 },
+          { ano: exercicio, periodicidade: "S", periodo: 1 },
+          { ano: exercicio, periodicidade: "Q", periodo: 1 },
+          { ano: 2025, periodicidade: "Q", periodo: 3 },
+          { ano: 2025, periodicidade: "S", periodo: 2 },
+        ]
+      : [
+          { ano: exercicio, periodicidade: "Q", periodo: 3 },
+          { ano: exercicio, periodicidade: "S", periodo: 2 },
+        ];
 
   const limiteMaximo = esfera === "E" ? 49 : 54;
   const limitePrudencial = esfera === "E" ? 46.55 : 51.3;
 
-  for (const { periodicidade, periodo } of tentativas) {
+  for (const { ano, periodicidade, periodo } of tentativas) {
     const params = new URLSearchParams({
-      an_exercicio: String(exercicio),
+      an_exercicio: String(ano),
       in_periodicidade: periodicidade,
       nr_periodo: String(periodo),
       co_tipo_demonstrativo: "RGF",
@@ -133,7 +146,7 @@ async function consultarRgfPessoal(
 
     if (itemPercentual || itemValor) {
       return {
-        exercicio,
+        exercicio: ano,
         periodo,
         despesaPessoalTotal:
           typeof itemValor?.valor === "number" ? itemValor.valor : null,
@@ -169,19 +182,31 @@ export async function buscarResumoFiscalSiconfi(
     return cacheSiconfi.get(key) ?? null;
   }
 
-  const tentativas: Array<{ exercicio: number; periodo: number }> = [
+  // Consulta em paralelo os períodos mais recentes (2026 B5/B4/B3 + 2025 B6) para escolher o mais atual sem latência sequencial
+  const lotesParalelos: Array<{ exercicio: number; periodo: number }> = [
+    { exercicio: 2026, periodo: 5 },
+    { exercicio: 2026, periodo: 4 },
+    { exercicio: 2026, periodo: 3 },
     { exercicio: 2025, periodo: 6 },
-    { exercicio: 2024, periodo: 6 },
   ];
 
-  for (const { exercicio, periodo } of tentativas) {
-    const anexo1 = await consultarRreo(
-      idEnte,
-      exercicio,
-      periodo,
-      "RREO-Anexo 01"
-    );
-    if (anexo1.length === 0) continue;
+  const resultadosLote = await Promise.all(
+    lotesParalelos.map(async (t) => ({
+      ...t,
+      anexo1: await consultarRreo(idEnte, t.exercicio, t.periodo, "RREO-Anexo 01"),
+    }))
+  );
+
+  let escolhido = resultadosLote.find((r) => r.anexo1.length > 0);
+  if (!escolhido) {
+    const fallback2024 = await consultarRreo(idEnte, 2024, 6, "RREO-Anexo 01");
+    if (fallback2024.length > 0) {
+      escolhido = { exercicio: 2024, periodo: 6, anexo1: fallback2024 };
+    }
+  }
+
+  if (escolhido) {
+    const { exercicio, periodo, anexo1 } = escolhido;
 
     const meta = anexo1[0];
 

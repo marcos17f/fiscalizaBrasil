@@ -4,6 +4,8 @@ import { buscarResumoFiscalSiconfi } from "@/lib/siconfi";
 import { buscarGovernadorTse } from "@/lib/tse";
 import { getEstadoPorUf } from "@/lib/ufs";
 
+export const preferredRegion = "gru1";
+
 export async function GET(
   request: Request,
   context: { params: Promise<{ uf: string }> }
