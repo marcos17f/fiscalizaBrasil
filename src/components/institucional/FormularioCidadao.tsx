@@ -1,37 +1,127 @@
 "use client";
 
 import Link from "next/link";
-import { useId, useState } from "react";
-import { CheckCircle2, Loader2, Send, ShieldCheck } from "lucide-react";
+import { useEffect, useId, useRef, useState } from "react";
+import {
+  CheckCircle2,
+  FileText,
+  Film,
+  Image as ImageIcon,
+  Link2,
+  Loader2,
+  Paperclip,
+  Send,
+  ShieldCheck,
+  UploadCloud,
+  X,
+} from "lucide-react";
 import { ESTADOS_BRASIL } from "@/lib/ufs";
+
+const MAX_ARQUIVOS = 5;
+const MAX_MB = 10;
+const ACCEPT_ATTR =
+  ".pdf,.doc,.docx,.xls,.xlsx,.csv,.txt,.jpg,.jpeg,.png,.webp,.mp4,.mov,.webm";
 
 type Props = {
   canal: "participe" | "denuncias" | "contato";
   titulo: string;
   descricao: string;
   opcoesAssunto?: readonly string[];
+  assuntoSelecionado?: string;
+  permitirAnexos?: boolean;
   textoBotao: string;
+  formId?: string;
 };
+
+type ReciboProtocolo = {
+  protocolo: string;
+  totalAnexos: number;
+  linkFonte: string | null;
+};
+
+function formatarTamanho(bytes: number): string {
+  if (bytes >= 1024 * 1024) {
+    return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+  }
+  return `${Math.max(1, Math.round(bytes / 1024))} KB`;
+}
+
+function IconeArquivo({ arquivo }: { arquivo: File }) {
+  if (arquivo.type.startsWith("image/")) {
+    return <ImageIcon className="h-4 w-4 shrink-0 text-brand-emerald" />;
+  }
+  if (arquivo.type.startsWith("video/")) {
+    return <Film className="h-4 w-4 shrink-0 text-brand-blue" />;
+  }
+  return <FileText className="h-4 w-4 shrink-0 text-brand-navy" />;
+}
 
 export function FormularioCidadao({
   canal,
   titulo,
   descricao,
   opcoesAssunto,
+  assuntoSelecionado,
+  permitirAnexos = false,
   textoBotao,
+  formId,
 }: Props) {
   const uid = useId();
+  const inputFileRef = useRef<HTMLInputElement | null>(null);
+
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [uf, setUf] = useState("");
-  const [assunto, setAssunto] = useState(opcoesAssunto?.[0] ?? "");
+  const [assunto, setAssunto] = useState(
+    assuntoSelecionado ?? opcoesAssunto?.[0] ?? ""
+  );
+  const [linkFonte, setLinkFonte] = useState("");
+  const [arquivos, setArquivos] = useState<File[]>([]);
+  const [arrastando, setArrastando] = useState(false);
   const [mensagem, setMensagem] = useState("");
   const [aceite, setAceite] = useState(false);
 
   const [enviando, setEnviando] = useState(false);
   const [erro, setErro] = useState<string | null>(null);
-  const [protocolo, setProtocolo] = useState<string | null>(null);
+  const [recibo, setRecibo] = useState<ReciboProtocolo | null>(null);
+
+  useEffect(() => {
+    if (assuntoSelecionado) {
+      setAssunto(assuntoSelecionado);
+    }
+  }, [assuntoSelecionado]);
+
+  const adicionarArquivos = (lista: FileList | null) => {
+    if (!lista || lista.length === 0) return;
+    setErro(null);
+
+    const novos = Array.from(lista);
+    const validos: File[] = [];
+
+    for (const file of novos) {
+      if (file.size > MAX_MB * 1024 * 1024) {
+        setErro(
+          `O arquivo "${file.name}" excede o limite de ${MAX_MB} MB por anexo.`
+        );
+        continue;
+      }
+      validos.push(file);
+    }
+
+    setArquivos((prev) => {
+      const combinado = [...prev, ...validos];
+      if (combinado.length > MAX_ARQUIVOS) {
+        setErro(`Você pode anexar no máximo ${MAX_ARQUIVOS} arquivos por envio.`);
+        return combinado.slice(0, MAX_ARQUIVOS);
+      }
+      return combinado;
+    });
+  };
+
+  const removerArquivo = (idx: number) => {
+    setArquivos((prev) => prev.filter((_, i) => i !== idx));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,30 +129,56 @@ export function FormularioCidadao({
     setEnviando(true);
 
     try {
-      const res = await fetch("/api/contato", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          canal,
-          nome,
-          email,
-          whatsapp,
-          uf,
-          assunto,
-          mensagem,
-          aceitePrivacidade: aceite,
-        }),
-      });
+      let res: Response;
+      if (permitirAnexos) {
+        const fd = new FormData();
+        fd.append("canal", canal);
+        fd.append("nome", nome);
+        fd.append("email", email);
+        fd.append("whatsapp", whatsapp);
+        fd.append("uf", uf);
+        fd.append("assunto", assunto);
+        fd.append("linkFonte", linkFonte);
+        fd.append("mensagem", mensagem);
+        fd.append("aceitePrivacidade", String(aceite));
+        for (const arq of arquivos) {
+          fd.append("anexos", arq);
+        }
+        res = await fetch("/api/contato", { method: "POST", body: fd });
+      } else {
+        res = await fetch("/api/contato", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            canal,
+            nome,
+            email,
+            whatsapp,
+            uf,
+            assunto,
+            linkFonte,
+            mensagem,
+            aceitePrivacidade: aceite,
+          }),
+        });
+      }
+
       const data = await res.json();
       if (!res.ok) {
         setErro(data.error || "Não foi possível enviar sua mensagem.");
       } else {
-        setProtocolo(data.protocolo);
+        setRecibo({
+          protocolo: data.protocolo,
+          totalAnexos: Array.isArray(data.anexos) ? data.anexos.length : 0,
+          linkFonte: data.linkFonte ?? null,
+        });
         setNome("");
         setEmail("");
         setWhatsapp("");
         setUf("");
-        setAssunto(opcoesAssunto?.[0] ?? "");
+        setAssunto(assuntoSelecionado ?? opcoesAssunto?.[0] ?? "");
+        setLinkFonte("");
+        setArquivos([]);
         setMensagem("");
         setAceite(false);
       }
@@ -74,7 +190,10 @@ export function FormularioCidadao({
   };
 
   return (
-    <section className="rounded-3xl border border-slate-200/90 bg-white p-6 shadow-xs sm:p-9">
+    <section
+      id={formId}
+      className="scroll-mt-32 rounded-3xl border border-slate-200/90 bg-white p-6 shadow-xs sm:p-9"
+    >
       <div className="flex items-start justify-between gap-4 border-b border-slate-100 pb-5">
         <div>
           <p className="text-[11px] font-bold tracking-[0.14em] text-brand-emerald uppercase">
@@ -90,7 +209,7 @@ export function FormularioCidadao({
         </div>
       </div>
 
-      {protocolo ? (
+      {recibo ? (
         <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50/80 p-6">
           <div className="flex items-start gap-3.5">
             <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-brand-emerald" />
@@ -101,12 +220,21 @@ export function FormularioCidadao({
               <p className="mt-1.5 text-sm text-emerald-900">
                 Seu número de protocolo:{" "}
                 <strong className="tabular-nums rounded-lg border border-emerald-200 bg-white px-2.5 py-1 font-mono text-brand-navy">
-                  {protocolo}
+                  {recibo.protocolo}
                 </strong>
               </p>
+              {(recibo.totalAnexos > 0 || recibo.linkFonte) && (
+                <p className="mt-2 text-xs font-medium text-emerald-900">
+                  {recibo.totalAnexos > 0
+                    ? `${recibo.totalAnexos} ${recibo.totalAnexos === 1 ? "arquivo validado e anexado" : "arquivos validados e anexados"}`
+                    : ""}
+                  {recibo.totalAnexos > 0 && recibo.linkFonte ? " • " : ""}
+                  {recibo.linkFonte ? "Link oficial registrado" : ""}
+                </p>
+              )}
               <button
                 type="button"
-                onClick={() => setProtocolo(null)}
+                onClick={() => setRecibo(null)}
                 className="mt-4 inline-flex items-center rounded-lg bg-brand-emerald px-3.5 py-2 text-xs font-bold text-white transition-colors hover:bg-brand-emerald-dark"
               >
                 Enviar outro registro
@@ -130,7 +258,7 @@ export function FormularioCidadao({
                 required
                 value={nome}
                 onChange={(e) => setNome(e.target.value)}
-                className="w-full rounded-xl border border-slate-300 bg-slate-50/40 px-3.5 py-2.5 text-sm transition-colors focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:outline-none"
+                className="min-h-[44px] w-full rounded-xl border border-slate-300 bg-slate-50/40 px-3.5 py-2.5 text-base transition-colors focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:outline-none sm:text-sm"
               />
             </div>
 
@@ -147,7 +275,7 @@ export function FormularioCidadao({
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full rounded-xl border border-slate-300 bg-slate-50/40 px-3.5 py-2.5 text-sm transition-colors focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:outline-none"
+                className="min-h-[44px] w-full rounded-xl border border-slate-300 bg-slate-50/40 px-3.5 py-2.5 text-base transition-colors focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:outline-none sm:text-sm"
               />
             </div>
 
@@ -165,7 +293,7 @@ export function FormularioCidadao({
                 value={whatsapp}
                 onChange={(e) => setWhatsapp(e.target.value)}
                 placeholder="(11) 99999-9999"
-                className="w-full rounded-xl border border-slate-300 bg-slate-50/40 px-3.5 py-2.5 text-sm transition-colors focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:outline-none"
+                className="min-h-[44px] w-full rounded-xl border border-slate-300 bg-slate-50/40 px-3.5 py-2.5 text-base transition-colors focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:outline-none sm:text-sm"
               />
             </div>
 
@@ -180,7 +308,7 @@ export function FormularioCidadao({
                 id={`${uid}-uf`}
                 value={uf}
                 onChange={(e) => setUf(e.target.value)}
-                className="w-full rounded-xl border border-slate-300 bg-slate-50/40 px-3.5 py-2.5 text-sm transition-colors focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:outline-none"
+                className="min-h-[44px] w-full rounded-xl border border-slate-300 bg-slate-50/40 px-3.5 py-2.5 text-base transition-colors focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:outline-none sm:text-sm"
               >
                 <option value="">Selecione</option>
                 {ESTADOS_BRASIL.map((e) => (
@@ -204,7 +332,7 @@ export function FormularioCidadao({
                 id={`${uid}-assunto`}
                 value={assunto}
                 onChange={(e) => setAssunto(e.target.value)}
-                className="w-full rounded-xl border border-slate-300 bg-slate-50/40 px-3.5 py-2.5 text-sm transition-colors focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:outline-none"
+                className="w-full rounded-xl border border-slate-300 bg-slate-50/40 px-3.5 py-2.5 text-sm font-medium text-brand-navy transition-colors focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:outline-none"
               >
                 {opcoesAssunto.map((op) => (
                   <option key={op} value={op}>
@@ -227,8 +355,119 @@ export function FormularioCidadao({
                 required
                 value={assunto}
                 onChange={(e) => setAssunto(e.target.value)}
-                className="w-full rounded-xl border border-slate-300 bg-slate-50/40 px-3.5 py-2.5 text-sm transition-colors focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:outline-none"
+                className="min-h-[44px] w-full rounded-xl border border-slate-300 bg-slate-50/40 px-3.5 py-2.5 text-base transition-colors focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:outline-none sm:text-sm"
               />
+            </div>
+          )}
+
+          {/* Campo de Link / Fonte Oficial */}
+          {permitirAnexos && (
+            <div>
+              <label
+                htmlFor={`${uid}-link`}
+                className="mb-1.5 flex items-center gap-1.5 text-xs font-bold text-brand-navy"
+              >
+                <Link2 className="h-3.5 w-3.5 text-brand-emerald" />
+                Link de edital, diário oficial, prestação de contas ou vídeo
+                (opcional)
+              </label>
+              <input
+                id={`${uid}-link`}
+                type="url"
+                value={linkFonte}
+                onChange={(e) => setLinkFonte(e.target.value)}
+                placeholder="https://..."
+                className="min-h-[44px] w-full rounded-xl border border-slate-300 bg-slate-50/40 px-3.5 py-2.5 text-base transition-colors focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:outline-none sm:text-sm"
+              />
+            </div>
+          )}
+
+          {/* Campo de Upload / Anexar Documentos, Fotos e Vídeos */}
+          {permitirAnexos && (
+            <div>
+              <span className="mb-1.5 flex items-center gap-1.5 text-xs font-bold text-brand-navy">
+                <Paperclip className="h-3.5 w-3.5 text-brand-emerald" />
+                Anexar Documentos (PDF/DOC/XLS), Fotos de Obras ou Vídeos
+                (opcional)
+              </span>
+
+              <div
+                onDragOver={(e) => {
+                  e.preventDefault();
+                  setArrastando(true);
+                }}
+                onDragLeave={() => setArrastando(false)}
+                onDrop={(e) => {
+                  e.preventDefault();
+                  setArrastando(false);
+                  adicionarArquivos(e.dataTransfer.files);
+                }}
+                onClick={() => inputFileRef.current?.click()}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    inputFileRef.current?.click();
+                  }
+                }}
+                className={`flex cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-dashed p-5 text-center transition-colors ${
+                  arrastando
+                    ? "border-brand-emerald bg-brand-mint/70"
+                    : "border-slate-300 bg-slate-50/60 hover:border-brand-blue/60 hover:bg-blue-50/30"
+                }`}
+              >
+                <input
+                  ref={inputFileRef}
+                  type="file"
+                  multiple
+                  accept={ACCEPT_ATTR}
+                  onChange={(e) => {
+                    adicionarArquivos(e.target.files);
+                    e.target.value = "";
+                  }}
+                  className="hidden"
+                />
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-brand-blue shadow-2xs ring-1 ring-slate-200">
+                  <UploadCloud className="h-5 w-5" />
+                </div>
+                <p className="mt-2.5 text-xs font-bold text-brand-navy sm:text-sm">
+                  Clique para selecionar ou arraste seus arquivos aqui
+                </p>
+                <p className="mt-1 text-[11px] text-brand-muted">
+                  PDF, DOC, XLS, JPG, PNG, WEBP, MP4, MOV ou WEBM • Até{" "}
+                  {MAX_ARQUIVOS} arquivos ({MAX_MB} MB cada)
+                </p>
+              </div>
+
+              {arquivos.length > 0 && (
+                <ul className="mt-3 space-y-2">
+                  {arquivos.map((arq, idx) => (
+                    <li
+                      key={`${arq.name}-${arq.size}-${idx}`}
+                      className="flex items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-xs"
+                    >
+                      <div className="flex min-w-0 items-center gap-2.5">
+                        <IconeArquivo arquivo={arq} />
+                        <span className="truncate font-semibold text-brand-navy">
+                          {arq.name}
+                        </span>
+                        <span className="tabular-nums shrink-0 text-[11px] text-brand-muted">
+                          ({formatarTamanho(arq.size)})
+                        </span>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => removerArquivo(idx)}
+                        aria-label={`Remover ${arq.name}`}
+                        className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-slate-400 transition-colors hover:bg-red-50 hover:text-red-600"
+                      >
+                        <X className="h-4 w-4" />
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           )}
 
@@ -245,7 +484,7 @@ export function FormularioCidadao({
               required
               value={mensagem}
               onChange={(e) => setMensagem(e.target.value)}
-              placeholder="Se possível, informe datas, local e links de fontes oficiais. Evite dados pessoais sensíveis de terceiros."
+              placeholder="Se possível, informe cidade, datas, local e contexto dos documentos ou fotos enviados. Evite dados pessoais sensíveis de terceiros."
               className="w-full rounded-xl border border-slate-300 bg-slate-50/40 px-3.5 py-2.5 text-sm transition-colors focus:border-brand-blue focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:outline-none"
             />
           </div>
@@ -279,7 +518,7 @@ export function FormularioCidadao({
           <button
             type="submit"
             disabled={enviando}
-            className="inline-flex items-center gap-2 rounded-xl bg-brand-emerald px-6 py-3 text-sm font-bold text-white shadow-sm transition-all hover:bg-brand-emerald-dark disabled:opacity-60"
+            className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-brand-emerald px-6 py-3 text-sm font-bold text-white shadow-sm transition-all hover:bg-brand-emerald-dark disabled:opacity-60 sm:w-auto"
           >
             {enviando ? (
               <Loader2 className="h-4 w-4 animate-spin" />

@@ -72,7 +72,7 @@ export default function DenunciasPage() {
             <FormularioCidadao
               canal="denuncias"
               titulo="Registrar relato de interesse público"
-              descricao="As informações recebidas são registradas para análise e verificação. Um número de protocolo será gerado ao enviar."
+              descricao="As informações recebidas são registradas para análise e verificação. Você pode colar links oficiais ou anexar documentos, fotos e vídeos — um protocolo será gerado na hora."
               opcoesAssunto={[
                 "Obra pública ou infraestrutura",
                 "Contrato ou licitação",
@@ -80,6 +80,7 @@ export default function DenunciasPage() {
                 "Uso de recursos ou emendas parlamentares",
                 "Outro fato de interesse público",
               ]}
+              permitirAnexos
               textoBotao="Registrar e gerar protocolo"
             />
           </div>

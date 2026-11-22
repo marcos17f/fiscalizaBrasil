@@ -45,10 +45,16 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/95 shadow-[0_1px_12px_rgba(6,24,44,0.04)] backdrop-blur-md">
       {/* Faixa institucional de imparcialidade */}
       <div className="bg-brand-navy text-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 text-[11px] sm:px-6 sm:text-xs">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-1.5 text-[11px] sm:px-6 sm:py-2 sm:text-xs">
           <p className="flex items-center gap-2 text-slate-300">
             <span className="inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
-            <span>
+            <span className="sm:hidden">
+              <strong className="font-semibold text-white">
+                O Fiscaliza Brasil não julga.
+              </strong>{" "}
+              Dados de fontes oficiais.
+            </span>
+            <span className="hidden sm:inline">
               <strong className="font-semibold text-white">
                 O Fiscaliza Brasil não julga.
               </strong>{" "}
@@ -122,7 +128,7 @@ export function SiteHeader() {
       <div className="border-t border-slate-100 bg-slate-50/90">
         <nav
           aria-label="Esferas políticas"
-          className="no-scrollbar mx-auto flex max-w-7xl items-center gap-1.5 overflow-x-auto px-4 py-2 sm:px-6"
+          className="no-scrollbar mx-auto flex max-w-7xl snap-x snap-mandatory items-center gap-1.5 overflow-x-auto px-4 py-2 sm:px-6"
         >
           <span className="mr-1 hidden shrink-0 text-[10px] font-bold tracking-wider text-slate-400 uppercase md:inline">
             Esferas:
@@ -134,7 +140,7 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`inline-flex shrink-0 items-center gap-1.5 rounded-lg px-3.5 py-1.5 text-xs font-semibold transition-all sm:text-[13px] ${
+                className={`inline-flex min-h-[38px] shrink-0 snap-start items-center gap-1.5 rounded-lg px-3.5 py-2 text-xs font-semibold transition-all sm:min-h-0 sm:py-1.5 sm:text-[13px] ${
                   ativo
                     ? "bg-brand-navy text-white shadow-xs"
                     : "bg-white text-slate-700 ring-1 ring-slate-200/80 hover:bg-brand-mint hover:text-brand-emerald hover:ring-emerald-200"
@@ -152,22 +158,46 @@ export function SiteHeader() {
         </nav>
       </div>
 
-      {/* Menu Mobile */}
+      {/* Menu Mobile & Tablet */}
       {menuAberto && (
         <nav
           aria-label="Menu institucional mobile"
-          className="border-t border-slate-200 bg-white px-4 py-4 shadow-lg lg:hidden"
+          className="max-h-[75vh] overflow-y-auto border-t border-slate-200 bg-white px-4 py-4 shadow-lg lg:hidden"
         >
-          <p className="mb-2.5 px-2 text-[11px] font-bold tracking-wider text-brand-muted uppercase">
+          <p className="mb-2.5 px-1 text-[11px] font-bold tracking-wider text-brand-muted uppercase">
+            Esferas Políticas
+          </p>
+          <div className="mb-4 grid grid-cols-2 gap-1.5 sm:grid-cols-3">
+            {ESFERAS_NAV.map((item) => {
+              const Icone = item.icone;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMenuAberto(false)}
+                  className={`flex min-h-[44px] items-center gap-2 rounded-xl px-3.5 py-2.5 text-xs font-semibold transition-colors ${
+                    isAtivo(item.href)
+                      ? "bg-brand-navy text-white"
+                      : "bg-slate-50 text-slate-700 hover:bg-brand-mint hover:text-brand-emerald"
+                  }`}
+                >
+                  <Icone className="h-3.5 w-3.5 shrink-0" />
+                  <span className="truncate">{item.label}</span>
+                </Link>
+              );
+            })}
+          </div>
+
+          <p className="mb-2.5 px-1 text-[11px] font-bold tracking-wider text-brand-muted uppercase">
             Institucional & Participação
           </p>
-          <div className="grid grid-cols-2 gap-1.5">
+          <div className="grid grid-cols-2 gap-1.5 sm:grid-cols-4">
             {INSTITUCIONAL_NAV.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setMenuAberto(false)}
-                className={`rounded-xl px-3.5 py-2.5 text-xs font-semibold transition-colors ${
+                className={`flex min-h-[44px] items-center rounded-xl px-3.5 py-2.5 text-xs font-semibold transition-colors ${
                   isAtivo(item.href)
                     ? "bg-brand-navy text-white"
                     : "bg-slate-50 text-slate-700 hover:bg-slate-100"

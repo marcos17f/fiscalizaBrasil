@@ -23,7 +23,7 @@ export function PerfilAbas({ abas, entidadeNome, renderConteudoAba }: Props) {
       <div
         role="tablist"
         aria-label={`Seções do perfil de ${entidadeNome}`}
-        className="no-scrollbar flex gap-1 overflow-x-auto border-b border-slate-200 bg-slate-50/90 px-2.5 pt-2.5"
+        className="no-scrollbar flex snap-x snap-mandatory gap-1 overflow-x-auto border-b border-slate-200 bg-slate-50/90 px-2.5 pt-2.5"
       >
         {abas.map((aba) => {
           const ativa = aba.id === abaAtual.id;
@@ -34,7 +34,7 @@ export function PerfilAbas({ abas, entidadeNome, renderConteudoAba }: Props) {
               role="tab"
               aria-selected={ativa}
               onClick={() => setAbaAtivaId(aba.id)}
-              className={`shrink-0 rounded-t-xl border-b-2 px-3.5 py-2.5 text-xs font-semibold transition-all sm:text-[13px] ${
+              className={`min-h-[44px] shrink-0 snap-start rounded-t-xl border-b-2 px-3.5 py-2.5 text-xs font-semibold transition-all sm:min-h-0 sm:text-[13px] ${
                 ativa
                   ? "border-brand-emerald bg-white text-brand-navy shadow-[0_-1px_4px_rgba(6,24,44,0.04)]"
                   : "border-transparent text-slate-600 hover:bg-white/70 hover:text-brand-navy"

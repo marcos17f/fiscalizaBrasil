@@ -105,6 +105,41 @@ export function PaginaInstitucionalView({
 
         {topoExtra}
 
+        {/* Sumário colapsável para Mobile e Tablet (< lg) */}
+        {exibirIndice && (
+          <details className="group rounded-2xl border border-slate-200/90 bg-white shadow-xs lg:hidden">
+            <summary className="flex min-h-[48px] cursor-pointer list-none items-center justify-between gap-2 px-4 py-3 text-xs font-bold tracking-wider text-brand-navy uppercase">
+              <span className="flex items-center gap-2">
+                <ListTree className="h-4 w-4 text-brand-emerald" />
+                Sumário desta página ({secoesComTitulo.length} tópicos)
+              </span>
+              <span className="text-[11px] font-semibold text-brand-blue group-open:hidden">
+                Abrir
+              </span>
+              <span className="hidden text-[11px] font-semibold text-brand-blue group-open:inline">
+                Fechar
+              </span>
+            </summary>
+            <nav
+              aria-label="Sumário mobile da página"
+              className="grid gap-1 border-t border-slate-100 p-3 sm:grid-cols-2"
+            >
+              {secoesComTitulo.map((sec, idx) => (
+                <a
+                  key={sec.id}
+                  href={`#${sec.id}`}
+                  className="flex min-h-[40px] items-center gap-2.5 rounded-xl px-3 py-2 text-xs font-medium text-slate-700 hover:bg-brand-mint hover:text-brand-navy"
+                >
+                  <span className="tabular-nums text-[10px] font-extrabold text-brand-emerald">
+                    {String(idx + 1).padStart(2, "0")}
+                  </span>
+                  <span className="line-clamp-1">{sec.titulo}</span>
+                </a>
+              ))}
+            </nav>
+          </details>
+        )}
+
         <div
           className={
             exibirIndice

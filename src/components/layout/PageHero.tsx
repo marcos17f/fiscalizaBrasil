@@ -57,11 +57,15 @@ export function PageHero({
           </div>
 
           {metricas && metricas.length > 0 && (
-            <div className="grid shrink-0 grid-cols-2 gap-2.5 sm:flex sm:flex-wrap">
-              {metricas.map((m) => (
+            <div className="grid w-full shrink-0 grid-cols-2 gap-2.5 sm:grid-cols-3 lg:flex lg:w-auto lg:flex-wrap">
+              {metricas.map((m, idx) => (
                 <div
                   key={m.label}
                   className={`rounded-2xl border px-4 py-3 backdrop-blur-xs ${
+                    metricas.length === 3 && idx === 2
+                      ? "col-span-2 sm:col-span-1"
+                      : ""
+                  } ${
                     m.destaque
                       ? "border-emerald-400/30 bg-emerald-500/15"
                       : "border-white/12 bg-white/[0.05]"

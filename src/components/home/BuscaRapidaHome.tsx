@@ -37,7 +37,7 @@ export function BuscaRapidaHome() {
             id="atalho-esfera-home"
             value={destino}
             onChange={(e) => setDestino(e.target.value)}
-            className="w-full appearance-none rounded-xl bg-white py-3.5 pr-9 pl-10 text-sm font-semibold text-brand-navy shadow-xs focus:ring-2 focus:ring-emerald-400 focus:outline-none"
+            className="min-h-[48px] w-full appearance-none rounded-xl bg-white py-3.5 pr-9 pl-10 text-base font-semibold text-brand-navy shadow-xs focus:ring-2 focus:ring-emerald-400 focus:outline-none sm:text-sm"
           >
             {DESTINOS.map((item) => (
               <option key={item.href} value={item.href}>
@@ -49,7 +49,7 @@ export function BuscaRapidaHome() {
 
         <button
           type="submit"
-          className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-brand-emerald px-6 py-3.5 text-sm font-bold text-white shadow-md transition-all hover:bg-brand-emerald-dark active:scale-[0.99]"
+          className="inline-flex min-h-[48px] w-full shrink-0 items-center justify-center gap-2 rounded-xl bg-brand-emerald px-6 py-3.5 text-sm font-bold text-white shadow-md transition-all hover:bg-brand-emerald-dark active:scale-[0.99] sm:w-auto"
         >
           Consultar agora
           <ArrowRight className="h-4 w-4" />
